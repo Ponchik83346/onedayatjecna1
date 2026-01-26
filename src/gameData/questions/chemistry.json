@@ -1,0 +1,242 @@
+[
+  {
+    "question": "Kolik molů vody je v 18 g H₂O?",
+    "a": "1 mol",
+    "b": "0,5 mol",
+    "c": "2 mol",
+    "d": "0,1 mol",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je oxidační stav síry v H₂SO₄?",
+    "a": "+4",
+    "b": "+6",
+    "c": +2,
+    "d": 0,
+    "correct": "B"
+  },
+  {
+    "question": "Jaká je molekulová hmotnost CO₂?",
+    "a": "44 g/mol",
+    "b": "28 g/mol",
+    "c": "32 g/mol",
+    "d": "16 g/mol",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik protonů má atom uhlíku?",
+    "a": "6",
+    "b": "12",
+    "c": "14",
+    "d": "8",
+    "correct": "A"
+  },
+  {
+    "question": "Jaká je chemická formule hydroxidu sodného?",
+    "a": "NaOH",
+    "b": "KOH",
+    "c": "NaH",
+    "d": "H₂O",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký pH má neutrální roztok při 25 °C?",
+    "a": "7",
+    "b": "0",
+    "c": "14",
+    "d": "1",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik gramů NaCl je potřeba na přípravu 0,5 mol roztoku?",
+    "a": "29,2 g",
+    "b": "11,7 g",
+    "c": "58,5 g",
+    "d": "23,4 g",
+    "correct": "D"
+  },
+  {
+    "question": "Jaká je hlavní složka chemického vaziva v vápně (CaO) po reakci s vodou?",
+    "a": "Ca(OH)₂",
+    "b": "CaCO₃",
+    "c": "CaSO₄",
+    "d": "CaCl₂",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik atomů vodíku je v jedné molekule glukózy (C₆H₁₂O₆)?",
+    "a": "12",
+    "b": "6",
+    "c": "18",
+    "d": "24",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký typ reakce je HCl + NaOH → NaCl + H₂O?",
+    "a": "neutralizace",
+    "b": "oxidace",
+    "c": "redox",
+    "d": "hydrolýza",
+    "correct": "A"
+  },
+  {
+    "question": "Jaká je elektronegativita kyslíku přibližně?",
+    "a": "3,5",
+    "b": "2,1",
+    "c": "1,0",
+    "d": "4,0",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik elektronů má iont Na⁺?",
+    "a": "10",
+    "b": "11",
+    "c": "12",
+    "d": "9",
+    "correct": "A"
+  },
+  {
+    "question": "Jaká je chemická formule kyseliny sírové?",
+    "a": "H₂SO₄",
+    "b": "HCl",
+    "c": "HNO₃",
+    "d": "H₂CO₃",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je hlavní produkt spalování uhlíku ve vzduchu?",
+    "a": "CO₂",
+    "b": "CO",
+    "c": "C",
+    "d": "CH₄",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik gramů H₂ je v 2 mol H₂?",
+    "a": "4 g",
+    "b": "2 g",
+    "c": "1 g",
+    "d": "8 g",
+    "correct": "A"
+  },
+  {
+    "question": "Jaká je hlavní složka tvrdé vody?",
+    "a": "Ca²⁺ a Mg²⁺",
+    "b": "Na⁺ a K⁺",
+    "c": "Cl⁻ a NO₃⁻",
+    "d": "HCO₃⁻",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik molů HCl reaguje s 1 mol NaOH?",
+    "a": "1 mol",
+    "b": "0,5 mol",
+    "c": "2 mol",
+    "d": "0,25 mol",
+    "correct": "A"
+  },
+  {
+    "question": "Jaká je oxidace sodíku při tvorbě Na₂O?",
+    "a": "+1",
+    "b": "+2",
+    "c": 0,
+    "d": "-1",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik gramů kyseliny sírové reaguje se 1 mol NaOH?",
+    "a": "49 g",
+    "b": "98 g",
+    "c": "24,5 g",
+    "d": "196 g",
+    "correct": "C"
+  },
+  {
+    "question": "Jaká je chemická formule uhličitanu vápenatého?",
+    "a": "CaCO₃",
+    "b": "CaSO₄",
+    "c": "CaO",
+    "d": "Ca(OH)₂",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik molů vody vznikne při spálení 2 mol CH₄?",
+    "a": "4 mol",
+    "b": "2 mol",
+    "c": "1 mol",
+    "d": "8 mol",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je hlavní produkt reakce Zn + HCl?",
+    "a": "ZnCl₂ + H₂",
+    "b": "ZnH + Cl₂",
+    "c": "ZnCl + H",
+    "d": "ZnO + HCl",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik elektronů je v molekule O₂?",
+    "a": "16",
+    "b": "8",
+    "c": "32",
+    "d": "12",
+    "correct": "A"
+  },
+  {
+    "question": "Jaká je molární hmotnost NH₃?",
+    "a": "17 g/mol",
+    "b": "14 g/mol",
+    "c": "18 g/mol",
+    "d": "16 g/mol",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik gramů Na je v 1 mol Na?",
+    "a": "23 g",
+    "b": "11,5 g",
+    "c": "46 g",
+    "d": "12 g",
+    "correct": "A"
+  },
+  {
+    "question": "Jaká je chemická formule chloridu draselného?",
+    "a": "KCl",
+    "b": "NaCl",
+    "c": "CaCl₂",
+    "d": "MgCl₂",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je hlavní oxid při spalování železa?",
+    "a": "Fe₂O₃",
+    "b": "FeO",
+    "c": "Fe₃O₄",
+    "d": "Fe(OH)₃",
+    "correct": "A"
+  },
+  {
+    "question": "Kolik molů O₂ je potřeba pro spálení 1 mol CH₄?",
+    "a": "2 mol",
+    "b": "1 mol",
+    "c": "0,5 mol",
+    "d": "3 mol",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je hlavní produkt reakce Na + H₂O?",
+    "a": "NaOH + H₂",
+    "b": "NaH + O₂",
+    "c": "Na₂O + H₂",
+    "d": "NaCl + H₂",
+    "correct": "A"
+  },
+  {
+    "question": "Jaká je molekulová hmotnost kyseliny dusičné (HNO₃)?",
+    "a": "63 g/mol",
+    "b": "62 g/mol",
+    "c": "64 g/mol",
+    "d": "65 g/mol",
+    "correct": "A"
+  }
+]

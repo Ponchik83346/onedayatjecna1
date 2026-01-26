@@ -1,0 +1,418 @@
+[
+  {
+    "question": "Co znamená zkratka CPU?",
+    "a": "Central Processing Unit",
+    "b": "Computer Personal Unit",
+    "c": "Central Program Utility",
+    "d": "Control Processing Unit",
+    "correct": "A"
+  },
+  {
+    "question": "Které zařízení slouží primárně k ukládání dat?",
+    "a": "RAM",
+    "b": "CPU",
+    "c": "SSD",
+    "d": "GPU",
+    "correct": "C"
+  },
+  {
+    "question": "Jaký je základní číselný systém používaný v počítačích?",
+    "a": "Desítkový",
+    "b": "Dvojkový",
+    "c": "Osmičkový",
+    "d": "Šestnáctkový",
+    "correct": "B"
+  },
+  {
+    "question": "Kolik bitů má jeden byte?",
+    "a": "4",
+    "b": "6",
+    "c": "8",
+    "d": "16",
+    "correct": "C"
+  },
+  {
+    "question": "Který z těchto je operační systém?",
+    "a": "Python",
+    "b": "Linux",
+    "c": "HTML",
+    "d": "SQL",
+    "correct": "B"
+  },
+  {
+    "question": "Co je RAM?",
+    "a": "Trvalá paměť",
+    "b": "Grafická karta",
+    "c": "Operační paměť",
+    "d": "Procesor",
+    "correct": "C"
+  },
+  {
+    "question": "Který jazyk je kompilovaný?",
+    "a": "Python",
+    "b": "Java",
+    "c": "C++",
+    "d": "JavaScript",
+    "correct": "C"
+  },
+  {
+    "question": "Co znamená zkratka URL?",
+    "a": "Uniform Resource Locator",
+    "b": "Universal Register Link",
+    "c": "Unified Resource Line",
+    "d": "User Resource Locator",
+    "correct": "A"
+  },
+  {
+    "question": "K čemu slouží firewall?",
+    "a": "Zrychlení internetu",
+    "b": "Ochrana sítě",
+    "c": "Ukládání dat",
+    "d": "Tvorba webu",
+    "correct": "B"
+  },
+  {
+    "question": "Jaké zařízení převádí digitální signál na analogový?",
+    "a": "Router",
+    "b": "Modem",
+    "c": "Switch",
+    "d": "Server",
+    "correct": "B"
+  },
+  {
+    "question": "Co je algoritmus?",
+    "a": "Programovací jazyk",
+    "b": "Datový typ",
+    "c": "Postup řešení problému",
+    "d": "Hardwarová součást",
+    "correct": "C"
+  },
+  {
+    "question": "Která struktura se používá pro opakování?",
+    "a": "Podmínka",
+    "b": "Proměnná",
+    "c": "Cyklus",
+    "d": "Třída",
+    "correct": "C"
+  },
+  {
+    "question": "Jaký protokol se používá pro přenos webových stránek?",
+    "a": "FTP",
+    "b": "SMTP",
+    "c": "HTTP",
+    "d": "SSH",
+    "correct": "C"
+  },
+  {
+    "question": "Co znamená zkratka IP?",
+    "a": "Internet Protocol",
+    "b": "Internal Program",
+    "c": "Interface Path",
+    "d": "Internet Process",
+    "correct": "A"
+  },
+  {
+    "question": "Který datový typ je logický?",
+    "a": "int",
+    "b": "char",
+    "c": "boolean",
+    "d": "float",
+    "correct": "C"
+  },
+  {
+    "question": "Co je open-source software?",
+    "a": "Placený software",
+    "b": "Software bez licence",
+    "c": "Software s otevřeným kódem",
+    "d": "Software pouze online",
+    "correct": "C"
+  },
+  {
+    "question": "Který z těchto je databázový jazyk?",
+    "a": "HTML",
+    "b": "CSS",
+    "c": "SQL",
+    "d": "PHP",
+    "correct": "C"
+  },
+  {
+    "question": "Co je proměnná?",
+    "a": "Typ cyklu",
+    "b": "Paměťové místo pro data",
+    "c": "Podmínka",
+    "d": "Funkce",
+    "correct": "B"
+  },
+  {
+    "question": "Jaký je výstupní hardware?",
+    "a": "Klávesnice",
+    "b": "Myš",
+    "c": "Monitor",
+    "d": "Scanner",
+    "correct": "C"
+  },
+  {
+    "question": "Který soubor je spustitelný ve Windows?",
+    "a": ".txt",
+    "b": ".jpg",
+    "c": ".exe",
+    "d": ".pdf",
+    "correct": "C"
+  },
+  {
+    "question": "Co je phishing?",
+    "a": "Typ viru",
+    "b": "Způsob podvodu",
+    "c": "Programovací jazyk",
+    "d": "Šifrování",
+    "correct": "B"
+  },
+  {
+    "question": "K čemu slouží Git?",
+    "a": "Editace videa",
+    "b": "Správa verzí",
+    "c": "Databáze",
+    "d": "Operační systém",
+    "correct": "B"
+  },
+  {
+    "question": "Co je binární strom?",
+    "a": "Datová struktura",
+    "b": "Síťový protokol",
+    "c": "Typ paměti",
+    "d": "Operační systém",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je rozsah IPv4 adres?",
+    "a": "16 bitů",
+    "b": "32 bitů",
+    "c": "64 bitů",
+    "d": "128 bitů",
+    "correct": "B"
+  },
+  {
+    "question": "Který jazyk se používá pro stylování webu?",
+    "a": "HTML",
+    "b": "CSS",
+    "c": "PHP",
+    "d": "SQL",
+    "correct": "B"
+  },
+  {
+    "question": "Co je cloud?",
+    "a": "Typ procesoru",
+    "b": "Vzdálené úložiště a služby",
+    "c": "Operační paměť",
+    "d": "Programovací jazyk",
+    "correct": "B"
+  },
+  {
+    "question": "Co znamená GUI?",
+    "a": "General User Interface",
+    "b": "Graphical User Interface",
+    "c": "Global Utility Interface",
+    "d": "Graphic Unit Input",
+    "correct": "B"
+  },
+  {
+    "question": "Který jazyk běží v prohlížeči?",
+    "a": "Java",
+    "b": "C++",
+    "c": "JavaScript",
+    "d": "Python",
+    "correct": "C"
+  },
+  {
+    "question": "Co je databáze?",
+    "a": "Program",
+    "b": "Uspořádaná data",
+    "c": "Hardware",
+    "d": "Operační systém",
+    "correct": "B"
+  },
+  {
+    "question": "Co znamená zkratka LAN?",
+    "a": "Large Area Network",
+    "b": "Local Area Network",
+    "c": "Logical Access Node",
+    "d": "Long Area Network",
+    "correct": "B"
+  },
+  {
+    "question": "K čemu slouží kompilátor?",
+    "a": "Spuštění programu",
+    "b": "Překlad zdrojového kódu",
+    "c": "Ukládání dat",
+    "d": "Správa sítě",
+    "correct": "B"
+  },
+  {
+    "question": "Co je to bug?",
+    "a": "Vylepšení programu",
+    "b": "Chyba v programu",
+    "c": "Verze softwaru",
+    "d": "Typ licence",
+    "correct": "B"
+  },
+  {
+    "question": "Které zařízení propojuje sítě?",
+    "a": "Switch",
+    "b": "Router",
+    "c": "Klávesnice",
+    "d": "Monitor",
+    "correct": "B"
+  },
+  {
+    "question": "Co je to API?",
+    "a": "Programovací jazyk",
+    "b": "Rozhraní pro komunikaci",
+    "c": "Operační systém",
+    "d": "Databáze",
+    "correct": "B"
+  },
+  {
+    "question": "Který z těchto je typ malware?",
+    "a": "Firewall",
+    "b": "Trojan",
+    "c": "Antivirus",
+    "d": "VPN",
+    "correct": "B"
+  },
+  {
+    "question": "Co je objekt v OOP?",
+    "a": "Datový typ",
+    "b": "Instance třídy",
+    "c": "Funkce",
+    "d": "Cyklus",
+    "correct": "B"
+  },
+  {
+    "question": "K čemu slouží SSD oproti HDD?",
+    "a": "Je levnější",
+    "b": "Je pomalejší",
+    "c": "Je rychlejší",
+    "d": "Má menší kapacitu vždy",
+    "correct": "C"
+  },
+  {
+    "question": "Co je šifrování?",
+    "a": "Mazání dat",
+    "b": "Záloha dat",
+    "c": "Ochrana dat",
+    "d": "Kompilace",
+    "correct": "C"
+  },
+  {
+    "question": "Který protokol slouží pro e-maily?",
+    "a": "HTTP",
+    "b": "FTP",
+    "c": "SMTP",
+    "d": "IP",
+    "correct": "C"
+  },
+  {
+    "question": "Co je boolean výraz?",
+    "a": "Číselný výraz",
+    "b": "Textový výraz",
+    "c": "Pravda / nepravda",
+    "d": "Cyklus",
+    "correct": "C"
+  },
+  {
+    "question": "K čemu slouží VPN?",
+    "a": "Zrychlení PC",
+    "b": "Zabezpečení připojení",
+    "c": "Ukládání souborů",
+    "d": "Programování",
+    "correct": "B"
+  },
+  {
+    "question": "Co je framework?",
+    "a": "Hardware",
+    "b": "Základ pro vývoj aplikací",
+    "c": "Databáze",
+    "d": "Operační systém",
+    "correct": "B"
+  },
+  {
+    "question": "Jaký je výchozí port pro HTTP?",
+    "a": "21",
+    "b": "25",
+    "c": "80",
+    "d": "443",
+    "correct": "C"
+  },
+  {
+    "question": "Co je to loop?",
+    "a": "Podmínka",
+    "b": "Cyklus",
+    "c": "Funkce",
+    "d": "Proměnná",
+    "correct": "B"
+  },
+  {
+    "question": "Který jazyk je čistě značkovací?",
+    "a": "CSS",
+    "b": "HTML",
+    "c": "JavaScript",
+    "d": "Python",
+    "correct": "B"
+  },
+  {
+    "question": "Co je virtualizace?",
+    "a": "Zrychlení procesoru",
+    "b": "Běh více OS na jednom stroji",
+    "c": "Záloha dat",
+    "d": "Šifrování",
+    "correct": "B"
+  },
+  {
+    "question": "K čemu slouží cache?",
+    "a": "Dlouhodobé ukládání",
+    "b": "Zrychlení přístupu k datům",
+    "c": "Záloha",
+    "d": "Síťová komunikace",
+    "correct": "B"
+  },
+  {
+    "question": "Co je to IDE?",
+    "a": "Editor obrázků",
+    "b": "Integrované vývojové prostředí",
+    "c": "Operační systém",
+    "d": "Databáze",
+    "correct": "B"
+  },
+  {
+    "question": "Který algoritmus je třídicí?",
+    "a": "Binary search",
+    "b": "Quick sort",
+    "c": "DFS",
+    "d": "BFS",
+    "correct": "B"
+  },
+  {
+    "question": "Co znamená zkratka WWW?",
+    "a": "World Wide Web",
+    "b": "Wide World Web",
+    "c": "Web World Wide",
+    "d": "World Web Window",
+    "correct": "A"
+  },
+  {
+    "question": "Co je to databázová tabulka?",
+    "a": "Program",
+    "b": "Struktura dat",
+    "c": "Operační systém",
+    "d": "Server",
+    "correct": "B"
+  },
+  {
+    "question": "Který z těchto není programovací jazyk?",
+    "a": "Java",
+    "b": "Python",
+    "c": "HTML",
+    "d": "C#",
+    "correct": "C"
+  }
+]

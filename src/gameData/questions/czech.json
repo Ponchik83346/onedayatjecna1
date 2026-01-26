@@ -1,0 +1,242 @@
+[
+  {
+    "question": "Kdo napsal román 'Babička'?",
+    "a": "Karel Čapek",
+    "b": "Božena Němcová",
+    "c": "Alois Jirásek",
+    "d": "Jan Neruda",
+    "correct": "B"
+  },
+  {
+    "question": "Které dílo napsal Franz Kafka?",
+    "a": "Proces",
+    "b": "Kytice",
+    "c": "Babička",
+    "d": "Maryša",
+    "correct": "A"
+  },
+  {
+    "question": "Co je hlavním tématem 'Kytice' od Karla Jaromíra Erbena?",
+    "a": "Historie českého národa",
+    "b": "Pohádkové a lidové motivy",
+    "c": "Politická satira",
+    "d": "Romantická láska",
+    "correct": "B"
+  },
+  {
+    "question": "Kdo je autorem dramatu 'Maryša'?",
+    "a": "Alois Jirásek",
+    "b": "Karel Čapek",
+    "c": "Vítězslav Nezval",
+    "d": "Vilém Mrštík a Alois Mrštík",
+    "correct": "D"
+  },
+  {
+    "question": "Jaký je hlavní literární směr díla 'Babička'?",
+    "a": "Realismus",
+    "b": "Romantismus",
+    "c": "Symbolismus",
+    "d": "Expresionismus",
+    "correct": "B"
+  },
+  {
+    "question": "Kdo napsal 'Válku světů'?",
+    "a": "H. G. Wells",
+    "b": "Jules Verne",
+    "c": "Edgar Allan Poe",
+    "d": "Oscar Wilde",
+    "correct": "A"
+  },
+  {
+    "question": "Kdo je autorem románu '1984'?",
+    "a": "George Orwell",
+    "b": "Aldous Huxley",
+    "c": "Ray Bradbury",
+    "d": "F. Scott Fitzgerald",
+    "correct": "A"
+  },
+  {
+    "question": "Jaké téma převládá v díle 'Malý princ'?",
+    "a": "Politická kritika",
+    "b": "Dětství a přátelství",
+    "c": "Válečné konflikty",
+    "d": "Romantická láska",
+    "correct": "B"
+  },
+  {
+    "question": "Kdo napsal 'Romeo a Julie'?",
+    "a": "Christopher Marlowe",
+    "b": "William Shakespeare",
+    "c": "Oscar Wilde",
+    "d": "John Milton",
+    "correct": "B"
+  },
+  {
+    "question": "Které dílo napsal Alois Jirásek?",
+    "a": "F. L. Věk",
+    "b": "Babička",
+    "c": "Kytice",
+    "d": "Maryša",
+    "correct": "A"
+  },
+  {
+    "question": "Kdo napsal 'Píseň o Rolandovi'?",
+    "a": "Neznámý autor",
+    "b": "Božena Němcová",
+    "c": "Karel Čapek",
+    "d": "Jan Amos Komenský",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je hlavní literární směr Karla Čapka?",
+    "a": "Realismus",
+    "b": "Futurismus",
+    "c": "Modernismus",
+    "d": "Romantismus",
+    "correct": "C"
+  },
+  {
+    "question": "Kdo napsal 'Mistr a Markétka'?",
+    "a": "Ivan Olbracht",
+    "b": "Bohumil Hrabal",
+    "c": "Milan Kundera",
+    "d": "Michail Bulgakov",
+    "correct": "D"
+  },
+  {
+    "question": "Jaký je hlavní motiv v básni 'Kytice'?",
+    "a": "Smrt a láska",
+    "b": "Příroda a vlastenectví",
+    "c": "Dětství",
+    "d": "Humor a satira",
+    "correct": "A"
+  },
+  {
+    "question": "Kdo napsal 'Povídky malostranské'?",
+    "a": "Jan Neruda",
+    "b": "Karel Hynek Mácha",
+    "c": "Alois Jirásek",
+    "d": "Franz Kafka",
+    "correct": "A"
+  },
+  {
+    "question": "Co je hlavním tématem '1984' od George Orwella?",
+    "a": "Romantická láska",
+    "b": "Totalitní režim a kontrola společnosti",
+    "c": "Dobrodružství v přírodě",
+    "d": "Humor a satira",
+    "correct": "B"
+  },
+  {
+    "question": "Kdo napsal 'R.U.R.'?",
+    "a": "Karel Čapek",
+    "b": "Alois Jirásek",
+    "c": "Franz Kafka",
+    "d": "Vítězslav Nezval",
+    "correct": "A"
+  },
+  {
+    "question": "Který český autor je spojen s modernismem a absurdním dramatem?",
+    "a": "Karel Čapek",
+    "b": "Vítězslav Nezval",
+    "c": "Franz Kafka",
+    "d": "Jan Neruda",
+    "correct": "C"
+  },
+  {
+    "question": "Co je hlavním tématem 'Malého prince'?",
+    "a": "Cesta vesmírem a poznání života",
+    "b": "Politická kritika",
+    "c": "Historie českého národa",
+    "d": "Romantická láska",
+    "correct": "A"
+  },
+  {
+    "question": "Kdo napsal 'F. L. Věk'?",
+    "a": "Alois Jirásek",
+    "b": "Božena Němcová",
+    "c": "Karel Čapek",
+    "d": "Franz Kafka",
+    "correct": "A"
+  },
+  {
+    "question": "Kdo je autorem 'Babičky'?",
+    "a": "Božena Němcová",
+    "b": "Karel Hynek Mácha",
+    "c": "Jan Neruda",
+    "d": "Vítězslav Nezval",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je literární směr 'Maryši'?",
+    "a": "Romantismus",
+    "b": "Realismus",
+    "c": "Symbolismus",
+    "d": "Modernismus",
+    "correct": "B"
+  },
+  {
+    "question": "Kdo napsal 'Chaloupka na vršku'?",
+    "a": "Alois Jirásek",
+    "b": "Karel Jaromír Erben",
+    "c": "Božena Němcová",
+    "d": "Jan Neruda",
+    "correct": "C"
+  },
+  {
+    "question": "Kdo napsal 'R.U.R.'?",
+    "a": "Franz Kafka",
+    "b": "Karel Čapek",
+    "c": "Alois Jirásek",
+    "d": "Vítězslav Nezval",
+    "correct": "B"
+  },
+  {
+    "question": "Které dílo napsal Karel Hynek Mácha?",
+    "a": "Máj",
+    "b": "Babička",
+    "c": "Maryša",
+    "d": "F. L. Věk",
+    "correct": "A"
+  },
+  {
+    "question": "Co je hlavním motivem v básni 'Máj'?",
+    "a": "Láska a smrt",
+    "b": "Historické události",
+    "c": "Pohádky",
+    "d": "Humor",
+    "correct": "A"
+  },
+  {
+    "question": "Kdo napsal 'Osudy dobrého vojáka Švejka'?",
+    "a": "Jaroslav Hašek",
+    "b": "Karel Čapek",
+    "c": "Franz Kafka",
+    "d": "Alois Jirásek",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký je hlavní literární směr 'Osudů dobrého vojáka Švejka'?",
+    "a": "Romantismus",
+    "b": "Realismus",
+    "c": "Satira a humor",
+    "d": "Symbolismus",
+    "correct": "C"
+  },
+  {
+    "question": "Kdo napsal 'Hledání ztraceného času'?",
+    "a": "Marcel Proust",
+    "b": "Franz Kafka",
+    "c": "George Orwell",
+    "d": "Aldous Huxley",
+    "correct": "A"
+  },
+  {
+    "question": "Jaký literární směr je spojen s dílem 'R.U.R.'?",
+    "a": "Expresionismus",
+    "b": "Romantismus",
+    "c": "Realismus",
+    "d": "Baroko",
+    "correct": "A"
+  }
+]

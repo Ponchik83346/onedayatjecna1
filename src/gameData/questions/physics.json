@@ -1,0 +1,218 @@
+[
+  {
+    "question": "Auto jede rovnoměrně rychlostí 72 km/h. Jakou dráhu ujede za 2 hodiny?",
+    "a": "144 km",
+    "b": "72 km",
+    "c": "36 km",
+    "d": "200 km",
+    "correct": "A"
+  },
+  {
+    "question": "Těleso o hmotnosti 5 kg má zrychlení 2 m/s². Jaká je působící síla?",
+    "a": "10 N",
+    "b": "7 N",
+    "c": "2,5 N",
+    "d": "5 N",
+    "correct": "A"
+  },
+  {
+    "question": "Kámen padá z výšky 20 m (g = 10 m/s²). Jaká je jeho rychlost při dopadu?",
+    "a": "20 m/s",
+    "b": "10 m/s",
+    "c": "40 m/s",
+    "d": "200 m/s",
+    "correct": "A"
+  },
+  {
+    "question": "Auto se rozjede z klidu a zrychluje rovnoměrně 3 m/s² po dobu 5 s. Jakou rychlost dosáhne?",
+    "a": "15 m/s",
+    "b": "8 m/s",
+    "c": "12 m/s",
+    "d": "5 m/s",
+    "correct": "A"
+  },
+  {
+    "question": "Těleso o hmotnosti 10 kg je zvednuto do výšky 3 m. Jaká je jeho potenciální energie? (g = 10 m/s²)",
+    "a": "300 J",
+    "b": "30 J",
+    "c": "100 J",
+    "d": "3000 J",
+    "correct": "A"
+  },
+  {
+    "question": "Kulička o hmotnosti 0,5 kg se pohybuje rychlostí 4 m/s. Jaká je její kinetická energie?",
+    "a": "4 J",
+    "b": "8 J",
+    "c": "16 J",
+    "d": "2 J",
+    "correct": "B"
+  },
+  {
+    "question": "Auto o hmotnosti 1000 kg brzdí z 20 m/s na 0 m/s. Jaká je práce brzdící síly?",
+    "a": "200 000 J",
+    "b": "400 000 J",
+    "c": "100 000 J",
+    "d": "500 000 J",
+    "correct": "B"
+  },
+  {
+    "question": "Těleso padá volně 4 s (g = 10 m/s²). Jakou dráhu urazí?",
+    "a": "80 m",
+    "b": "40 m",
+    "c": "160 m",
+    "d": "20 m",
+    "correct": "A"
+  },
+  {
+    "question": "Kámen je hozen vodorovně rychlostí 5 m/s. Jakou dráhu urazí za 2 s?",
+    "a": "10 m",
+    "b": "5 m",
+    "c": "20 m",
+    "d": "2,5 m",
+    "correct": "A"
+  },
+  {
+    "question": "Pružina má tuhost 200 N/m a je stlačena o 0,1 m. Jaká je pružná energie?",
+    "a": "1 J",
+    "b": "2 J",
+    "c": "0,5 J",
+    "d": "10 J",
+    "correct": "B"
+  },
+  {
+    "question": "Auto jede rychlostí 36 km/h. Jakou rychlost má v m/s?",
+    "a": "10 m/s",
+    "b": "36 m/s",
+    "c": "100 m/s",
+    "d": "12 m/s",
+    "correct": "A"
+  },
+  {
+    "question": "Těleso o hmotnosti 2 kg se pohybuje rychlostí 3 m/s. Jaká je jeho hybnost?",
+    "a": "6 kg·m/s",
+    "b": "5 kg·m/s",
+    "c": "9 kg·m/s",
+    "d": "1,5 kg·m/s",
+    "correct": "A"
+  },
+  {
+    "question": "Kámen padá z výšky 5 m. Jaká je jeho rychlost při dopadu? (g = 10 m/s²)",
+    "a": "10 m/s",
+    "b": "5 m/s",
+    "c": "sqrt(100) m/s",
+    "d": "sqrt(50) m/s",
+    "correct": "D"
+  },
+  {
+    "question": "Těleso se pohybuje po kružnici poloměru 2 m rychlostí 4 m/s. Jaké je dostředivé zrychlení?",
+    "a": "8 m/s²",
+    "b": "16 m/s²",
+    "c": "2 m/s²",
+    "d": "4 m/s²",
+    "correct": "B"
+  },
+  {
+    "question": "Auto urazí dráhu 100 m z klidu za 5 s. Jaké je jeho zrychlení?",
+    "a": "8 m/s²",
+    "b": "5 m/s²",
+    "c": "10 m/s²",
+    "d": "4 m/s²",
+    "correct": "D"
+  },
+  {
+    "question": "Těleso o hmotnosti 3 kg má kinetickou energii 54 J. Jaká je jeho rychlost?",
+    "a": "6 m/s",
+    "b": "9 m/s",
+    "c": "3 m/s",
+    "d": "12 m/s",
+    "correct": "A"
+  },
+  {
+    "question": "Těleso padá volně z výšky 45 m. Jak dlouho padá? (g = 10 m/s²)",
+    "a": "3 s",
+    "b": "4,5 s",
+    "c": "9 s",
+    "d": "6 s",
+    "correct": "A"
+  },
+  {
+    "question": "Těleso o hmotnosti 50 kg stojí na plošině. Jaká je jeho tíhová síla? (g = 10 m/s²)",
+    "a": "500 N",
+    "b": "50 N",
+    "c": "1000 N",
+    "d": "5 N",
+    "correct": "A"
+  },
+  {
+    "question": "Pružina je natažena silou 20 N a prodloužena o 0,2 m. Jaká je tuhost pružiny?",
+    "a": "100 N/m",
+    "b": "200 N/m",
+    "c": "50 N/m",
+    "d": "20 N/m",
+    "correct": "A"
+  },
+  {
+    "question": "Auto jede rychlostí 15 m/s a brzdí rovnoměrně na 0 m/s za 5 s. Jaké je zrychlení?",
+    "a": "-3 m/s²",
+    "b": "3 m/s²",
+    "c": "-15 m/s²",
+    "d": "0,3 m/s²",
+    "correct": "A"
+  },
+  {
+    "question": "Těleso má hmotnost 0,2 kg a rychlost 10 m/s. Jaká je jeho kinetická energie?",
+    "a": "10 J",
+    "b": "5 J",
+    "c": "20 J",
+    "d": "2 J",
+    "correct": "A"
+  },
+  {
+    "question": "Těleso padá z výšky 80 m. Jaká je jeho rychlost při dopadu? (g = 10 m/s²)",
+    "a": "40 m/s",
+    "b": "20 m/s",
+    "c": "80 m/s",
+    "d": "10 m/s",
+    "correct": "A"
+  },
+  {
+    "question": "Auto urazí dráhu 50 m z klidu s rovnoměrným zrychlením 5 m/s². Jaká je jeho konečná rychlost?",
+    "a": "20 m/s",
+    "b": "25 m/s",
+    "c": "15 m/s",
+    "d": "10 m/s",
+    "correct": "A"
+  },
+  {
+    "question": "Těleso o hmotnosti 4 kg padá volně. Jaká je jeho hybnost po 3 s? (g = 10 m/s²)",
+    "a": "120 kg·m/s",
+    "b": "30 kg·m/s",
+    "c": "60 kg·m/s",
+    "d": "12 kg·m/s",
+    "correct": "C"
+  },
+  {
+    "question": "Těleso má kinetickou energii 200 J a hmotnost 8 kg. Jaká je jeho rychlost?",
+    "a": "5 m/s",
+    "b": "7 m/s",
+    "c": "10 m/s",
+    "d": "15 m/s",
+    "correct": "C"
+  },
+  {
+    "question": "Těleso padá volně z výšky 10 m. Jak dlouho padá? (g = 10 m/s²)",
+    "a": "1 s",
+    "b": "2 s",
+    "c": "√2 s",
+    "d": "10 s",
+    "correct": "B"
+  },
+  {
+    "question": "Těleso má hmotnost 6 kg a je zvednuto do výšky 4 m. Jaká je jeho potenciální energie? (g = 10 m/s²)",
+    "a": "240 J",
+    "b": "60 J",
+    "c": "400 J",
+    "d": "24 J",
+    "correct": "A"
+  }
+]
