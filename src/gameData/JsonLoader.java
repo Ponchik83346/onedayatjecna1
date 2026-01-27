@@ -15,9 +15,7 @@ public final class JsonLoader {
     }
 
     public static <T> T load(String resourcePath, Class<T> c) {
-        try (InputStream is = JsonLoader.class
-                .getClassLoader()
-                .getResourceAsStream(resourcePath)) {
+        try (InputStream is = JsonLoader.class.getResourceAsStream(resourcePath)) {
 
             if (is == null) {
                 throw new IllegalStateException("Nenalezen resource: " + resourcePath);

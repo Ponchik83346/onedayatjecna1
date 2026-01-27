@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameData {
-    public ArrayList<Food> foods;
+    public ArrayList<Food> food;
     public ArrayList<Material> materials;
     public ArrayList<Teacher> teachers;
     public ArrayList<Room> rooms;
@@ -26,7 +26,7 @@ public class GameData {
 
         data.teachers = JsonLoader.load("/teachers.json", TeachersData.class).getTeachers();
         data.rooms    = JsonLoader.load("/rooms.json", RoomsData.class).getRooms();
-        data.foods     = JsonLoader.load("/food.json", FoodData.class).getFood();
+        data.food     = JsonLoader.load("/food.json", FoodData.class).getFood();
         data.materials = JsonLoader.load("/materials.json", MaterialsData.class).getMaterials();
 
         return data;
@@ -34,6 +34,6 @@ public class GameData {
 
     public List<Teacher> getTeachers() { return teachers; }
     public List<Room> getRooms() { return rooms; }
-    public List<Food> getFood() { return foods; }
+    public List<Food> getFood() { return food; }
     public List<Material> getMaterials() { return materials; }
 }

@@ -1,4 +1,5 @@
-[
+{
+  "teachers": [
   {"name": "NEUGEBAUEROVA", "baseAI": 10, "questionSet": null, "timeLimit": 20},
   {"name": "SEDOVA", "baseAI": 12, "questionSet": null, "timeLimit": 20},
   {"name": "STUDENKOVA", "baseAI": 12, "questionSet": null, "timeLimit": 12},
@@ -8,4 +9,5 @@
   {"name": "PAPULA", "baseAI": 12, "questionSet": null, "timeLimit": 20},
   {"name": "BODNAROVA", "baseAI": 12, "questionSet": null, "timeLimit": 20},
   {"name": "MANDIK", "baseAI": 20, "questionSet": null, "timeLimit": 15}
-]
+  ]
+}

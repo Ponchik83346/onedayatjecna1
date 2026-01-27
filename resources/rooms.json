@@ -1,8 +1,10 @@
-[
+{
+  "rooms": [
   {"name": "CLASSROOM"},
   {"name": "CABINET"},
   {"name": "LUNCHROOM"},
   {"name": "BUFET"},
   {"name": "LAB"},
   {"name": "PRINCIPALSOFFICE"}
-]
+  ]
+}

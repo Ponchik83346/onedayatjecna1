@@ -1,0 +1,36 @@
+{
+  "food": [
+    {
+      "name": "BAGETA",
+      "stamina": 20
+    },
+    {
+      "name": "CORNFLAKES",
+      "stamina": 25
+    },
+    {
+      "name": "KEBAB",
+      "stamina": 30
+    },
+    {
+      "name": "PANINI",
+      "stamina": 15
+    },
+    {
+      "name": "HOTDOG",
+      "stamina": 10
+    },
+    {
+      "name": "SVICKOVA",
+      "stamina": 50
+    },
+    {
+      "name": "SUNKOFLEKY",
+      "stamina": 75
+    },
+    {
+      "name": "PIZZA",
+      "stamina": 100
+    }
+  ]
+}

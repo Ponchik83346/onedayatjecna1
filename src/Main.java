@@ -5,6 +5,6 @@ import gameData.GameData;
 public class Main {
     public static void main(String[] args) {
         GameData GD = GameData.load();
-        GD.ge
+        System.out.println(GD.getTeachers());
     }
 }
