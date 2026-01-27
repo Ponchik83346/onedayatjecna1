@@ -2,7 +2,7 @@ package model;
 import items.Inventory;
 import items.Item;
 
-public class Player extends Character {
+public class Player extends GameCharacter {
 
     private int stamina = 100;
     private Inventory inventory = new Inventory();

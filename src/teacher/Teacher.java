@@ -1,8 +1,8 @@
 package teacher;
 import map.Door;
-import model.Character;
-import java.util.Random;
-public class Teacher extends Character {
+import model.GameCharacter;
+
+public class Teacher extends GameCharacter {
     private String name;
     private int aiLevel;
     private QuestionSet questions;

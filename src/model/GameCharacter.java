@@ -1,7 +1,7 @@
 package model;
 import map.Door;
 
-public abstract class Character {
+public abstract class GameCharacter {
 
     protected Door currentDoor;
     protected boolean insideRoom = false;
