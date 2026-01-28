@@ -1,13 +1,13 @@
 {
   "teachers": [
-  {"name": "NEUGEBAUEROVA", "baseAI": 10, "questionSet": null, "timeLimit": 20},
-  {"name": "SEDOVA", "baseAI": 12, "questionSet": null, "timeLimit": 20},
-  {"name": "STUDENKOVA", "baseAI": 12, "questionSet": null, "timeLimit": 12},
-  {"name": "PROCHAZKA", "baseAI": 10, "questionSet": null, "timeLimit": 15},
-  {"name": "KUCHARIK", "baseAI": 15, "questionSet": null, "timeLimit": 30},
-  {"name": "ZILINCAR", "baseAI": 18, "questionSet": null, "timeLimit": 60},
-  {"name": "PAPULA", "baseAI": 12, "questionSet": null, "timeLimit": 20},
-  {"name": "BODNAROVA", "baseAI": 12, "questionSet": null, "timeLimit": 20},
-  {"name": "MANDIK", "baseAI": 20, "questionSet": null, "timeLimit": 15}
+  {"name": "NEUGEBAUEROVA", "aiLevel": 10, "questionSet": null, "timeLimit": 20},
+  {"name": "SEDOVA", "aiLevel": 12, "questionSet": null, "timeLimit": 20},
+  {"name": "STUDENKOVA", "aiLevel": 12, "questionSet": null, "timeLimit": 12},
+  {"name": "PROCHAZKA", "aiLevel": 10, "questionSet": null, "timeLimit": 15},
+  {"name": "KUCHARIK", "aiLevel": 15, "questionSet": null, "timeLimit": 30},
+  {"name": "ZILINCAR", "aiLevel": 18, "questionSet": null, "timeLimit": 60},
+  {"name": "PAPULA", "aiLevel": 12, "questionSet": null, "timeLimit": 20},
+  {"name": "BODNAROVA", "aiLevel": 12, "questionSet": null, "timeLimit": 20},
+  {"name": "MANDIK", "aiLevel": 20, "questionSet": null, "timeLimit": 15}
   ]
 }

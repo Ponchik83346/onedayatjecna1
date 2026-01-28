@@ -9,20 +9,63 @@ public class Teacher extends GameCharacter {
     private Door startDoor;
     private int timeLimit;
 
-    public Teacher(String name, int aiLevel, QuestionSet questions, Door startDoor, int timeLimit) {
+    public void move() {
+    }
+
+    public void askQuestion() {
+    }
+
+    public void updateAiLevel() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAiLevel() {
+        return aiLevel;
+    }
+
+    public void setAiLevel(int aiLevel) {
         this.aiLevel = aiLevel;
+    }
+
+    public QuestionSet getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(QuestionSet questions) {
         this.questions = questions;
+    }
+
+    public Door getStartDoor() {
+        return startDoor;
+    }
+
+    public void setStartDoor(Door startDoor) {
         this.startDoor = startDoor;
+    }
+
+    public int getTimeLimit() {
+        return timeLimit;
+    }
+
+    public void setTimeLimit(int timeLimit) {
         this.timeLimit = timeLimit;
     }
 
-    public void move() {
-    }
-    public void askQuestion() {
-
-    }
-    public void updateAiLevel() {
-
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "name='" + name + '\'' +
+                ", aiLevel=" + aiLevel +
+                ", questions=" + questions +
+                ", startDoor=" + startDoor +
+                ", timeLimit=" + timeLimit +
+                '}';
     }
 }
