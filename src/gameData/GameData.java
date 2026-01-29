@@ -32,6 +32,7 @@ public class GameData {
         return data;
     }
 
+
     public List<Teacher> getTeachers() { return teachers; }
     public List<Room> getRooms() { return rooms; }
     public List<Food> getFood() { return food; }

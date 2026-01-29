@@ -1,14 +1,14 @@
 package items;
 
 public class Food extends Item {
-    private int staminaAdded;
+    private int stamina;
 
-    public Food(int staminaAdded, String name) {
-        super(name);
-        this.staminaAdded = staminaAdded;
+    public Food(int stamina, String name, int chanceToSpawn) {
+        super(name, chanceToSpawn);
+        this.stamina = stamina;
     }
 
     public int getStaminaAdded() {
-        return staminaAdded;
+        return stamina;
     }
 }

@@ -6,5 +6,7 @@ public enum RoomType {
     LUNCHROOM,
     BUFET,
     LAB,
-    PRINCIPALSOFFICE
+    PRINCIPALSOFFICE,
+    ELEVATOR,
+    STAIRS
 }
