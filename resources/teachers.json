@@ -1,13 +1,13 @@
 {
   "teachers": [
-  {"name": "NEUGEBAUEROVA", "aiLevel": 10, "questionSet": null, "timeLimit": 20},
-  {"name": "SEDOVA", "aiLevel": 12, "questionSet": null, "timeLimit": 20},
-  {"name": "STUDENKOVA", "aiLevel": 12, "questionSet": null, "timeLimit": 12},
-  {"name": "PROCHAZKA", "aiLevel": 10, "questionSet": null, "timeLimit": 15},
-  {"name": "KUCHARIK", "aiLevel": 15, "questionSet": null, "timeLimit": 30},
-  {"name": "ZILINCAR", "aiLevel": 18, "questionSet": null, "timeLimit": 60},
-  {"name": "PAPULA", "aiLevel": 12, "questionSet": null, "timeLimit": 20},
-  {"name": "BODNAROVA", "aiLevel": 12, "questionSet": null, "timeLimit": 20},
-  {"name": "MANDIK", "aiLevel": 20, "questionSet": null, "timeLimit": 15}
+  {"name": "NEUGEBAUEROVA", "aiLevel": 10, "questionSet": "math", "timeLimit": 20},
+  {"name": "SEDOVA", "aiLevel": 12, "questionSet": "it", "timeLimit": 20},
+  {"name": "STUDENKOVA", "aiLevel": 12, "questionSet": "czech", "timeLimit": 12},
+  {"name": "PROCHAZKA", "aiLevel": 10, "questionSet": "td", "timeLimit": 15},
+  {"name": "KUCHARIK", "aiLevel": 15, "questionSet": "enm", "timeLimit": 30},
+  {"name": "ZILINCAR", "aiLevel": 18, "questionSet": "physics", "timeLimit": 60},
+  {"name": "PAPULA", "aiLevel": 12, "questionSet": "it", "timeLimit": 20},
+  {"name": "BODNAROVA", "aiLevel": 12, "questionSet": "chemistry", "timeLimit": 20},
+  {"name": "MANDIK", "aiLevel": 20, "questionSet": "all", "timeLimit": 15}
   ]
 }

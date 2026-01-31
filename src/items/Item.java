@@ -9,6 +9,10 @@ public abstract class Item {
         this.chanceToSpawn = chanceToSpawn;
     }
 
+    public Item(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

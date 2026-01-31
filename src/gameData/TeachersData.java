@@ -1,14 +1,14 @@
 package gameData;
-
 import teacher.Teacher;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class TeachersData {
-    private ArrayList<Teacher> teachers;
+import java.util.ArrayList;
 
-    public ArrayList<Teacher> getTeachers() {
+public class TeachersData {
+    private ArrayList<TeacherData> teachers;
+
+    public ArrayList<TeacherData> getTeachers() {
         return teachers;
     }
 }

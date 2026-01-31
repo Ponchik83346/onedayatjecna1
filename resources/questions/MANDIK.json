@@ -1,0 +1,1818 @@
+[
+        {
+          "question": "Kolik molů vody je v 18 g H₂O?",
+          "a": "1 mol",
+          "b": "0,5 mol",
+          "c": "2 mol",
+          "d": "0,1 mol",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je oxidační stav síry v H₂SO₄?",
+          "a": "+4",
+          "b": "+6",
+          "c": "+2",
+          "d": "0",
+          "correct": "B"
+        },
+        {
+          "question": "Jaká je molekulová hmotnost CO₂?",
+          "a": "44 g/mol",
+          "b": "28 g/mol",
+          "c": "32 g/mol",
+          "d": "16 g/mol",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik protonů má atom uhlíku?",
+          "a": "6",
+          "b": "12",
+          "c": "14",
+          "d": "8",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je chemická formule hydroxidu sodného?",
+          "a": "NaOH",
+          "b": "KOH",
+          "c": "NaH",
+          "d": "H₂O",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký pH má neutrální roztok při 25 °C?",
+          "a": "7",
+          "b": "0",
+          "c": "14",
+          "d": "1",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik gramů NaCl je potřeba na přípravu 0,5 mol roztoku?",
+          "a": "29,2 g",
+          "b": "11,7 g",
+          "c": "58,5 g",
+          "d": "23,4 g",
+          "correct": "D"
+        },
+        {
+          "question": "Jaká je hlavní složka chemického vaziva v vápně (CaO) po reakci s vodou?",
+          "a": "Ca(OH)₂",
+          "b": "CaCO₃",
+          "c": "CaSO₄",
+          "d": "CaCl₂",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik atomů vodíku je v jedné molekule glukózy (C₆H₁₂O₆)?",
+          "a": "12",
+          "b": "6",
+          "c": "18",
+          "d": "24",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký typ reakce je HCl + NaOH → NaCl + H₂O?",
+          "a": "neutralizace",
+          "b": "oxidace",
+          "c": "redox",
+          "d": "hydrolýza",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je elektronegativita kyslíku přibližně?",
+          "a": "3,5",
+          "b": "2,1",
+          "c": "1,0",
+          "d": "4,0",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik elektronů má iont Na⁺?",
+          "a": "10",
+          "b": "11",
+          "c": "12",
+          "d": "9",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je chemická formule kyseliny sírové?",
+          "a": "H₂SO₄",
+          "b": "HCl",
+          "c": "HNO₃",
+          "d": "H₂CO₃",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je hlavní produkt spalování uhlíku ve vzduchu?",
+          "a": "CO₂",
+          "b": "CO",
+          "c": "C",
+          "d": "CH₄",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik gramů H₂ je v 2 mol H₂?",
+          "a": "4 g",
+          "b": "2 g",
+          "c": "1 g",
+          "d": "8 g",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je hlavní složka tvrdé vody?",
+          "a": "Ca²⁺ a Mg²⁺",
+          "b": "Na⁺ a K⁺",
+          "c": "Cl⁻ a NO₃⁻",
+          "d": "HCO₃⁻",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik molů HCl reaguje s 1 mol NaOH?",
+          "a": "1 mol",
+          "b": "0,5 mol",
+          "c": "2 mol",
+          "d": "0,25 mol",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je oxidace sodíku při tvorbě Na₂O?",
+          "a": "+1",
+          "b": "+2",
+          "c": "0",
+          "d": "-1",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik gramů kyseliny sírové reaguje se 1 mol NaOH?",
+          "a": "49 g",
+          "b": "98 g",
+          "c": "24,5 g",
+          "d": "196 g",
+          "correct": "C"
+        },
+        {
+          "question": "Jaká je chemická formule uhličitanu vápenatého?",
+          "a": "CaCO₃",
+          "b": "CaSO₄",
+          "c": "CaO",
+          "d": "Ca(OH)₂",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik molů vody vznikne při spálení 2 mol CH₄?",
+          "a": "4 mol",
+          "b": "2 mol",
+          "c": "1 mol",
+          "d": "8 mol",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je hlavní produkt reakce Zn + HCl?",
+          "a": "ZnCl₂ + H₂",
+          "b": "ZnH + Cl₂",
+          "c": "ZnCl + H",
+          "d": "ZnO + HCl",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik elektronů je v molekule O₂?",
+          "a": "16",
+          "b": "8",
+          "c": "32",
+          "d": "12",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je molární hmotnost NH₃?",
+          "a": "17 g/mol",
+          "b": "14 g/mol",
+          "c": "18 g/mol",
+          "d": "16 g/mol",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik gramů Na je v 1 mol Na?",
+          "a": "23 g",
+          "b": "11,5 g",
+          "c": "46 g",
+          "d": "12 g",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je chemická formule chloridu draselného?",
+          "a": "KCl",
+          "b": "NaCl",
+          "c": "CaCl₂",
+          "d": "MgCl₂",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je hlavní oxid při spalování železa?",
+          "a": "Fe₂O₃",
+          "b": "FeO",
+          "c": "Fe₃O₄",
+          "d": "Fe(OH)₃",
+          "correct": "A"
+        },
+        {
+          "question": "Kolik molů O₂ je potřeba pro spálení 1 mol CH₄?",
+          "a": "2 mol",
+          "b": "1 mol",
+          "c": "0,5 mol",
+          "d": "3 mol",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je hlavní produkt reakce Na + H₂O?",
+          "a": "NaOH + H₂",
+          "b": "NaH + O₂",
+          "c": "Na₂O + H₂",
+          "d": "NaCl + H₂",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je molekulová hmotnost kyseliny dusičné (HNO₃)?",
+          "a": "63 g/mol",
+          "b": "62 g/mol",
+          "c": "64 g/mol",
+          "d": "65 g/mol",
+          "correct": "A"
+        },
+        {
+          "question": "Kdo napsal román 'Babička'?",
+          "a": "Karel Čapek",
+          "b": "Božena Němcová",
+          "c": "Alois Jirásek",
+          "d": "Jan Neruda",
+          "correct": "B"
+        },
+        {
+          "question": "Které dílo napsal Franz Kafka?",
+          "a": "Proces",
+          "b": "Kytice",
+          "c": "Babička",
+          "d": "Maryša",
+          "correct": "A"
+        },
+        {
+          "question": "Co je hlavním tématem 'Kytice' od Karla Jaromíra Erbena?",
+          "a": "Historie českého národa",
+          "b": "Pohádkové a lidové motivy",
+          "c": "Politická satira",
+          "d": "Romantická láska",
+          "correct": "B"
+        },
+        {
+          "question": "Kdo je autorem dramatu 'Maryša'?",
+          "a": "Alois Jirásek",
+          "b": "Karel Čapek",
+          "c": "Vítězslav Nezval",
+          "d": "Vilém Mrštík a Alois Mrštík",
+          "correct": "D"
+        },
+        {
+          "question": "Jaký je hlavní literární směr díla 'Babička'?",
+          "a": "Realismus",
+          "b": "Romantismus",
+          "c": "Symbolismus",
+          "d": "Expresionismus",
+          "correct": "B"
+        },
+        {
+          "question": "Kdo napsal 'Válku světů'?",
+          "a": "H. G. Wells",
+          "b": "Jules Verne",
+          "c": "Edgar Allan Poe",
+          "d": "Oscar Wilde",
+          "correct": "A"
+        },
+        {
+          "question": "Kdo je autorem románu '1984'?",
+          "a": "George Orwell",
+          "b": "Aldous Huxley",
+          "c": "Ray Bradbury",
+          "d": "F. Scott Fitzgerald",
+          "correct": "A"
+        },
+        {
+          "question": "Jaké téma převládá v díle 'Malý princ'?",
+          "a": "Politická kritika",
+          "b": "Dětství a přátelství",
+          "c": "Válečné konflikty",
+          "d": "Romantická láska",
+          "correct": "B"
+        },
+        {
+          "question": "Kdo napsal 'Romeo a Julie'?",
+          "a": "Christopher Marlowe",
+          "b": "William Shakespeare",
+          "c": "Oscar Wilde",
+          "d": "John Milton",
+          "correct": "B"
+        },
+        {
+          "question": "Které dílo napsal Alois Jirásek?",
+          "a": "F. L. Věk",
+          "b": "Babička",
+          "c": "Kytice",
+          "d": "Maryša",
+          "correct": "A"
+        },
+        {
+          "question": "Kdo napsal 'Píseň o Rolandovi'?",
+          "a": "Neznámý autor",
+          "b": "Božena Němcová",
+          "c": "Karel Čapek",
+          "d": "Jan Amos Komenský",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je hlavní literární směr Karla Čapka?",
+          "a": "Realismus",
+          "b": "Futurismus",
+          "c": "Modernismus",
+          "d": "Romantismus",
+          "correct": "C"
+        },
+        {
+          "question": "Kdo napsal 'Mistr a Markétka'?",
+          "a": "Ivan Olbracht",
+          "b": "Bohumil Hrabal",
+          "c": "Milan Kundera",
+          "d": "Michail Bulgakov",
+          "correct": "D"
+        },
+        {
+          "question": "Jaký je hlavní motiv v básni 'Kytice'?",
+          "a": "Smrt a láska",
+          "b": "Příroda a vlastenectví",
+          "c": "Dětství",
+          "d": "Humor a satira",
+          "correct": "A"
+        },
+        {
+          "question": "Kdo napsal 'Povídky malostranské'?",
+          "a": "Jan Neruda",
+          "b": "Karel Hynek Mácha",
+          "c": "Alois Jirásek",
+          "d": "Franz Kafka",
+          "correct": "A"
+        },
+        {
+          "question": "Co je hlavním tématem '1984' od George Orwella?",
+          "a": "Romantická láska",
+          "b": "Totalitní režim a kontrola společnosti",
+          "c": "Dobrodružství v přírodě",
+          "d": "Humor a satira",
+          "correct": "B"
+        },
+        {
+          "question": "Kdo napsal 'R.U.R.'?",
+          "a": "Karel Čapek",
+          "b": "Alois Jirásek",
+          "c": "Franz Kafka",
+          "d": "Vítězslav Nezval",
+          "correct": "A"
+        },
+        {
+          "question": "Který český autor je spojen s modernismem a absurdním dramatem?",
+          "a": "Karel Čapek",
+          "b": "Vítězslav Nezval",
+          "c": "Franz Kafka",
+          "d": "Jan Neruda",
+          "correct": "C"
+        },
+        {
+          "question": "Co je hlavním tématem 'Malého prince'?",
+          "a": "Cesta vesmírem a poznání života",
+          "b": "Politická kritika",
+          "c": "Historie českého národa",
+          "d": "Romantická láska",
+          "correct": "A"
+        },
+        {
+          "question": "Kdo napsal 'F. L. Věk'?",
+          "a": "Alois Jirásek",
+          "b": "Božena Němcová",
+          "c": "Karel Čapek",
+          "d": "Franz Kafka",
+          "correct": "A"
+        },
+        {
+          "question": "Kdo je autorem 'Babičky'?",
+          "a": "Božena Němcová",
+          "b": "Karel Hynek Mácha",
+          "c": "Jan Neruda",
+          "d": "Vítězslav Nezval",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je literární směr 'Maryši'?",
+          "a": "Romantismus",
+          "b": "Realismus",
+          "c": "Symbolismus",
+          "d": "Modernismus",
+          "correct": "B"
+        },
+        {
+          "question": "Kdo napsal 'Chaloupka na vršku'?",
+          "a": "Alois Jirásek",
+          "b": "Karel Jaromír Erben",
+          "c": "Božena Němcová",
+          "d": "Jan Neruda",
+          "correct": "C"
+        },
+        {
+          "question": "Kdo napsal 'R.U.R.'?",
+          "a": "Franz Kafka",
+          "b": "Karel Čapek",
+          "c": "Alois Jirásek",
+          "d": "Vítězslav Nezval",
+          "correct": "B"
+        },
+        {
+          "question": "Které dílo napsal Karel Hynek Mácha?",
+          "a": "Máj",
+          "b": "Babička",
+          "c": "Maryša",
+          "d": "F. L. Věk",
+          "correct": "A"
+        },
+        {
+          "question": "Co je hlavním motivem v básni 'Máj'?",
+          "a": "Láska a smrt",
+          "b": "Historické události",
+          "c": "Pohádky",
+          "d": "Humor",
+          "correct": "A"
+        },
+        {
+          "question": "Kdo napsal 'Osudy dobrého vojáka Švejka'?",
+          "a": "Jaroslav Hašek",
+          "b": "Karel Čapek",
+          "c": "Franz Kafka",
+          "d": "Alois Jirásek",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je hlavní literární směr 'Osudů dobrého vojáka Švejka'?",
+          "a": "Romantismus",
+          "b": "Realismus",
+          "c": "Satira a humor",
+          "d": "Symbolismus",
+          "correct": "C"
+        },
+        {
+          "question": "Kdo napsal 'Hledání ztraceného času'?",
+          "a": "Marcel Proust",
+          "b": "Franz Kafka",
+          "c": "George Orwell",
+          "d": "Aldous Huxley",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký literární směr je spojen s dílem 'R.U.R.'?",
+          "a": "Expresionismus",
+          "b": "Romantismus",
+          "c": "Realismus",
+          "d": "Baroko",
+          "correct": "A"
+        },
+        {
+          "question": "V RLC obvodu s R = 10 Ω, L = 0.2 H a C = 50 μF při frekvenci f = 50 Hz, jaký je celkový odpor (impedance)?",
+          "a": "10 Ω",
+          "b": "15 Ω",
+          "c": "20 Ω",
+          "d": "25 Ω",
+          "correct": "B"
+        },
+        {
+          "question": "Jaký je proud v obvodu s R = 20 Ω při střídavém napětí U = 100 V RMS?",
+          "a": "2 A",
+          "b": "4 A",
+          "c": "5 A",
+          "d": "10 A",
+          "correct": "C"
+        },
+        {
+          "question": "Kondenzátor 100 μF je připojen na střídavé napětí 50 V RMS a f = 50 Hz. Jaký je proud kondenzátorem?",
+          "a": "0.5 A",
+          "b": "0.628 A",
+          "c": "1 A",
+          "d": "2 A",
+          "correct": "B"
+        },
+        {
+          "question": "Cívka L = 0.1 H je připojena k síti 220 V, 50 Hz. Jaký je proud, pokud odpor R = 10 Ω?",
+          "a": "1.4 A",
+          "b": "2 A",
+          "c": "2.2 A",
+          "d": "3 A",
+          "correct": "A"
+        },
+        {
+          "question": "Tranzistor NPN má β = 100 a proud báze I_B = 20 μA. Jaký je proud kolektoru I_C?",
+          "a": "1 mA",
+          "b": "2 mA",
+          "c": "2.5 mA",
+          "d": "3 mA",
+          "correct": "B"
+        },
+        {
+          "question": "Rezistor 50 Ω je připojen na střídavé napětí 100 V RMS. Jaký je odběr proudu?",
+          "a": "1 A",
+          "b": "2 A",
+          "c": "2.5 A",
+          "d": "0.5 A",
+          "correct": "B"
+        },
+        {
+          "question": "V sériovém RLC obvodu: R = 10 Ω, L = 0.1 H, C = 100 μF, f = 50 Hz. Jaká je reaktance kondenzátoru?",
+          "a": "31.8 Ω",
+          "b": "25 Ω",
+          "c": "20 Ω",
+          "d": "15.9 Ω",
+          "correct": "D"
+        },
+        {
+          "question": "V sériovém RLC obvodu: R = 10 Ω, L = 0.1 H, C = 100 μF, f = 50 Hz. Jaká je reaktance cívky?",
+          "a": "31.4 Ω",
+          "b": "25 Ω",
+          "c": "20 Ω",
+          "d": "15 Ω",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je proud v předchozím obvodu, když U = 100 V RMS?",
+          "a": "1.2 A",
+          "b": "2 A",
+          "c": "2.5 A",
+          "d": "3 A",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je fázový úhel v předchozím RLC obvodu?",
+          "a": "0°",
+          "b": "45°",
+          "c": "90°",
+          "d": "-45°",
+          "correct": "B"
+        },
+        {
+          "question": "Kondenzátor C = 10 μF je připojen na AC napětí 50 V, f = 100 Hz. Jaká je jeho kapacitní reaktance?",
+          "a": "159 Ω",
+          "b": "100 Ω",
+          "c": "200 Ω",
+          "d": "50 Ω",
+          "correct": "A"
+        },
+        {
+          "question": "Cívka L = 0.05 H je připojena na AC napětí 100 V, f = 50 Hz. Jaká je induktivní reaktance?",
+          "a": "15.7 Ω",
+          "b": "31.4 Ω",
+          "c": "25 Ω",
+          "d": "50 Ω",
+          "correct": "B"
+        },
+        {
+          "question": "Tranzistor PNP má β = 50 a proud báze I_B = 40 μA. Jaký je proud kolektoru I_C?",
+          "a": "2 mA",
+          "b": "1 mA",
+          "c": "1.5 mA",
+          "d": "2.5 mA",
+          "correct": "A"
+        },
+        {
+          "question": "Střídavé napětí 220 V, R = 44 Ω. Jaký je proud?",
+          "a": "5 A",
+          "b": "4 A",
+          "c": "2 A",
+          "d": "1 A",
+          "correct": "B"
+        },
+        {
+          "question": "V RLC obvodu: R = 20 Ω, L = 0.2 H, C = 50 μF, f = 50 Hz. Jaká je impedance?",
+          "a": "20 Ω",
+          "b": "30 Ω",
+          "c": "25 Ω",
+          "d": "35 Ω",
+          "correct": "C"
+        },
+        {
+          "question": "Kondenzátor C = 20 μF, U = 100 V, f = 50 Hz. Jaký je proud?",
+          "a": "0.628 A",
+          "b": "0.785 A",
+          "c": "1 A",
+          "d": "1.5 A",
+          "correct": "B"
+        },
+        {
+          "question": "Cívka L = 0.1 H, U = 100 V, f = 50 Hz, R = 10 Ω. Jaký je proud?",
+          "a": "2 A",
+          "b": "1.5 A",
+          "c": "1.4 A",
+          "d": "1.2 A",
+          "correct": "C"
+        },
+        {
+          "question": "Tranzistor NPN β = 150, I_B = 10 μA. Jaký je I_C?",
+          "a": "1.5 mA",
+          "b": "1 mA",
+          "c": "2 mA",
+          "d": "0.5 mA",
+          "correct": "A"
+        },
+        {
+          "question": "RLC obvod: R = 30 Ω, L = 0.15 H, C = 40 μF, f = 60 Hz. Jaká je impedance?",
+          "a": "40 Ω",
+          "b": "35 Ω",
+          "c": "50 Ω",
+          "d": "30 Ω",
+          "correct": "B"
+        },
+        {
+          "question": "RLC: R = 20 Ω, X_L = 31.4 Ω, X_C = 15.9 Ω, U = 100 V. Jaký je proud?",
+          "a": "2 A",
+          "b": "3 A",
+          "c": "1.8 A",
+          "d": "1.5 A",
+          "correct": "C"
+        },
+        {
+          "question": "Fázový úhel RLC obvodu: R = 20 Ω, X_L - X_C = 15 Ω. Jaký je?",
+          "a": "36.9°",
+          "b": "45°",
+          "c": "30°",
+          "d": "60°",
+          "correct": "A"
+        },
+        {
+          "question": "Tranzistor PNP β = 100, I_B = 50 μA. Jaký je I_C?",
+          "a": "5 mA",
+          "b": "4 mA",
+          "c": "3 mA",
+          "d": "2.5 mA",
+          "correct": "A"
+        },
+        {
+          "question": "Kondenzátor 50 μF, U = 220 V, f = 50 Hz. Jaká je kapacitní reaktance?",
+          "a": "63.7 Ω",
+          "b": "70 Ω",
+          "c": "50 Ω",
+          "d": "100 Ω",
+          "correct": "A"
+        },
+        {
+          "question": "Cívka L = 0.2 H, f = 50 Hz. Jaká je X_L?",
+          "a": "62.8 Ω",
+          "b": "50 Ω",
+          "c": "100 Ω",
+          "d": "31.4 Ω",
+          "correct": "A"
+        },
+        {
+          "question": "R = 10 Ω, L = 0.1 H, C = 100 μF, f = 50 Hz. Jaká je impedance?",
+          "a": "10 Ω",
+          "b": "15 Ω",
+          "c": "20 Ω",
+          "d": "25 Ω",
+          "correct": "B"
+        },
+        {
+          "question": "U = 120 V, R = 40 Ω. Jaký je proud?",
+          "a": "2 A",
+          "b": "3 A",
+          "c": "4 A",
+          "d": "5 A",
+          "correct": "A"
+        },
+        {
+          "question": "Tranzistor NPN β = 200, I_B = 25 μA. Jaký je I_C?",
+          "a": "5 mA",
+          "b": "4 mA",
+          "c": "3 mA",
+          "d": "2 mA",
+          "correct": "A"
+        },
+        {
+          "question": "RLC obvod: R = 50 Ω, L = 0.1 H, C = 50 μF, f = 50 Hz. Jaká je impedance?",
+          "a": "60 Ω",
+          "b": "50 Ω",
+          "c": "55 Ω",
+          "d": "65 Ω",
+          "correct": "C"
+        },
+        {
+          "question": "Cívka L = 0.05 H, U = 220 V, f = 60 Hz. Jaký je X_L?",
+          "a": "18.8 Ω",
+          "b": "20 Ω",
+          "c": "25 Ω",
+          "d": "30 Ω",
+          "correct": "A"
+        },
+        {
+          "question": "Co znamená zkratka CPU?",
+          "a": "Central Processing Unit",
+          "b": "Computer Personal Unit",
+          "c": "Central Program Utility",
+          "d": "Control Processing Unit",
+          "correct": "A"
+        },
+        {
+          "question": "Které zařízení slouží primárně k ukládání dat?",
+          "a": "RAM",
+          "b": "CPU",
+          "c": "SSD",
+          "d": "GPU",
+          "correct": "C"
+        },
+        {
+          "question": "Jaký je základní číselný systém používaný v počítačích?",
+          "a": "Desítkový",
+          "b": "Dvojkový",
+          "c": "Osmičkový",
+          "d": "Šestnáctkový",
+          "correct": "B"
+        },
+        {
+          "question": "Kolik bitů má jeden byte?",
+          "a": "4",
+          "b": "6",
+          "c": "8",
+          "d": "16",
+          "correct": "C"
+        },
+        {
+          "question": "Který z těchto je operační systém?",
+          "a": "Python",
+          "b": "Linux",
+          "c": "HTML",
+          "d": "SQL",
+          "correct": "B"
+        },
+        {
+          "question": "Co je RAM?",
+          "a": "Trvalá paměť",
+          "b": "Grafická karta",
+          "c": "Operační paměť",
+          "d": "Procesor",
+          "correct": "C"
+        },
+        {
+          "question": "Který jazyk je kompilovaný?",
+          "a": "Python",
+          "b": "Java",
+          "c": "C++",
+          "d": "JavaScript",
+          "correct": "C"
+        },
+        {
+          "question": "Co znamená zkratka URL?",
+          "a": "Uniform Resource Locator",
+          "b": "Universal Register Link",
+          "c": "Unified Resource Line",
+          "d": "User Resource Locator",
+          "correct": "A"
+        },
+        {
+          "question": "K čemu slouží firewall?",
+          "a": "Zrychlení internetu",
+          "b": "Ochrana sítě",
+          "c": "Ukládání dat",
+          "d": "Tvorba webu",
+          "correct": "B"
+        },
+        {
+          "question": "Jaké zařízení převádí digitální signál na analogový?",
+          "a": "Router",
+          "b": "Modem",
+          "c": "Switch",
+          "d": "Server",
+          "correct": "B"
+        },
+        {
+          "question": "Co je algoritmus?",
+          "a": "Programovací jazyk",
+          "b": "Datový typ",
+          "c": "Postup řešení problému",
+          "d": "Hardwarová součást",
+          "correct": "C"
+        },
+        {
+          "question": "Která struktura se používá pro opakování?",
+          "a": "Podmínka",
+          "b": "Proměnná",
+          "c": "Cyklus",
+          "d": "Třída",
+          "correct": "C"
+        },
+        {
+          "question": "Jaký protokol se používá pro přenos webových stránek?",
+          "a": "FTP",
+          "b": "SMTP",
+          "c": "HTTP",
+          "d": "SSH",
+          "correct": "C"
+        },
+        {
+          "question": "Co znamená zkratka IP?",
+          "a": "Internet Protocol",
+          "b": "Internal Program",
+          "c": "Interface Path",
+          "d": "Internet Process",
+          "correct": "A"
+        },
+        {
+          "question": "Který datový typ je logický?",
+          "a": "int",
+          "b": "char",
+          "c": "boolean",
+          "d": "float",
+          "correct": "C"
+        },
+        {
+          "question": "Co je open-source software?",
+          "a": "Placený software",
+          "b": "Software bez licence",
+          "c": "Software s otevřeným kódem",
+          "d": "Software pouze online",
+          "correct": "C"
+        },
+        {
+          "question": "Který z těchto je databázový jazyk?",
+          "a": "HTML",
+          "b": "CSS",
+          "c": "SQL",
+          "d": "PHP",
+          "correct": "C"
+        },
+        {
+          "question": "Co je proměnná?",
+          "a": "Typ cyklu",
+          "b": "Paměťové místo pro data",
+          "c": "Podmínka",
+          "d": "Funkce",
+          "correct": "B"
+        },
+        {
+          "question": "Jaký je výstupní hardware?",
+          "a": "Klávesnice",
+          "b": "Myš",
+          "c": "Monitor",
+          "d": "Scanner",
+          "correct": "C"
+        },
+        {
+          "question": "Který soubor je spustitelný ve Windows?",
+          "a": ".txt",
+          "b": ".jpg",
+          "c": ".exe",
+          "d": ".pdf",
+          "correct": "C"
+        },
+        {
+          "question": "Co je phishing?",
+          "a": "Typ viru",
+          "b": "Způsob podvodu",
+          "c": "Programovací jazyk",
+          "d": "Šifrování",
+          "correct": "B"
+        },
+        {
+          "question": "K čemu slouží Git?",
+          "a": "Editace videa",
+          "b": "Správa verzí",
+          "c": "Databáze",
+          "d": "Operační systém",
+          "correct": "B"
+        },
+        {
+          "question": "Co je binární strom?",
+          "a": "Datová struktura",
+          "b": "Síťový protokol",
+          "c": "Typ paměti",
+          "d": "Operační systém",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je rozsah IPv4 adres?",
+          "a": "16 bitů",
+          "b": "32 bitů",
+          "c": "64 bitů",
+          "d": "128 bitů",
+          "correct": "B"
+        },
+        {
+          "question": "Který jazyk se používá pro stylování webu?",
+          "a": "HTML",
+          "b": "CSS",
+          "c": "PHP",
+          "d": "SQL",
+          "correct": "B"
+        },
+        {
+          "question": "Co je cloud?",
+          "a": "Typ procesoru",
+          "b": "Vzdálené úložiště a služby",
+          "c": "Operační paměť",
+          "d": "Programovací jazyk",
+          "correct": "B"
+        },
+        {
+          "question": "Co znamená GUI?",
+          "a": "General User Interface",
+          "b": "Graphical User Interface",
+          "c": "Global Utility Interface",
+          "d": "Graphic Unit Input",
+          "correct": "B"
+        },
+        {
+          "question": "Který jazyk běží v prohlížeči?",
+          "a": "Java",
+          "b": "C++",
+          "c": "JavaScript",
+          "d": "Python",
+          "correct": "C"
+        },
+        {
+          "question": "Co je databáze?",
+          "a": "Program",
+          "b": "Uspořádaná data",
+          "c": "Hardware",
+          "d": "Operační systém",
+          "correct": "B"
+        },
+        {
+          "question": "Co znamená zkratka LAN?",
+          "a": "Large Area Network",
+          "b": "Local Area Network",
+          "c": "Logical Access Node",
+          "d": "Long Area Network",
+          "correct": "B"
+        },
+        {
+          "question": "K čemu slouží kompilátor?",
+          "a": "Spuštění programu",
+          "b": "Překlad zdrojového kódu",
+          "c": "Ukládání dat",
+          "d": "Správa sítě",
+          "correct": "B"
+        },
+        {
+          "question": "Co je to bug?",
+          "a": "Vylepšení programu",
+          "b": "Chyba v programu",
+          "c": "Verze softwaru",
+          "d": "Typ licence",
+          "correct": "B"
+        },
+        {
+          "question": "Které zařízení propojuje sítě?",
+          "a": "Switch",
+          "b": "Router",
+          "c": "Klávesnice",
+          "d": "Monitor",
+          "correct": "B"
+        },
+        {
+          "question": "Co je to API?",
+          "a": "Programovací jazyk",
+          "b": "Rozhraní pro komunikaci",
+          "c": "Operační systém",
+          "d": "Databáze",
+          "correct": "B"
+        },
+        {
+          "question": "Který z těchto je typ malware?",
+          "a": "Firewall",
+          "b": "Trojan",
+          "c": "Antivirus",
+          "d": "VPN",
+          "correct": "B"
+        },
+        {
+          "question": "Co je objekt v OOP?",
+          "a": "Datový typ",
+          "b": "Instance třídy",
+          "c": "Funkce",
+          "d": "Cyklus",
+          "correct": "B"
+        },
+        {
+          "question": "K čemu slouží SSD oproti HDD?",
+          "a": "Je levnější",
+          "b": "Je pomalejší",
+          "c": "Je rychlejší",
+          "d": "Má menší kapacitu vždy",
+          "correct": "C"
+        },
+        {
+          "question": "Co je šifrování?",
+          "a": "Mazání dat",
+          "b": "Záloha dat",
+          "c": "Ochrana dat",
+          "d": "Kompilace",
+          "correct": "C"
+        },
+        {
+          "question": "Který protokol slouží pro e-maily?",
+          "a": "HTTP",
+          "b": "FTP",
+          "c": "SMTP",
+          "d": "IP",
+          "correct": "C"
+        },
+        {
+          "question": "Co je boolean výraz?",
+          "a": "Číselný výraz",
+          "b": "Textový výraz",
+          "c": "Pravda / nepravda",
+          "d": "Cyklus",
+          "correct": "C"
+        },
+        {
+          "question": "K čemu slouží VPN?",
+          "a": "Zrychlení PC",
+          "b": "Zabezpečení připojení",
+          "c": "Ukládání souborů",
+          "d": "Programování",
+          "correct": "B"
+        },
+        {
+          "question": "Co je framework?",
+          "a": "Hardware",
+          "b": "Základ pro vývoj aplikací",
+          "c": "Databáze",
+          "d": "Operační systém",
+          "correct": "B"
+        },
+        {
+          "question": "Jaký je výchozí port pro HTTP?",
+          "a": "21",
+          "b": "25",
+          "c": "80",
+          "d": "443",
+          "correct": "C"
+        },
+        {
+          "question": "Co je to loop?",
+          "a": "Podmínka",
+          "b": "Cyklus",
+          "c": "Funkce",
+          "d": "Proměnná",
+          "correct": "B"
+        },
+        {
+          "question": "Který jazyk je čistě značkovací?",
+          "a": "CSS",
+          "b": "HTML",
+          "c": "JavaScript",
+          "d": "Python",
+          "correct": "B"
+        },
+        {
+          "question": "Co je virtualizace?",
+          "a": "Zrychlení procesoru",
+          "b": "Běh více OS na jednom stroji",
+          "c": "Záloha dat",
+          "d": "Šifrování",
+          "correct": "B"
+        },
+        {
+          "question": "K čemu slouží cache?",
+          "a": "Dlouhodobé ukládání",
+          "b": "Zrychlení přístupu k datům",
+          "c": "Záloha",
+          "d": "Síťová komunikace",
+          "correct": "B"
+        },
+        {
+          "question": "Co je to IDE?",
+          "a": "Editor obrázků",
+          "b": "Integrované vývojové prostředí",
+          "c": "Operační systém",
+          "d": "Databáze",
+          "correct": "B"
+        },
+        {
+          "question": "Který algoritmus je třídicí?",
+          "a": "Binary search",
+          "b": "Quick sort",
+          "c": "DFS",
+          "d": "BFS",
+          "correct": "B"
+        },
+        {
+          "question": "Co znamená zkratka WWW?",
+          "a": "World Wide Web",
+          "b": "Wide World Web",
+          "c": "Web World Wide",
+          "d": "World Web Window",
+          "correct": "A"
+        },
+        {
+          "question": "Co je to databázová tabulka?",
+          "a": "Program",
+          "b": "Struktura dat",
+          "c": "Operační systém",
+          "d": "Server",
+          "correct": "B"
+        },
+        {
+          "question": "Který z těchto není programovací jazyk?",
+          "a": "Java",
+          "b": "Python",
+          "c": "HTML",
+          "d": "C#",
+          "correct": "C"
+        },
+        {
+          "question": "Vypočítej: tan 45°",
+          "a": "0",
+          "b": "1",
+          "c": "√3",
+          "d": "−1",
+          "correct": "B"
+        },
+        {
+          "question": "Vypočítej: cotg 30°",
+          "a": "√3",
+          "b": "1",
+          "c": "1/√3",
+          "d": "0",
+          "correct": "A"
+        },
+        {
+          "question": "Vyřeš rovnici: tan x = √3, x ∈ ⟨0°, 90°⟩",
+          "a": "x = 30°",
+          "b": "x = 45°",
+          "c": "x = 60°",
+          "d": "x = 90°",
+          "correct": "C"
+        },
+        {
+          "question": "Vyřeš rovnici: cotg x = 1, x ∈ ⟨0°, 90°⟩",
+          "a": "x = 30°",
+          "b": "x = 45°",
+          "c": "x = 60°",
+          "d": "x = 0°",
+          "correct": "B"
+        },
+        {
+          "question": "Vyřeš rovnici: x² = 16",
+          "a": "x = 4",
+          "b": "x = −4",
+          "c": "x = ±4",
+          "d": "x = 8",
+          "correct": "C"
+        },
+        {
+          "question": "Vyřeš rovnici: x² − 9 = 0",
+          "a": "x = 3",
+          "b": "x = −3",
+          "c": "x = ±3",
+          "d": "x = 0",
+          "correct": "C"
+        },
+        {
+          "question": "Vyřeš rovnici: x² − 5x + 6 = 0",
+          "a": "x = 2, 3",
+          "b": "x = −2, −3",
+          "c": "x = 1, 6",
+          "d": "x = 0, 6",
+          "correct": "A"
+        },
+        {
+          "question": "Vyřeš rovnici: x² + 4x + 4 = 0",
+          "a": "x = 2",
+          "b": "x = −2",
+          "c": "x = ±2",
+          "d": "x = 0",
+          "correct": "B"
+        },
+        {
+          "question": "Kolik je √81?",
+          "a": "7",
+          "b": "8",
+          "c": "9",
+          "d": "−9",
+          "correct": "C"
+        },
+        {
+          "question": "Vypočítej: √(25 · 4)",
+          "a": "10",
+          "b": "20",
+          "c": "5",
+          "d": "40",
+          "correct": "A"
+        },
+        {
+          "question": "Vypočítej: log₁₀ 100",
+          "a": "1",
+          "b": "2",
+          "c": "10",
+          "d": "0",
+          "correct": "B"
+        },
+        {
+          "question": "Vypočítej: log₁₀ 1",
+          "a": "0",
+          "b": "1",
+          "c": "10",
+          "d": "−1",
+          "correct": "A"
+        },
+        {
+          "question": "Vyřeš rovnici: log₁₀ x = 2",
+          "a": "x = 2",
+          "b": "x = 10",
+          "c": "x = 100",
+          "d": "x = 1000",
+          "correct": "C"
+        },
+        {
+          "question": "Vyřeš rovnici: log₁₀ x = 0",
+          "a": "x = 0",
+          "b": "x = 1",
+          "c": "x = 10",
+          "d": "x = −1",
+          "correct": "B"
+        },
+        {
+          "question": "Vyřeš rovnici: log₁₀ (x − 1) = 1",
+          "a": "x = 2",
+          "b": "x = 10",
+          "c": "x = 11",
+          "d": "x = 1",
+          "correct": "C"
+        },
+        {
+          "question": "Vyřeš rovnici: 2x + 3 = 11",
+          "a": "x = 2",
+          "b": "x = 3",
+          "c": "x = 4",
+          "d": "x = 5",
+          "correct": "C"
+        },
+        {
+          "question": "Vyřeš rovnici: 3(x − 2) = 9",
+          "a": "x = 3",
+          "b": "x = 4",
+          "c": "x = 5",
+          "d": "x = 6",
+          "correct": "C"
+        },
+        {
+          "question": "Vypočítej: 5² − 4²",
+          "a": "1",
+          "b": "9",
+          "c": "16",
+          "d": "25",
+          "correct": "B"
+        },
+        {
+          "question": "Vyřeš rovnici: tan x = 1, x ∈ ⟨0°, 90°⟩",
+          "a": "x = 30°",
+          "b": "x = 45°",
+          "c": "x = 60°",
+          "d": "x = 90°",
+          "correct": "B"
+        },
+        {
+          "question": "Vyřeš rovnici: cotg x = √3, x ∈ ⟨0°, 90°⟩",
+          "a": "x = 30°",
+          "b": "x = 45°",
+          "c": "x = 60°",
+          "d": "x = 90°",
+          "correct": "A"
+        },
+        {
+          "question": "Který výraz není definován?",
+          "a": "tan 45°",
+          "b": "cotg 45°",
+          "c": "tan 90°",
+          "d": "tan 0°",
+          "correct": "C"
+        },
+        {
+          "question": "Kolik je tan 0°?",
+          "a": "0",
+          "b": "1",
+          "c": "není definován",
+          "d": "−1",
+          "correct": "A"
+        },
+        {
+          "question": "Vypočítej: tan 30° · cotg 30°",
+          "a": "0",
+          "b": "1",
+          "c": "√3",
+          "d": "1/√3",
+          "correct": "B"
+        },
+        {
+          "question": "Vyřeš rovnici: x² − 1 = 0",
+          "a": "x = 1",
+          "b": "x = −1",
+          "c": "x = ±1",
+          "d": "x = 0",
+          "correct": "C"
+        },
+        {
+          "question": "Vyřeš rovnici: log₁₀ x = 3",
+          "a": "x = 30",
+          "b": "x = 100",
+          "c": "x = 300",
+          "d": "x = 1000",
+          "correct": "D"
+        },
+        {
+          "question": "Vypočítej: √49 + √16",
+          "a": "11",
+          "b": "9",
+          "c": "13",
+          "d": "15",
+          "correct": "A"
+        },
+        {
+          "question": "Vyřeš rovnici: 4x² = 16",
+          "a": "x = 2",
+          "b": "x = −2",
+          "c": "x = ±2",
+          "d": "x = 4",
+          "correct": "C"
+        },
+        {
+          "question": "Vyřeš rovnici: log₁₀ (x) = 1",
+          "a": "x = 0",
+          "b": "x = 1",
+          "c": "x = 10",
+          "d": "x = 100",
+          "correct": "C"
+        },
+        {
+          "question": "Vypočítej: cotg 45°",
+          "a": "0",
+          "b": "1",
+          "c": "√3",
+          "d": "1/√3",
+          "correct": "B"
+        },
+        {
+          "question": "Auto jede rovnoměrně rychlostí 72 km/h. Jakou dráhu ujede za 2 hodiny?",
+          "a": "144 km",
+          "b": "72 km",
+          "c": "36 km",
+          "d": "200 km",
+          "correct": "A"
+        },
+        {
+          "question": "Těleso o hmotnosti 5 kg má zrychlení 2 m/s². Jaká je působící síla?",
+          "a": "10 N",
+          "b": "7 N",
+          "c": "2,5 N",
+          "d": "5 N",
+          "correct": "A"
+        },
+        {
+          "question": "Kámen padá z výšky 20 m (g = 10 m/s²). Jaká je jeho rychlost při dopadu?",
+          "a": "20 m/s",
+          "b": "10 m/s",
+          "c": "40 m/s",
+          "d": "200 m/s",
+          "correct": "A"
+        },
+        {
+          "question": "Auto se rozjede z klidu a zrychluje rovnoměrně 3 m/s² po dobu 5 s. Jakou rychlost dosáhne?",
+          "a": "15 m/s",
+          "b": "8 m/s",
+          "c": "12 m/s",
+          "d": "5 m/s",
+          "correct": "A"
+        },
+        {
+          "question": "Těleso o hmotnosti 10 kg je zvednuto do výšky 3 m. Jaká je jeho potenciální energie? (g = 10 m/s²)",
+          "a": "300 J",
+          "b": "30 J",
+          "c": "100 J",
+          "d": "3000 J",
+          "correct": "A"
+        },
+        {
+          "question": "Kulička o hmotnosti 0,5 kg se pohybuje rychlostí 4 m/s. Jaká je její kinetická energie?",
+          "a": "4 J",
+          "b": "8 J",
+          "c": "16 J",
+          "d": "2 J",
+          "correct": "B"
+        },
+        {
+          "question": "Auto o hmotnosti 1000 kg brzdí z 20 m/s na 0 m/s. Jaká je práce brzdící síly?",
+          "a": "200 000 J",
+          "b": "400 000 J",
+          "c": "100 000 J",
+          "d": "500 000 J",
+          "correct": "B"
+        },
+        {
+          "question": "Těleso padá volně 4 s (g = 10 m/s²). Jakou dráhu urazí?",
+          "a": "80 m",
+          "b": "40 m",
+          "c": "160 m",
+          "d": "20 m",
+          "correct": "A"
+        },
+        {
+          "question": "Kámen je hozen vodorovně rychlostí 5 m/s. Jakou dráhu urazí za 2 s?",
+          "a": "10 m",
+          "b": "5 m",
+          "c": "20 m",
+          "d": "2,5 m",
+          "correct": "A"
+        },
+        {
+          "question": "Pružina má tuhost 200 N/m a je stlačena o 0,1 m. Jaká je pružná energie?",
+          "a": "1 J",
+          "b": "2 J",
+          "c": "0,5 J",
+          "d": "10 J",
+          "correct": "B"
+        },
+        {
+          "question": "Auto jede rychlostí 36 km/h. Jakou rychlost má v m/s?",
+          "a": "10 m/s",
+          "b": "36 m/s",
+          "c": "100 m/s",
+          "d": "12 m/s",
+          "correct": "A"
+        },
+        {
+          "question": "Těleso o hmotnosti 2 kg se pohybuje rychlostí 3 m/s. Jaká je jeho hybnost?",
+          "a": "6 kg·m/s",
+          "b": "5 kg·m/s",
+          "c": "9 kg·m/s",
+          "d": "1,5 kg·m/s",
+          "correct": "A"
+        },
+        {
+          "question": "Kámen padá z výšky 5 m. Jaká je jeho rychlost při dopadu? (g = 10 m/s²)",
+          "a": "10 m/s",
+          "b": "5 m/s",
+          "c": "sqrt(100) m/s",
+          "d": "sqrt(50) m/s",
+          "correct": "D"
+        },
+        {
+          "question": "Těleso se pohybuje po kružnici poloměru 2 m rychlostí 4 m/s. Jaké je dostředivé zrychlení?",
+          "a": "8 m/s²",
+          "b": "16 m/s²",
+          "c": "2 m/s²",
+          "d": "4 m/s²",
+          "correct": "B"
+        },
+        {
+          "question": "Auto urazí dráhu 100 m z klidu za 5 s. Jaké je jeho zrychlení?",
+          "a": "8 m/s²",
+          "b": "5 m/s²",
+          "c": "10 m/s²",
+          "d": "4 m/s²",
+          "correct": "D"
+        },
+        {
+          "question": "Těleso o hmotnosti 3 kg má kinetickou energii 54 J. Jaká je jeho rychlost?",
+          "a": "6 m/s",
+          "b": "9 m/s",
+          "c": "3 m/s",
+          "d": "12 m/s",
+          "correct": "A"
+        },
+        {
+          "question": "Těleso padá volně z výšky 45 m. Jak dlouho padá? (g = 10 m/s²)",
+          "a": "3 s",
+          "b": "4,5 s",
+          "c": "9 s",
+          "d": "6 s",
+          "correct": "A"
+        },
+        {
+          "question": "Těleso o hmotnosti 50 kg stojí na plošině. Jaká je jeho tíhová síla? (g = 10 m/s²)",
+          "a": "500 N",
+          "b": "50 N",
+          "c": "1000 N",
+          "d": "5 N",
+          "correct": "A"
+        },
+        {
+          "question": "Pružina je natažena silou 20 N a prodloužena o 0,2 m. Jaká je tuhost pružiny?",
+          "a": "100 N/m",
+          "b": "200 N/m",
+          "c": "50 N/m",
+          "d": "20 N/m",
+          "correct": "A"
+        },
+        {
+          "question": "Auto jede rychlostí 15 m/s a brzdí rovnoměrně na 0 m/s za 5 s. Jaké je zrychlení?",
+          "a": "-3 m/s²",
+          "b": "3 m/s²",
+          "c": "-15 m/s²",
+          "d": "0,3 m/s²",
+          "correct": "A"
+        },
+        {
+          "question": "Těleso má hmotnost 0,2 kg a rychlost 10 m/s. Jaká je jeho kinetická energie?",
+          "a": "10 J",
+          "b": "5 J",
+          "c": "20 J",
+          "d": "2 J",
+          "correct": "A"
+        },
+        {
+          "question": "Těleso padá z výšky 80 m. Jaká je jeho rychlost při dopadu? (g = 10 m/s²)",
+          "a": "40 m/s",
+          "b": "20 m/s",
+          "c": "80 m/s",
+          "d": "10 m/s",
+          "correct": "A"
+        },
+        {
+          "question": "Auto urazí dráhu 50 m z klidu s rovnoměrným zrychlením 5 m/s². Jaká je jeho konečná rychlost?",
+          "a": "20 m/s",
+          "b": "25 m/s",
+          "c": "15 m/s",
+          "d": "10 m/s",
+          "correct": "A"
+        },
+        {
+          "question": "Těleso o hmotnosti 4 kg padá volně. Jaká je jeho hybnost po 3 s? (g = 10 m/s²)",
+          "a": "120 kg·m/s",
+          "b": "30 kg·m/s",
+          "c": "60 kg·m/s",
+          "d": "12 kg·m/s",
+          "correct": "C"
+        },
+        {
+          "question": "Těleso má kinetickou energii 200 J a hmotnost 8 kg. Jaká je jeho rychlost?",
+          "a": "5 m/s",
+          "b": "7 m/s",
+          "c": "10 m/s",
+          "d": "15 m/s",
+          "correct": "C"
+        },
+        {
+          "question": "Těleso padá volně z výšky 10 m. Jak dlouho padá? (g = 10 m/s²)",
+          "a": "1 s",
+          "b": "2 s",
+          "c": "√2 s",
+          "d": "10 s",
+          "correct": "B"
+        },
+        {
+          "question": "Těleso má hmotnost 6 kg a je zvednuto do výšky 4 m. Jaká je jeho potenciální energie? (g = 10 m/s²)",
+          "a": "240 J",
+          "b": "60 J",
+          "c": "400 J",
+          "d": "24 J",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je standardní formát papíru pro technické výkresy podle ISO?",
+          "a": "A4",
+          "b": "A3",
+          "c": "A0",
+          "d": "A2",
+          "correct": "C"
+        },
+        {
+          "question": "Co označuje kótovací čára ve výkrese?",
+          "a": "Rozměr objektu",
+          "b": "Materiál objektu",
+          "c": "Barvu kresby",
+          "d": "Tloušťku čáry",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký typ čáry se používá pro skryté hrany objektu?",
+          "a": "Plná čára",
+          "b": "Čárkovaná čára",
+          "c": "Tečkovaná čára",
+          "d": "Dvojitá čára",
+          "correct": "B"
+        },
+        {
+          "question": "Co znamená zkratka 'Ø' u kót na výkrese?",
+          "a": "Poloměr",
+          "b": "Průměr",
+          "c": "Hloubka",
+          "d": "Úhel",
+          "correct": "B"
+        },
+        {
+          "question": "Jaký je hlavní účel pohledů ve výkrese (např. čelní, boční)?",
+          "a": "Ukázat materiál",
+          "b": "Ukázat tvar a rozměry objektu",
+          "c": "Ukázat technologii výroby",
+          "d": "Ukázat barvy a povrch",
+          "correct": "B"
+        },
+        {
+          "question": "Jak se nazývá pohled na objekt, který je nakloněn, aby byly vidět 3 strany najednou?",
+          "a": "Příčný pohled",
+          "b": "Axonometrický pohled",
+          "c": "Řez",
+          "d": "Detail",
+          "correct": "B"
+        },
+        {
+          "question": "K čemu slouží řez ve výkrese?",
+          "a": "K zobrazení vnitřní struktury objektu",
+          "b": "K zobrazení povrchu",
+          "c": "K označení materiálu",
+          "d": "K zobrazení barev",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký typ čáry se používá pro osy a středové čáry?",
+          "a": "Plná čára",
+          "b": "Dlouhá a krátká čárka střídavě",
+          "c": "Dvojitá čára",
+          "d": "Čárkovaná čára",
+          "correct": "B"
+        },
+        {
+          "question": "Co označuje symbol šipky u kótovací čáry?",
+          "a": "Konec čáry",
+          "b": "Směr měření rozměru",
+          "c": "Materiál",
+          "d": "Tloušťku čáry",
+          "correct": "B"
+        },
+        {
+          "question": "Jaký typ pohledu je použit, pokud je objekt rozdělen a ukazuje se jeho vnitřek?",
+          "a": "Axonometrický pohled",
+          "b": "Řez",
+          "c": "Detail",
+          "d": "Skrytý pohled",
+          "correct": "B"
+        },
+        {
+          "question": "Co je účelem tolerance rozměrů ve výkrese?",
+          "a": "Zajistit přesnost výroby",
+          "b": "Určit barvu součástky",
+          "c": "Vybrat materiál",
+          "d": "Zobrazit pohledy",
+          "correct": "A"
+        },
+        {
+          "question": "Jak se nazývá prvek výkresu, který udává měřítko?",
+          "a": "Legenda",
+          "b": "Kótovací čára",
+          "c": "Měřítko",
+          "d": "Popisná tabulka",
+          "correct": "C"
+        },
+        {
+          "question": "Jaký je účel technického výkresu?",
+          "a": "Prezentace produktu",
+          "b": "Návod k výrobě a kontrole",
+          "c": "Dekorace",
+          "d": "Marketing",
+          "correct": "B"
+        },
+        {
+          "question": "Co je hlavní rozdíl mezi čelním a bočním pohledem?",
+          "a": "Čelní ukazuje šířku, boční výšku",
+          "b": "Čelní ukazuje výšku a šířku, boční hloubku a výšku",
+          "c": "Boční ukazuje barvy",
+          "d": "Čelní ukazuje materiál",
+          "correct": "B"
+        },
+        {
+          "question": "Co znamená zkratka 'R' u kótování?",
+          "a": "Poloměr",
+          "b": "Průměr",
+          "c": "Rozměr",
+          "d": "Řez",
+          "correct": "A"
+        },
+        {
+          "question": "Jaká je typická tloušťka čáry pro obrys hlavního tvaru ve výkrese?",
+          "a": "Tenká čára",
+          "b": "Střední čára",
+          "c": "Silná čára",
+          "d": "Tečkovaná čára",
+          "correct": "C"
+        },
+        {
+          "question": "Co označuje výkresová značka 'Ø10'?",
+          "a": "Průměr otvoru 10 mm",
+          "b": "Poloměr 10 mm",
+          "c": "Hloubku 10 mm",
+          "d": "Úhel 10°",
+          "correct": "A"
+        },
+        {
+          "question": "Jak se nazývá symbol, který označuje povrchovou úpravu součástky?",
+          "a": "Značka materiálu",
+          "b": "Značka drsnosti",
+          "c": "Kótovací symbol",
+          "d": "Řezová značka",
+          "correct": "B"
+        },
+        {
+          "question": "Jaký je účel perspektivního pohledu ve výkrese?",
+          "a": "Zobrazit přesné rozměry",
+          "b": "Ukázat vzhled objektu trojrozměrně",
+          "c": "Umožnit měření",
+          "d": "Ukázat materiál",
+          "correct": "B"
+        },
+        {
+          "question": "Jak se nazývá tabulka, kde jsou uvedeny všechny součástky ve výkrese?",
+          "a": "Legenda",
+          "b": "Popisná tabulka",
+          "c": "Seznam materiálů (BOM)",
+          "d": "Kótovací tabulka",
+          "correct": "C"
+        },
+        {
+          "question": "Co značí čára střihu, pokud je řez proveden?",
+          "a": "Obrys objektu",
+          "b": "Povrchovou úpravu",
+          "c": "Místo řezu",
+          "d": "Osa symetrie",
+          "correct": "C"
+        },
+        {
+          "question": "Jaký typ pohledu se používá pro zvětšení malé části výkresu?",
+          "a": "Detail",
+          "b": "Axonometrie",
+          "c": "Řez",
+          "d": "Skrytý pohled",
+          "correct": "A"
+        },
+        {
+          "question": "Co je měřítko 1:2?",
+          "a": "Výkres je dvakrát větší než objekt",
+          "b": "Výkres je poloviční než objekt",
+          "c": "Výkres a objekt mají stejnou velikost",
+          "d": "Výkres je čtyřikrát větší než objekt",
+          "correct": "B"
+        },
+        {
+          "question": "Jaký typ čáry se používá pro střed kruhu?",
+          "a": "Plná čára",
+          "b": "Čárkovaná čára",
+          "c": "Tečkovaná čára",
+          "d": "Dvojitá čára",
+          "correct": "C"
+        },
+        {
+          "question": "Co označuje kótovací hodnota 50 ±0,1?",
+          "a": "Rozměr s tolerancí ±0,1 mm",
+          "b": "Rozměr bez tolerance",
+          "c": "Hloubku 50 mm",
+          "d": "Úhel 50°",
+          "correct": "A"
+        },
+        {
+          "question": "Jak se nazývá hlavní část výkresu, kde je zakreslen samotný objekt?",
+          "a": "Rámeček",
+          "b": "Pole výkresu",
+          "c": "Legenda",
+          "d": "Kótovací zóna",
+          "correct": "B"
+        },
+        {
+          "question": "Co znamená symbol šrafování ve výkrese?",
+          "a": "Materiál nebo řez",
+          "b": "Průměr součástky",
+          "c": "Tloušťku čáry",
+          "d": "Měřítko",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký typ čáry se používá pro označení hran, které nelze vidět?",
+          "a": "Plná čára",
+          "b": "Čárkovaná čára",
+          "c": "Dvojitá čára",
+          "d": "Tečkovaná čára",
+          "correct": "B"
+        },
+        {
+          "question": "Jaký je účel legendy ve výkrese?",
+          "a": "Vysvětlit symboly a značky",
+          "b": "Zobrazit rozměry",
+          "c": "Zobrazit materiál",
+          "d": "Zobrazit měřítko",
+          "correct": "A"
+        },
+        {
+          "question": "Jaký je hlavní rozdíl mezi 1:1 a 1:5 měřítkem?",
+          "a": "1:1 je skutečná velikost, 1:5 je pětkrát menší",
+          "b": "1:1 je pětkrát větší než objekt",
+          "c": "1:1 a 1:5 jsou stejné",
+          "d": "1:5 je větší než objekt",
+          "correct": "A"
+        }
+]

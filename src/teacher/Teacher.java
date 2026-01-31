@@ -5,7 +5,7 @@ import model.GameCharacter;
 public class Teacher extends GameCharacter {
     private String name;
     private int aiLevel;
-    private QuestionSet questions;
+    private QuestionSet questionSet;
     private Door startDoor;
     private int timeLimit;
 
@@ -34,12 +34,12 @@ public class Teacher extends GameCharacter {
         this.aiLevel = aiLevel;
     }
 
-    public QuestionSet getQuestions() {
-        return questions;
+    public QuestionSet getQuestionSet() {
+        return questionSet;
     }
 
     public void setQuestions(QuestionSet questions) {
-        this.questions = questions;
+        this.questionSet = questions;
     }
 
     public Door getStartDoor() {
@@ -63,7 +63,7 @@ public class Teacher extends GameCharacter {
         return "Teacher{" +
                 "name='" + name + '\'' +
                 ", aiLevel=" + aiLevel +
-                ", questions=" + questions +
+                ", questionSet=" + questionSet +
                 ", startDoor=" + startDoor +
                 ", timeLimit=" + timeLimit +
                 '}';

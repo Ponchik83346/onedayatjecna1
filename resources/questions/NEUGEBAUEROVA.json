@@ -1,0 +1,234 @@
+[
+      {
+        "question": "Vypočítej: tan 45°",
+        "a": "0",
+        "b": "1",
+        "c": "√3",
+        "d": "−1",
+        "correct": "B"
+      },
+      {
+        "question": "Vypočítej: cotg 30°",
+        "a": "√3",
+        "b": "1",
+        "c": "1/√3",
+        "d": "0",
+        "correct": "A"
+      },
+      {
+        "question": "Vyřeš rovnici: tan x = √3, x ∈ ⟨0°, 90°⟩",
+        "a": "x = 30°",
+        "b": "x = 45°",
+        "c": "x = 60°",
+        "d": "x = 90°",
+        "correct": "C"
+      },
+      {
+        "question": "Vyřeš rovnici: cotg x = 1, x ∈ ⟨0°, 90°⟩",
+        "a": "x = 30°",
+        "b": "x = 45°",
+        "c": "x = 60°",
+        "d": "x = 0°",
+        "correct": "B"
+      },
+      {
+        "question": "Vyřeš rovnici: x² = 16",
+        "a": "x = 4",
+        "b": "x = −4",
+        "c": "x = ±4",
+        "d": "x = 8",
+        "correct": "C"
+      },
+      {
+        "question": "Vyřeš rovnici: x² − 9 = 0",
+        "a": "x = 3",
+        "b": "x = −3",
+        "c": "x = ±3",
+        "d": "x = 0",
+        "correct": "C"
+      },
+      {
+        "question": "Vyřeš rovnici: x² − 5x + 6 = 0",
+        "a": "x = 2, 3",
+        "b": "x = −2, −3",
+        "c": "x = 1, 6",
+        "d": "x = 0, 6",
+        "correct": "A"
+      },
+      {
+        "question": "Vyřeš rovnici: x² + 4x + 4 = 0",
+        "a": "x = 2",
+        "b": "x = −2",
+        "c": "x = ±2",
+        "d": "x = 0",
+        "correct": "B"
+      },
+      {
+        "question": "Kolik je √81?",
+        "a": "7",
+        "b": "8",
+        "c": "9",
+        "d": "−9",
+        "correct": "C"
+      },
+      {
+        "question": "Vypočítej: √(25 · 4)",
+        "a": "10",
+        "b": "20",
+        "c": "5",
+        "d": "40",
+        "correct": "A"
+      },
+      {
+        "question": "Vypočítej: log₁₀ 100",
+        "a": "1",
+        "b": "2",
+        "c": "10",
+        "d": "0",
+        "correct": "B"
+      },
+      {
+        "question": "Vypočítej: log₁₀ 1",
+        "a": "0",
+        "b": "1",
+        "c": "10",
+        "d": "−1",
+        "correct": "A"
+      },
+      {
+        "question": "Vyřeš rovnici: log₁₀ x = 2",
+        "a": "x = 2",
+        "b": "x = 10",
+        "c": "x = 100",
+        "d": "x = 1000",
+        "correct": "C"
+      },
+      {
+        "question": "Vyřeš rovnici: log₁₀ x = 0",
+        "a": "x = 0",
+        "b": "x = 1",
+        "c": "x = 10",
+        "d": "x = −1",
+        "correct": "B"
+      },
+      {
+        "question": "Vyřeš rovnici: log₁₀ (x − 1) = 1",
+        "a": "x = 2",
+        "b": "x = 10",
+        "c": "x = 11",
+        "d": "x = 1",
+        "correct": "C"
+      },
+      {
+        "question": "Vyřeš rovnici: 2x + 3 = 11",
+        "a": "x = 2",
+        "b": "x = 3",
+        "c": "x = 4",
+        "d": "x = 5",
+        "correct": "C"
+      },
+      {
+        "question": "Vyřeš rovnici: 3(x − 2) = 9",
+        "a": "x = 3",
+        "b": "x = 4",
+        "c": "x = 5",
+        "d": "x = 6",
+        "correct": "C"
+      },
+      {
+        "question": "Vypočítej: 5² − 4²",
+        "a": "1",
+        "b": "9",
+        "c": "16",
+        "d": "25",
+        "correct": "B"
+      },
+      {
+        "question": "Vyřeš rovnici: tan x = 1, x ∈ ⟨0°, 90°⟩",
+        "a": "x = 30°",
+        "b": "x = 45°",
+        "c": "x = 60°",
+        "d": "x = 90°",
+        "correct": "B"
+      },
+      {
+        "question": "Vyřeš rovnici: cotg x = √3, x ∈ ⟨0°, 90°⟩",
+        "a": "x = 30°",
+        "b": "x = 45°",
+        "c": "x = 60°",
+        "d": "x = 90°",
+        "correct": "A"
+      },
+      {
+        "question": "Který výraz není definován?",
+        "a": "tan 45°",
+        "b": "cotg 45°",
+        "c": "tan 90°",
+        "d": "tan 0°",
+        "correct": "C"
+      },
+      {
+        "question": "Kolik je tan 0°?",
+        "a": "0",
+        "b": "1",
+        "c": "není definován",
+        "d": "−1",
+        "correct": "A"
+      },
+      {
+        "question": "Vypočítej: tan 30° · cotg 30°",
+        "a": "0",
+        "b": "1",
+        "c": "√3",
+        "d": "1/√3",
+        "correct": "B"
+      },
+      {
+        "question": "Vyřeš rovnici: x² − 1 = 0",
+        "a": "x = 1",
+        "b": "x = −1",
+        "c": "x = ±1",
+        "d": "x = 0",
+        "correct": "C"
+      },
+      {
+        "question": "Vyřeš rovnici: log₁₀ x = 3",
+        "a": "x = 30",
+        "b": "x = 100",
+        "c": "x = 300",
+        "d": "x = 1000",
+        "correct": "D"
+      },
+      {
+        "question": "Vypočítej: √49 + √16",
+        "a": "11",
+        "b": "9",
+        "c": "13",
+        "d": "15",
+        "correct": "A"
+      },
+      {
+        "question": "Vyřeš rovnici: 4x² = 16",
+        "a": "x = 2",
+        "b": "x = −2",
+        "c": "x = ±2",
+        "d": "x = 4",
+        "correct": "C"
+      },
+      {
+        "question": "Vyřeš rovnici: log₁₀ (x) = 1",
+        "a": "x = 0",
+        "b": "x = 1",
+        "c": "x = 10",
+        "d": "x = 100",
+        "correct": "C"
+      },
+      {
+        "question": "Vypočítej: cotg 45°",
+        "a": "0",
+        "b": "1",
+        "c": "√3",
+        "d": "1/√3",
+        "correct": "B"
+      }
+    ]

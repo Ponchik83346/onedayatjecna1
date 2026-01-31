@@ -4,17 +4,22 @@ import gameData.JsonLoader;
 import gameData.QuestionSetsData;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import teacher.TeacherType;
 
 public class QuestionSetFactory {
+    public static HashMap<String, QuestionSet> createQuestionSets() {
+        HashMap<String, QuestionSet> sets = new HashMap<>();
+        for (TeacherType teacher : TeacherType.values()) {
+            String fileName = "/questions/" + teacher.name() + ".json";
+            Question[] questions = JsonLoader.load(fileName, Question[].class);
 
-    public static List<QuestionSetsData> createQuestionSets() {
-        List<QuestionSetsData> sets = new ArrayList<>();
-        String[] files = JsonLoader.load("/questions/" + "index.json", String[].class);
+            QuestionSet qs = new QuestionSet();
+            qs.getQuestions().addAll(Arrays.asList(questions));
 
-        for (String fileName : files) {
-            QuestionSetsData data = JsonLoader.load("/questions/" + fileName, QuestionSetsData.class);
-            sets.add(data);
+            sets.put(teacher.name(), qs);
         }
 
         return sets;
