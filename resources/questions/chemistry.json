@@ -11,8 +11,8 @@
     "question": "Jaký je oxidační stav síry v H₂SO₄?",
     "a": "+4",
     "b": "+6",
-    "c": +2,
-    "d": 0,
+    "c": "+2",
+    "d": "0",
     "correct": "B"
   },
   {
@@ -139,7 +139,7 @@
     "question": "Jaká je oxidace sodíku při tvorbě Na₂O?",
     "a": "+1",
     "b": "+2",
-    "c": 0,
+    "c": "0",
     "d": "-1",
     "correct": "A"
   },

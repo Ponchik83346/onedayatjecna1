@@ -72,7 +72,7 @@
         { "id": "3-5", "type": "CLASSROOM" },
         { "id": "0-6", "type": "BUFET" },
         { "id": "0-7", "type": "CABINET" },
-        { "id": "0-8", "type": "STAIRS" },
+        { "id": "0-8", "type": "STAIRS", "upStairsId": "1-5"},
         { "id": "3-5", "type": "CLASSROOM" },
         { "id": "0-9", "type": "LAB" },
         { "id": "0-10", "type": "LAB" },

@@ -1,10 +1,14 @@
 package ui;
+import map.Map;
 import model.Game;
 public class MapRenderer {
-    private Game game;
-    public MapRenderer(Game game) {
-        this.game = game;
+    private Map map;
+
+    public MapRenderer(Map map) {
+        this.map = map;
     }
+
     public void render() {
+
     }
 }
