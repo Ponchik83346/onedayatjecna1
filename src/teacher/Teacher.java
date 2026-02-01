@@ -6,8 +6,16 @@ public class Teacher extends GameCharacter {
     private String name;
     private int aiLevel;
     private QuestionSet questionSet;
-    private Door startDoor;
+    private String startDoorId;
     private int timeLimit;
+
+    public Teacher(String name, int aiLevel, QuestionSet questionSet, String startDoorId, int timeLimit) {
+        this.name = name;
+        this.aiLevel = aiLevel;
+        this.questionSet = questionSet;
+        this.startDoorId = startDoorId;
+        this.timeLimit = timeLimit;
+    }
 
     public void move() {
     }

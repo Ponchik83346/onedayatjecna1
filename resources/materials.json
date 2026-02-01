@@ -1,7 +1,7 @@
 {
   "materials": [
-  {"name": "WOOD", "hp": 4},
-  {"name": "IRON", "hp": 8},
-  {"name": "OBSIDIAN", "hp": 12}
-    ]
+    {"name": "WOOD", "hp": 4, "chanceToSpawn": 50},
+    {"name": "IRON", "hp": 8, "chanceToSpawn": 30},
+    {"name": "OBSIDIAN", "hp": 12, "chanceToSpawn": 10}
+  ]
 }

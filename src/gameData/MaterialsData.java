@@ -5,8 +5,8 @@ import items.Material;
 import java.util.ArrayList;
 
 public class MaterialsData {
-    private ArrayList<Material> materials;
-    public ArrayList<Material> getMaterials() {
+    private ArrayList<MaterialData> materials;
+    public ArrayList<MaterialData> getMaterials() {
         return materials;
     }
 }

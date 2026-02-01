@@ -2,35 +2,59 @@
   "food": [
     {
       "name": "BAGETA",
-      "stamina": 20
+      "stamina": 20,
+      "chanceClass": 15,
+      "chanceBuffet": 40,
+      "chanceCafeteria": 1
     },
     {
       "name": "CORNFLAKES",
-      "stamina": 25
+      "stamina": 25,
+      "chanceClass": 12,
+      "chanceBuffet": 25,
+      "chanceCafeteria": 1
     },
     {
       "name": "KEBAB",
-      "stamina": 30
+      "stamina": 30,
+      "chanceClass": 8,
+      "chanceBuffet": 20,
+      "chanceCafeteria": 1
     },
     {
       "name": "PANINI",
-      "stamina": 15
+      "stamina": 15,
+      "chanceClass": 20,
+      "chanceBuffet": 1,
+      "chanceCafeteria": 1
     },
     {
       "name": "HOTDOG",
-      "stamina": 10
+      "stamina": 10,
+      "chanceClass": 42,
+      "chanceBuffet": 1,
+      "chanceCafeteria": 1
     },
     {
       "name": "SVICKOVA",
-      "stamina": 50
+      "stamina": 50,
+      "chanceClass": 1,
+      "chanceBuffet": 5,
+      "chanceCafeteria": 35
     },
     {
       "name": "SUNKOFLEKY",
-      "stamina": 75
+      "stamina": 75,
+      "chanceClass": 1,
+      "chanceBuffet": 5,
+      "chanceCafeteria": 35
     },
     {
       "name": "PIZZA",
-      "stamina": 100
+      "stamina": 100,
+      "chanceClass": 1,
+      "chanceBuffet": 3,
+      "chanceCafeteria": 25
     }
   ]
 }

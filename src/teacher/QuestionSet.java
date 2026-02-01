@@ -2,7 +2,7 @@ package teacher;
 import java.util.ArrayList;
 import java.util.List;
 public class QuestionSet {
-    private List<Question> questions = new ArrayList<Question>();
+    private List<Question> questions = new ArrayList<>();
     public QuestionSet() {
 
     }

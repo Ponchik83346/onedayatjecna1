@@ -15,30 +15,30 @@
         { "id": "3-5", "type": "CLASSROOM" },
         { "id": "3-5", "type": "CLASSROOM" },
         { "id": "3-9", "type": "CABINET" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-10", "type": "ELEVATOR" }
+        { "id": "3-10", "type": "CLASSROOM" },
+        { "id": "3-11", "type": "ELEVATOR" }
       ]
     },
     {
       "floor": 2,
       "rooms": [
         { "id": "2-1", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "2-2", "type": "CABINET" },
-        { "id": "2-3", "type": "CLASSROOM" },
+        { "id": "2-2", "type": "CLASSROOM" },
+        { "id": "2-3", "type": "CABINET" },
         { "id": "2-4", "type": "CLASSROOM" },
         { "id": "2-5", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "2-6", "type": "STAIRS", "downStairsId": "1-5", "upStairsId": "3-6"},
+        { "id": "2-6", "type": "CLASSROOM" },
         { "id": "2-7", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "2-8", "type": "CABINET" },
+        { "id": "2-8", "type": "CLASSROOM" },
         { "id": "2-9", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "2-10", "type": "ELEVATOR" }
+        { "id": "2-10", "type": "STAIRS", "downStairsId": "1-5", "upStairsId": "3-6"},
+        { "id": "2-11", "type": "CLASSROOM" },
+        { "id": "2-12", "type": "CLASSROOM" },
+        { "id": "2-13", "type": "CLASSROOM" },
+        { "id": "2-15", "type": "CABINET" },
+        { "id": "2-16", "type": "CLASSROOM" },
+        { "id": "2-17", "type": "CLASSROOM" },
+        { "id": "2-18", "type": "ELEVATOR" }
       ]
     },
     {
@@ -46,19 +46,19 @@
       "rooms": [
         { "id": "1-1", "type": "LUNCHROOM" },
         { "id": "1-2", "type": "CABINET" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "1-3", "type": "CABINET" },
-        { "id": "1-4", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "1-5", "type": "STAIRS", "downStairsId": "0-8", "upStairsId": "2-6"},
+        { "id": "1-3", "type": "CLASSROOM" },
+        { "id": "1-4", "type": "CABINET" },
+        { "id": "1-5", "type": "CLASSROOM" },
         { "id": "1-6", "type": "CLASSROOM" },
-        { "id": "1-7", "type": "PRINCIPALSOFFICE" },
+        { "id": "1-7", "type": "STAIRS", "downStairsId": "0-8", "upStairsId": "2-6"},
         { "id": "1-8", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "1-9", "type": "ELEVATOR" },
-        { "id": "1-10", "type": "LAB" }
+        { "id": "1-9", "type": "PRINCIPALSOFFICE" },
+        { "id": "1-10", "type": "CLASSROOM" },
+        { "id": "1-11", "type": "CLASSROOM" },
+        { "id": "1-12", "type": "CLASSROOM" },
+        { "id": "1-13", "type": "CLASSROOM" },
+        { "id": "1-14", "type": "ELEVATOR" },
+        { "id": "1-15", "type": "LAB" }
       ]
     },
     {
@@ -69,17 +69,17 @@
         { "id": "0-3", "type": "LAB" },
         { "id": "0-4", "type": "CABINET" },
         { "id": "0-5", "type": "CABINET" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "0-6", "type": "BUFET" },
-        { "id": "0-7", "type": "CABINET" },
-        { "id": "0-8", "type": "STAIRS", "upStairsId": "1-5"},
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "0-9", "type": "LAB" },
-        { "id": "0-10", "type": "LAB" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "0-11", "type": "ELEVATOR" },
-        { "id": "0-12", "type": "LAB"},
-        { "id": "0-12", "type": "LAB"}
+        { "id": "0-6", "type": "CLASSROOM" },
+        { "id": "0-7", "type": "BUFET" },
+        { "id": "0-8", "type": "CABINET" },
+        { "id": "0-9", "type": "STAIRS", "upStairsId": "1-5"},
+        { "id": "0-10", "type": "CLASSROOM" },
+        { "id": "0-11", "type": "LAB" },
+        { "id": "0-12", "type": "LAB" },
+        { "id": "0-13", "type": "CLASSROOM" },
+        { "id": "0-14", "type": "ELEVATOR" },
+        { "id": "0-15", "type": "LAB"},
+        { "id": "0-16", "type": "LAB"}
       ]
     }
   ]
