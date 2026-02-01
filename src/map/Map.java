@@ -7,7 +7,14 @@ public class Map {
         this.floors = floors;
     }
 
+    public List<Floor> getFloors() {
+        return floors;
+    }
+
     public Floor getFloor(int level) {
-        return floors.get(level);
+        for (Floor f : floors) {
+            if (f.getLevel() == level) return f;
+        }
+        return null;
     }
 }

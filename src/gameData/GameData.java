@@ -1,10 +1,11 @@
 package gameData;
 import items.Food;
-import items.FoodType;
-import items.Item;
 import items.Material;
-import map.Room;
-import model.GameCharacter;
+import map.Door;
+import map.Floor;
+import map.Map;
+import map.MapFactory;
+import model.Player;
 import teacher.*;
 
 import java.util.ArrayList;
@@ -12,37 +13,55 @@ import java.util.HashMap;
 import java.util.List;
 
 public class GameData {
-    public ArrayList<Food> food;
-    public ArrayList<Material> materials;
-    public ArrayList<Teacher> teachers;
+    private ArrayList<Food> food;
+    private ArrayList<Material> materials;
+    private ArrayList<Teacher> teachers;
+    private Player player;
+    private static Map map;
 
-    private GameData() {
+    public GameData() {
         teachers = new ArrayList<>();
         materials = new ArrayList<>();
         food = new ArrayList<>();
+        player = new Player();
     }
 
     public static GameData load() {
         GameData data = new GameData();
+        map = MapFactory.load();
         data.createTeachers();
         data.createFood();
         data.createMaterials();
-
         return data;
     }
     public void createTeachers() {
         HashMap<String, QuestionSet> questionSets = QuestionSetFactory.createQuestionSets();
         List<TeacherData> teacherDataList = JsonLoader.load("/teachers.json", TeachersData.class).getTeachers();
-
+        HashMap<String, Door> doorsById = new HashMap<>();
+        for (Floor floor : map.getFloors()) {
+            for (Door door : floor.getDoors()) {
+                doorsById.put(door.getId(), door);
+            }
+        }
         for (TeacherData data : teacherDataList) {
-            Teacher t = new Teacher(data.getName(), data.getAiLevel(), questionSets.get(data.getName()), data.getStartDoorId(), data.getTimeLimit());
+            Door startDoor = doorsById.get(data.getStartDoorId());
+            if (startDoor == null) {
+                throw new IllegalStateException("Start door not found for teacher: " + data.getName());
+            }
+            Teacher t = new Teacher(
+                    data.getName(),
+                    data.getAiLevel(),
+                    questionSets.get(data.getName()),
+                    startDoor,
+                    data.getTimeLimit()
+            );
             teachers.add(t);
         }
     }
     public void createFood(){
         ArrayList<FoodData> foodDataList = JsonLoader.load("/food.json", FoodsData.class).getFood();
         for(FoodData data : foodDataList){
-            Food f = new Food(data.getStamina(), data.getName());
+            Food f = new Food(data.getStamina(), data.getName(), data.getChanceClass(), data.getChanceBuffet(), data.getChanceCafeteria());
             food.add(f);
         }
     }
@@ -61,4 +80,15 @@ public class GameData {
         return food; }
     public List<Material> getMaterials() {
         return materials; }
+
+    public Player getPlayer() {
+        return player;
+    }
+    public Floor getFloorByLevel(int Level){
+        return map.getFloor(Level);
+    }
+
+    public static Map getMap() {
+        return map;
+    }
 }

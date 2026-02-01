@@ -10,6 +10,7 @@ import java.util.List;
 public class Room {
     private String id;
     private RoomType type;
+    private Door door;
     private int capacity;
     private ArrayList<Teacher> teachersInside;
     private boolean hasTest;
@@ -56,5 +57,13 @@ public class Room {
 
     public RoomType getType() {
         return type;
+    }
+
+    public Door getDoor() {
+        return door;
+    }
+
+    public void setDoor(Door door) {
+        this.door = door;
     }
 }

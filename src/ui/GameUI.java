@@ -8,5 +8,11 @@ public class GameUI {
     private InputHandler input;
 
     public void gameLoop() {
+        renderer.render(game);
+    }
+    public GameUI(){
+        game = new Game();
+        renderer = new MapRenderer(game.getMap());
+        game.initialize();
     }
 }
