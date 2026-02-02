@@ -37,8 +37,15 @@ public final class MapFactory {
                 if (j > 0) door.setLeft(doors.get(j - 1));
                 if (j < doors.size() - 1) door.setRight(doors.get(j + 1));
                 if (rd.getType() == RoomType.STAIRS) {
-                    if (rd.getDownStairsId() != null) door.setDownDoor(doorsByRoomId.get(rd.getDownStairsId()));
-                    if (rd.getUpStairsId() != null) door.setUpDoor(doorsByRoomId.get(rd.getUpStairsId()));
+                    if (rd.getDownStairsId() != null){
+                        door.setDownDoor(doorsByRoomId.get(rd.getDownStairsId()));
+                    }
+                    if (rd.getUpStairsId() != null){
+                        door.setUpDoor(doorsByRoomId.get(rd.getUpStairsId()));
+                    }
+                }
+                if(rd.getType()==RoomType.ELEVATOR){
+                    door.setLocked(true);
                 }
             }
         }

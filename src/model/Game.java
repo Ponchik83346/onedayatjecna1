@@ -19,15 +19,13 @@ public class Game {
     public void initialize() {
         this.gameData = GameData.load();
         this.gameData.getPlayer().setCurrentFloor(gameData.getFloorByLevel(3));
+        this.gameData.getPlayer().setCurrentDoor(gameData.getDoorByLevel(3, 2));
         this.state = GameState.INTRO;
         this.globalTime = 0;
         this.lastTeacherUpdate = 0;
     }
 
-    public void startGame() {
-    }
-
-    public void onPlayerAction() {
+    public void update() {
         updateTeachers();
         lastTeacherUpdate = globalTime;
     }

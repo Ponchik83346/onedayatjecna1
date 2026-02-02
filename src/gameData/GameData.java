@@ -1,10 +1,7 @@
 package gameData;
 import items.Food;
 import items.Material;
-import map.Door;
-import map.Floor;
-import map.Map;
-import map.MapFactory;
+import map.*;
 import model.Player;
 import teacher.*;
 
@@ -87,8 +84,24 @@ public class GameData {
     public Floor getFloorByLevel(int Level){
         return map.getFloor(Level);
     }
+    public Door getDoorByLevel(int floor ,int doorId){
+        return map.getFloor(floor).getDoors().get(doorId);
+    }
 
     public static Map getMap() {
         return map;
+    }
+    public static boolean unlockAllElevators(){
+        boolean foundElevator = false;
+        for (Floor floor : map.getFloors()) {
+            for (Door door : floor.getDoors()) {
+                if (door.getConnectedRoom() != null
+                        && door.getConnectedRoom().getType() == RoomType.ELEVATOR) {
+                    door.setLocked(false);
+                    foundElevator = true;
+                }
+            }
+        }
+        return foundElevator;
     }
 }

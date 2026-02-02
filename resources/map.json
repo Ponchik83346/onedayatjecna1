@@ -8,15 +8,15 @@
         { "id": "3-3", "type": "CLASSROOM" },
         { "id": "3-4", "type": "CLASSROOM" },
         { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-6", "type": "STAIRS", "downStairsId": "2-6"},
-        { "id": "3-7", "type": "CLASSROOM" },
+        { "id": "3-6", "type": "CLASSROOM" },
+        { "id": "3-7", "type": "STAIRS", "downStairsId": "2-6"},
         { "id": "3-8", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-5", "type": "CLASSROOM" },
-        { "id": "3-9", "type": "CABINET" },
+        { "id": "3-9", "type": "CLASSROOM" },
         { "id": "3-10", "type": "CLASSROOM" },
-        { "id": "3-11", "type": "ELEVATOR" }
+        { "id": "3-11", "type": "CLASSROOM" },
+        { "id": "3-12", "type": "CABINET" },
+        { "id": "3-13", "type": "CLASSROOM" },
+        { "id": "3-14", "type": "ELEVATOR" }
       ]
     },
     {

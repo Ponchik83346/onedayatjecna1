@@ -1,6 +1,8 @@
 package ui;
 import model.Game;
 import command.Command;
+import model.GameState;
+
 public class GameUI {
 
     private Game game;
@@ -8,7 +10,15 @@ public class GameUI {
     private InputHandler input;
 
     public void gameLoop() {
-        renderer.render(game);
+        while (game.getState() == GameState.PLAYING) {
+            renderer.render(game);
+            String inputStr = input.processInput();
+            Command command = input.readCommand(inputStr);
+            if (command != null) {
+                command.execute();
+            }
+            game.update();
+        }
     }
     public GameUI(){
         game = new Game();

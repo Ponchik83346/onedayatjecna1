@@ -1,5 +1,7 @@
 package map;
 
+import items.Material;
+
 public class Door {
     private final String id;
     private Door left;
@@ -7,11 +9,14 @@ public class Door {
     private Door downDoor;
     private Door upDoor;
     private final Room connectedRoom;
+    private boolean isLocked;
+    private Material material;
 
     public Door(String id, Room connectedRoom) {
         this.id = id;
         this.connectedRoom = connectedRoom;
         connectedRoom.setDoor(this);
+        this.isLocked = false;
     }
 
     public void setLeft(Door left) {
@@ -47,4 +52,19 @@ public class Door {
         this.upDoor = upDoor;
     }
 
+    public boolean isLocked() {
+        return isLocked;
+    }
+
+    public void setLocked(boolean locked) {
+        isLocked = locked;
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
+    }
 }

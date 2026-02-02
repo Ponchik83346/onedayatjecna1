@@ -1,5 +1,7 @@
 package items;
 
+import model.Player;
+
 public class Food extends Item {
     private int stamina;
     private int chanceClass;
@@ -48,5 +50,9 @@ public class Food extends Item {
 
     public void setChanceCafeteria(int chanceCafeteria) {
         this.chanceCafeteria = chanceCafeteria;
+    }
+
+    public void use(Player player) {
+        player.addStamina(20);
     }
 }

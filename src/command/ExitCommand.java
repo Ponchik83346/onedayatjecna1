@@ -7,7 +7,6 @@ public class ExitCommand implements Command {
     public void execute() {
 
     }
-
     public ExitCommand(Game game) {
     }
 }
