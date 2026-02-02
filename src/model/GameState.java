@@ -4,5 +4,6 @@ public enum GameState {
     INTRO,
     PLAYING,
     WIN,
-    LOSE
+    LOSE,
+    EXIT
 }

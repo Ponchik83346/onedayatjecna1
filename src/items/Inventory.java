@@ -38,9 +38,9 @@ public class Inventory {
     }
     public void printContents() {
         System.out.println("=== INVENTORY ===");
-        for (Item item : items) {
-            if (item != null) {
-                System.out.println("- " + item.getName());
+        for (int i=0; i<items.size(); i++) {
+            if (items.get(i) != null) {
+                System.out.println("-"+i +" " +items.get(i).getName());
             }
         }
     }
@@ -54,5 +54,12 @@ public class Inventory {
             }
         }
         return mats;
+    }
+
+    public Item getItemByIndex(int index) {
+        if (index < 0 || index >= items.size()) {
+            return null;
+        }
+        return items.get(index);
     }
 }

@@ -22,8 +22,9 @@ public class Player extends GameCharacter {
         this.inventory = new Inventory();
         this.stamina = 100;
     }
-    public void useItem(Item item) {
-        if (!inventory.contains(item)){
+    public void useItem(Item item, Scanner sc) {
+        if (!inventory.contains(item)) {
+            System.out.println("Nemáte tento item v inventáři!");
             return;
         }
         Door door = getCurrentDoor();
@@ -31,35 +32,32 @@ public class Player extends GameCharacter {
             case FOOD -> {
                 Food food = (Food) item;
                 food.use(this);
+                inventory.removeItem(item);
+                System.out.println("Snědl jste " + food.getName() + ". Stamina + " + food.getStamina());
             }
             case KEY -> {
                 Key key = (Key) item;
                 key.use(this);
+                inventory.removeItem(item);
+                System.out.println("Využili jste klíč!");
             }
             case HAMMER -> {
-
-                Hammer hammer = (Hammer) item;
-
-                if (door == null) return;
-
                 List<Material> materials = inventory.getMaterials();
-
                 if (materials.isEmpty()) {
                     System.out.println("Nemáte žádné materiály!");
                     return;
                 }
-
                 System.out.println("Vyberte si materiál:");
                 for (int i = 0; i < materials.size(); i++) {
                     System.out.println(i + ": " + materials.get(i).getName());
                 }
-                Scanner sc = new Scanner(System.in);
-                int choice = sc.nextInt();
-                if (choice < 0 || choice >= materials.size()) {
-                    System.out.println("Invalid choice.");
-                    return;
+                int choice = -1;
+                while (choice < 0 || choice >= materials.size()) {
+                    System.out.print("Zadejte číslo materiálu: ");
+                    choice = sc.nextInt();
                 }
                 Material chosenMat = materials.get(choice);
+                Hammer hammer = (Hammer) item;
                 hammer.use(this, chosenMat, door);
                 inventory.removeItem(chosenMat);
                 if (hammer.getHp() <= 0) {
@@ -80,12 +78,12 @@ public class Player extends GameCharacter {
             if (upDoor != null) {
                 currentDoor = upDoor;
                 currentFloor = getFloorByDoor(upDoor);
-                System.out.println("You went upstairs to floor " + currentFloor.getLevel());
+                System.out.println("Šli jste po schodech nahoru do patra " + currentFloor.getLevel());
             } else {
-                System.out.println("There is no upstairs here!");
+                System.out.println("Není kam jít!");
             }
         } else {
-            System.out.println("You are not at stairs!");
+            System.out.println("Nejste na schodech!");
         }
     }
 
@@ -96,12 +94,12 @@ public class Player extends GameCharacter {
             if (downDoor != null) {
                 currentDoor = downDoor;
                 currentFloor = getFloorByDoor(downDoor);
-                System.out.println("You went downstairs to floor " + currentFloor.getLevel());
+                System.out.println("Šli jste po schodech dolu do patra " + currentFloor.getLevel());
             } else {
-                System.out.println("There is no downstairs here!");
+                System.out.println("Není kam jít!");
             }
         } else {
-            System.out.println("You are not at stairs!");
+            System.out.println("Nejste na schodech!");
         }
     }
 
@@ -114,14 +112,14 @@ public class Player extends GameCharacter {
                             && door != currentDoor) {
                         currentDoor = door;
                         currentFloor = floor;
-                        System.out.println("You used the elevator to floor " + currentFloor.getLevel());
+                        System.out.println("Jeli jste výtahem do patra " + currentFloor.getLevel());
                         return;
                     }
                 }
             }
-            System.out.println("No other elevator available!");
+            System.out.println("Špatné číslo výtahu!");
         } else {
-            System.out.println("You are not at an elevator!");
+            System.out.println("Nejste ve výtahu!");
         }
     }
 

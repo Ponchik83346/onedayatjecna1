@@ -1,6 +1,7 @@
 package command;
 
 import model.Game;
+import model.GameState;
 
 public class ExitCommand implements Command {
     @Override
@@ -8,5 +9,6 @@ public class ExitCommand implements Command {
 
     }
     public ExitCommand(Game game) {
+        game.setState(GameState.EXIT);
     }
 }
