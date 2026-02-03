@@ -1,25 +1,28 @@
 package gameData;
-import items.Food;
-import items.Material;
+import items.*;
 import map.*;
 import model.Player;
 import teacher.*;
+import ui.RandomGenerator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class GameData {
-    private ArrayList<Food> food;
-    private ArrayList<Material> materials;
-    private ArrayList<Teacher> teachers;
-    private Player player;
+    private static ArrayList<Food> food;
+    private static ArrayList<Material> materials;
+    private static ArrayList<Teacher> teachers;
+    private static ArrayList<Key> keys;
+    private static ArrayList<Item> items;
+    private static Player player;
     private static Map map;
 
     public GameData() {
         teachers = new ArrayList<>();
         materials = new ArrayList<>();
         food = new ArrayList<>();
+        items = new ArrayList<>();
         player = new Player();
     }
 
@@ -29,9 +32,16 @@ public class GameData {
         data.createTeachers();
         data.createFood();
         data.createMaterials();
+        createItems(food, materials);
         return data;
     }
-    public void createTeachers() {
+
+    public static void createItems(ArrayList<Food> food, ArrayList<Material> materials){
+        items.addAll(food);
+        items.addAll(materials);
+    }
+
+    private void createTeachers() {
         HashMap<String, QuestionSet> questionSets = QuestionSetFactory.createQuestionSets();
         List<TeacherData> teacherDataList = JsonLoader.load("/teachers.json", TeachersData.class).getTeachers();
         HashMap<String, Door> doorsById = new HashMap<>();
@@ -55,16 +65,18 @@ public class GameData {
             teachers.add(t);
         }
     }
-    public void createFood(){
+
+    private void createFood() {
         ArrayList<FoodData> foodDataList = JsonLoader.load("/food.json", FoodsData.class).getFood();
-        for(FoodData data : foodDataList){
+        for (FoodData data : foodDataList) {
             Food f = new Food(data.getStamina(), data.getName(), data.getChanceClass(), data.getChanceBuffet(), data.getChanceCafeteria());
             food.add(f);
         }
     }
-    public void createMaterials(){
+
+    private void createMaterials() {
         ArrayList<MaterialData> materialsData = JsonLoader.load("/materials.json", MaterialsData.class).getMaterials();
-        for(MaterialData data : materialsData){
+        for (MaterialData data : materialsData) {
             Material m = new Material(data.getHp(), data.getName(), data.getChanceToSpawn());
             materials.add(m);
         }
@@ -72,26 +84,34 @@ public class GameData {
 
 
     public List<Teacher> getTeachers() {
-        return teachers; }
+        return teachers;
+    }
+
     public List<Food> getFood() {
-        return food; }
+        return food;
+    }
+
     public List<Material> getMaterials() {
-        return materials; }
+        return materials;
+    }
 
     public Player getPlayer() {
         return player;
     }
-    public Floor getFloorByLevel(int Level){
+
+    public Floor getFloorByLevel(int Level) {
         return map.getFloor(Level);
     }
-    public Door getDoorByLevel(int floor ,int doorId){
+
+    public Door getDoorByLevel(int floor, int doorId) {
         return map.getFloor(floor).getDoors().get(doorId);
     }
 
     public static Map getMap() {
         return map;
     }
-    public static boolean unlockAllElevators(){
+
+    public static boolean unlockAllElevators() {
         boolean foundElevator = false;
         for (Floor floor : map.getFloors()) {
             for (Door door : floor.getDoors()) {
@@ -103,5 +123,37 @@ public class GameData {
             }
         }
         return foundElevator;
+    }
+
+    private void generateItems(RandomGenerator rnd) {
+        for (Floor f : map.getFloors()) {
+            for (Door d : f.getDoors()) {
+                if (rnd.generateProbability(50)) {
+                    putItemsIntoRoom(d, rnd, items);
+                }
+            }
+        }
+    }
+
+    private void putItemsIntoRoom(Door d, RandomGenerator rnd, List<Item> items) {
+        int itemCount = 0;
+        while (itemCount != d.getConnectedRoom().getMaxItemCountPerRoom())
+            for (Item item : items) {
+                if(rnd.generateProbability(item.getChanceToSpawn())){
+                    if(item.getType()==ItemType.FOOD){
+                        d.getConnectedRoom().getFood().add(item);
+                    }
+                }
+            }
+    }
+
+    private void putKeysIntoCabinets(){
+
+    }
+    private void putHammerIntoRooms(Door d, RandomGenerator rnd){
+
+    }
+    private void putTestsIntoRooms(){
+
     }
 }

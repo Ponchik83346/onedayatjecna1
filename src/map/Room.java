@@ -18,6 +18,7 @@ public class Room {
     private List<Material> materials;
     private Hammer hammer;
     private boolean hasKey;
+    private int maxItemCountPerRoom;
 
     public Room(String id, RoomType type) {
         this.id = id;
@@ -27,7 +28,11 @@ public class Room {
         this.teachersInside = new ArrayList<>();
         if (type == RoomType.LAB || type == RoomType.LUNCHROOM) {
             this.capacity = 2;
-        } else {
+            this.maxItemCountPerRoom = 3;
+        } else if(type == RoomType.BUFET){
+            this.maxItemCountPerRoom = 2;
+            this.capacity = 1;
+        } else{
             this.capacity = 1;
         }
     }
@@ -65,5 +70,29 @@ public class Room {
 
     public void setDoor(Door door) {
         this.door = door;
+    }
+
+    public int getMaxItemCountPerRoom() {
+        return maxItemCountPerRoom;
+    }
+
+    public void setMaxItemCountPerRoom(int maxItemCountPerRoom) {
+        this.maxItemCountPerRoom = maxItemCountPerRoom;
+    }
+
+    public List<Material> getMaterials() {
+        return materials;
+    }
+
+    public void setMaterials(List<Material> materials) {
+        this.materials = materials;
+    }
+
+    public List<Food> getFood() {
+        return food;
+    }
+
+    public void setFood(List<Food> food) {
+        this.food = food;
     }
 }

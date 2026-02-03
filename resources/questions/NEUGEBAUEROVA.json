@@ -230,5 +230,13 @@
         "c": "√3",
         "d": "1/√3",
         "correct": "B"
+      },
+      {
+        "question": "Šnek? (easter egg)",
+        "a": "Ano",
+        "b": "Ne",
+        "c": "Možná",
+        "d": "Určitě",
+        "correct": "D"
       }
     ]

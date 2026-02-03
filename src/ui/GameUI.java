@@ -20,6 +20,7 @@ public class GameUI {
             game.update();
         }
     }
+
     public GameUI(){
         game = new Game();
         renderer = new MapRenderer(game.getMap());
