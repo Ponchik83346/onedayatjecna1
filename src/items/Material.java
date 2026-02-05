@@ -10,4 +10,5 @@ public class Material extends Item {
         super(name, chanceToSpawn, ItemType.MATERIAL);
         this.hp = hp;
     }
+
 }

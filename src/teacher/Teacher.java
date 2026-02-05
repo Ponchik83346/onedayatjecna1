@@ -2,7 +2,9 @@ package teacher;
 import map.Door;
 import model.GameCharacter;
 
+import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Teacher extends GameCharacter {
 
@@ -23,8 +25,7 @@ public class Teacher extends GameCharacter {
         return name;
     }
 
-    public void moveAI() {
-        Random rand = new Random();
+    public void moveAI(Random rand) {
         if(rand.nextInt() < aiLevel) {
             if (Math.random() < 0.5) {
                 moveLeft();
@@ -34,8 +35,24 @@ public class Teacher extends GameCharacter {
         }
     }
 
-    public void askQuestion() {
-
+    public boolean askQuestion(Random rand, Scanner scanner) {
+        Question q = questions.getQuestions().get(rand.nextInt(questions.getQuestions().size()));
+        System.out.println(q);
+        long start = System.currentTimeMillis();
+        String answer = scanner.nextLine().toUpperCase();
+        long end = System.currentTimeMillis();
+        long seconds = (end - start) / 1000;
+        if (seconds > timeLimit) {
+            System.out.println("Time's up!");
+            return false;
+        }
+        if (q.isCorrect(answer)) {
+            System.out.println("Správně!");
+            return true;
+        } else {
+            System.out.println("Špatně!");
+            return false;
+        }
     }
 
     public QuestionSet getQuestions() {

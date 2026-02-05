@@ -1,6 +1,7 @@
 package ui;
 import model.Game;
 import command.Command;
+import command.CommandFactory;
 import model.GameState;
 
 public class GameUI {
@@ -10,20 +11,23 @@ public class GameUI {
     private InputHandler input;
 
     public void gameLoop() {
-        while (game.getState() == GameState.PLAYING) {
+        while (game.isRunning()) {
             renderer.render(game);
             String inputStr = input.processInput();
             Command command = input.readCommand(inputStr);
             if (command != null) {
                 command.execute();
             }
-            game.update();
+            game.update(input);
         }
+        System.out.println("Hra ukončena: " + game.getState());
     }
 
-    public GameUI(){
+    public GameUI() {
         game = new Game();
-        renderer = new MapRenderer(game.getMap());
         game.initialize();
+        renderer = new MapRenderer(game.getMap());
+        CommandFactory factory = new CommandFactory(game.getPlayer(), input, game);
+        input = new InputHandler(factory);
     }
 }

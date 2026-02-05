@@ -35,6 +35,9 @@ public class Question {
     public String getTimeLimit() {
         return timeLimit;
     }
+    public boolean isCorrect(String input){
+        return input.equals(correct);
+    }
 
     @Override
     public String toString() {

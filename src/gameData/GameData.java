@@ -1,4 +1,5 @@
 package gameData;
+
 import items.*;
 import map.*;
 import model.Player;
@@ -22,6 +23,10 @@ public class GameData {
         teachers = new ArrayList<>();
         materials = new ArrayList<>();
         food = new ArrayList<>();
+        keys = new ArrayList<>();
+        for(int i = 0; i<10; i++){
+            keys.add(new Key("k"+i));
+        }
         items = new ArrayList<>();
         player = new Player();
     }
@@ -32,18 +37,24 @@ public class GameData {
         data.createTeachers();
         data.createFood();
         data.createMaterials();
-        createItems(food, materials);
+        createItems();
+        data.generateItems(new RandomGenerator());
         return data;
     }
-
-    public static void createItems(ArrayList<Food> food, ArrayList<Material> materials){
+    public static void createItems() {
+        items.clear();
         items.addAll(food);
         items.addAll(materials);
+        items.addAll(keys);
     }
 
     private void createTeachers() {
-        HashMap<String, QuestionSet> questionSets = QuestionSetFactory.createQuestionSets();
-        List<TeacherData> teacherDataList = JsonLoader.load("/teachers.json", TeachersData.class).getTeachers();
+        HashMap<String, QuestionSet> questionSets =
+                QuestionSetFactory.createQuestionSets();
+
+        List<TeacherData> teacherDataList =
+                JsonLoader.load("/teachers.json", TeachersData.class).getTeachers();
+
         HashMap<String, Door> doorsById = new HashMap<>();
         for (Floor floor : map.getFloors()) {
             for (Door door : floor.getDoors()) {
@@ -53,7 +64,9 @@ public class GameData {
         for (TeacherData data : teacherDataList) {
             Door startDoor = doorsById.get(data.getStartDoorId());
             if (startDoor == null) {
-                throw new IllegalStateException("Start door not found for teacher: " + data.getName());
+                throw new IllegalStateException(
+                        "Start door not found for teacher: " + data.getName()
+                );
             }
             Teacher t = new Teacher(
                     data.getName(),
@@ -65,58 +78,58 @@ public class GameData {
             teachers.add(t);
         }
     }
-
     private void createFood() {
-        ArrayList<FoodData> foodDataList = JsonLoader.load("/food.json", FoodsData.class).getFood();
+        ArrayList<FoodData> foodDataList =
+                JsonLoader.load("/food.json", FoodsData.class).getFood();
         for (FoodData data : foodDataList) {
-            Food f = new Food(data.getStamina(), data.getName(), data.getChanceClass(), data.getChanceBuffet(), data.getChanceCafeteria());
+            Food f = new Food(
+                    data.getStamina(),
+                    data.getName(),
+                    data.getChanceClass(),
+                    data.getChanceBuffet(),
+                    data.getChanceCafeteria()
+            );
             food.add(f);
         }
     }
-
     private void createMaterials() {
-        ArrayList<MaterialData> materialsData = JsonLoader.load("/materials.json", MaterialsData.class).getMaterials();
+        ArrayList<MaterialData> materialsData =
+                JsonLoader.load("/materials.json", MaterialsData.class).getMaterials();
+
         for (MaterialData data : materialsData) {
-            Material m = new Material(data.getHp(), data.getName(), data.getChanceToSpawn());
+            Material m = new Material(
+                    data.getHp(),
+                    data.getName(),
+                    data.getChanceToSpawn()
+            );
             materials.add(m);
         }
     }
+    public List<Teacher> getTeachers() { return teachers; }
 
+    public List<Food> getFood() { return food; }
 
-    public List<Teacher> getTeachers() {
-        return teachers;
-    }
+    public List<Material> getMaterials() { return materials; }
 
-    public List<Food> getFood() {
-        return food;
-    }
+    public Player getPlayer() { return player; }
 
-    public List<Material> getMaterials() {
-        return materials;
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public Floor getFloorByLevel(int Level) {
-        return map.getFloor(Level);
+    public Floor getFloorByLevel(int level) {
+        return map.getFloor(level);
     }
 
     public Door getDoorByLevel(int floor, int doorId) {
         return map.getFloor(floor).getDoors().get(doorId);
     }
 
-    public static Map getMap() {
-        return map;
-    }
+    public static Map getMap() { return map; }
 
     public static boolean unlockAllElevators() {
         boolean foundElevator = false;
         for (Floor floor : map.getFloors()) {
             for (Door door : floor.getDoors()) {
-                if (door.getConnectedRoom() != null
-                        && door.getConnectedRoom().getType() == RoomType.ELEVATOR) {
+                if (door.getConnectedRoom() != null &&
+                        door.getConnectedRoom().getType() == RoomType.ELEVATOR) {
+
                     door.setLocked(false);
                     foundElevator = true;
                 }
@@ -124,36 +137,70 @@ public class GameData {
         }
         return foundElevator;
     }
-
     private void generateItems(RandomGenerator rnd) {
         for (Floor f : map.getFloors()) {
             for (Door d : f.getDoors()) {
+                if (d.getConnectedRoom() == null)
+                    continue;
                 if (rnd.generateProbability(50)) {
-                    putItemsIntoRoom(d, rnd, items);
+                    putItemsIntoRoom(d, rnd);
                 }
             }
         }
     }
-
-    private void putItemsIntoRoom(Door d, RandomGenerator rnd, List<Item> items) {
-        int itemCount = 0;
-        while (itemCount != d.getConnectedRoom().getMaxItemCountPerRoom())
-            for (Item item : items) {
-                if(rnd.generateProbability(item.getChanceToSpawn())){
-                    if(item.getType()==ItemType.FOOD){
-                        d.getConnectedRoom().getFood().add(item);
+    private void putItemsIntoRoom(Door d, RandomGenerator rnd) {
+        Room room = d.getConnectedRoom();
+        if (room == null) return;
+        int max = room.getMaxItemCountPerRoom();
+        int count = 0;
+        for (Item item : items) {
+            if (count >= max) break;
+            switch (room.getType()) {
+                case LUNCHROOM:
+                    if (item instanceof Food f && f.getStamina() >= 40) {
+                        if (rnd.generateProbability(f.getChanceCafeteria())) {
+                            room.getFood().add(f);
+                            count++;
+                        }
                     }
-                }
+                    break;
+                case BUFET:
+                    if (item instanceof Food f &&
+                            f.getName().toLowerCase().contains("bageta")) {
+                        if (rnd.generateProbability(f.getChanceBuffet())) {
+                            room.getFood().add(f);
+                            count++;
+                        }
+                    }
+                    break;
+                case CABINET:
+                    if (item instanceof Key k) {
+                        room.addKey(k);
+                        count++;
+                    }
+                    break;
+
+                case LAB:
+                    if (item instanceof Material m &&
+                            rnd.generateProbability(item.getChanceToSpawn())) {
+                        room.getMaterials().add(m);
+                        count++;
+                    }
+                    break;
+
+                case CLASSROOM:
+                    if (rnd.generateProbability(item.getChanceToSpawn())) {
+                        switch (item) {
+                            case Food f -> room.getFood().add(f);
+                            case Material m -> room.getMaterials().add(m);
+                            case Key k -> room.addKey(k);
+                            default -> {
+                            }
+                        }
+                        count++;
+                    }
+                    break;
             }
-    }
-
-    private void putKeysIntoCabinets(){
-
-    }
-    private void putHammerIntoRooms(Door d, RandomGenerator rnd){
-
-    }
-    private void putTestsIntoRooms(){
-
+        }
     }
 }

@@ -13,4 +13,7 @@ public class QuestionSet {
     public boolean isEmpty() {
         return questions.isEmpty();
     }
+    public Question getQuestionByID(int id) {
+        return questions.get(id);
+    }
 }

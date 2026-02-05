@@ -1,6 +1,7 @@
 package map;
 
 import items.Material;
+import teacher.Teacher;
 
 public class Door {
     private final String id;
