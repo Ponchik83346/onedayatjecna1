@@ -3,8 +3,11 @@ package command;
 import model.Player;
 
 public class MoveLeftCommand implements Command {
-    private Player player;
+
+    private final Player player;
+
     public MoveLeftCommand(Player player) {
+        this.player = player;
     }
 
     @Override

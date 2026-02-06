@@ -3,7 +3,8 @@ package command;
 import model.Player;
 
 public class GoUpstairsCommand implements Command {
-    private Player player;
+
+    private final Player player;
 
     public GoUpstairsCommand(Player player) {
         this.player = player;

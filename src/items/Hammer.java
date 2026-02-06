@@ -17,7 +17,6 @@ public class Hammer extends Item {
         }
         door.setLocked(true);
         hp--;
-        System.out.println("Door repaired using " + material.getName());
     }
 
     public int getHp() {

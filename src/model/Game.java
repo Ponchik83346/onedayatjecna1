@@ -11,8 +11,9 @@ import java.util.List;
 public class Game {
     private GameData gameData;
     private GameState state;
-    private int globalTime;
-    private int lastTeacherUpdate;
+    private double globalTime = 0;
+    private long lastUpdateNano = 0;
+    private double lastTeacherUpdate = 0;
     private RandomGenerator randomGenerator;
     public Game() {
     }
@@ -20,43 +21,27 @@ public class Game {
     public void initialize() {
         this.gameData = GameData.load();
         this.randomGenerator = new RandomGenerator();
-        this.gameData.getPlayer().setCurrentFloor(
-                gameData.getFloorByLevel(3)
-        );
-        this.gameData.getPlayer().setCurrentDoor(
-                gameData.getDoorByLevel(3, 2)
-        );
+        this.gameData.getPlayer().setCurrentFloor(gameData.getFloorByLevel(3));
+        this.gameData.getPlayer().setCurrentDoor(gameData.getDoorByLevel(3, 2));
         this.state = GameState.PLAYING;
         this.globalTime = 0;
         this.lastTeacherUpdate = 0;
+        this.lastUpdateNano = System.nanoTime();
     }
-    public void update(InputHandler input) {
-        globalTime++;
+    public void update() {
         updateTeachers();
-        checkCollide(input);
     }
     public void updateTeachers() {
-        if (globalTime - lastTeacherUpdate >= 3) {
-            for (Teacher teacher : gameData.getTeachers()) {
-                teacher.moveAI(randomGenerator.getRandom());
+        long now = System.nanoTime();
+        double delta = (now - lastUpdateNano) / 1_000_000_000.0;
+        lastUpdateNano = now;
+        globalTime += delta;
+        if (globalTime - lastTeacherUpdate >= 3.0) {
+            for (Teacher t : getTeachers()) {
+                t.moveAI(randomGenerator.getRandom());
             }
             lastTeacherUpdate = globalTime;
         }
-    }
-    public boolean checkCollide(InputHandler input) {
-        Door playerDoor = gameData.getPlayer().getCurrentDoor();
-        for (Teacher t : gameData.getTeachers()) {
-            if (t.getCurrentDoor() == playerDoor) {
-                boolean correct = t.askQuestion(randomGenerator.getRandom(), input.getScanner());
-                if (!correct) {
-                    setState(GameState.LOSE);
-                    System.out.println("GAME OVER");
-                }
-                return true;
-            }
-        }
-
-        return false;
     }
 
     public boolean isRunning() {
@@ -70,7 +55,7 @@ public class Game {
     public void setState(GameState state) {
         this.state = state;
     }
-    public int getGlobalTime() {
+    public double getGlobalTime() {
         return globalTime;
     }
 
@@ -78,7 +63,7 @@ public class Game {
         this.globalTime = globalTime;
     }
 
-    public int getLastTeacherUpdate() {
+    public double getLastTeacherUpdate() {
         return lastTeacherUpdate;
     }
 
@@ -93,6 +78,38 @@ public class Game {
     }
     public List<Teacher> getTeachers() {
         return gameData.getTeachers();
+    }
+
+    public GameData getGameData() {
+        return gameData;
+    }
+
+    public void setGameData(GameData gameData) {
+        this.gameData = gameData;
+    }
+
+    public void setGlobalTime(double globalTime) {
+        this.globalTime = globalTime;
+    }
+
+    public long getLastUpdateNano() {
+        return lastUpdateNano;
+    }
+
+    public void setLastUpdateNano(long lastUpdateNano) {
+        this.lastUpdateNano = lastUpdateNano;
+    }
+
+    public void setLastTeacherUpdate(double lastTeacherUpdate) {
+        this.lastTeacherUpdate = lastTeacherUpdate;
+    }
+
+    public RandomGenerator getRandomGenerator() {
+        return randomGenerator;
+    }
+
+    public void setRandomGenerator(RandomGenerator randomGenerator) {
+        this.randomGenerator = randomGenerator;
     }
 }
 

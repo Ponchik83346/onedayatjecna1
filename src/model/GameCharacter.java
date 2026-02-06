@@ -1,19 +1,21 @@
 package model;
 
 import map.Door;
+import map.Room;
 
 public abstract class GameCharacter {
     protected Door currentDoor;
+    protected Room currentRoom;
     protected boolean insideRoom = false;
 
     public void moveLeft() {
-        if (currentDoor.getLeft() != null) {
+        if (currentDoor != null && currentDoor.getLeft() != null) {
             currentDoor = currentDoor.getLeft();
         }
     }
 
     public void moveRight() {
-        if (currentDoor.getRight() != null) {
+        if (currentDoor != null && currentDoor.getRight() != null) {
             currentDoor = currentDoor.getRight();
         }
     }
@@ -21,12 +23,15 @@ public abstract class GameCharacter {
     public void enterRoom() {
         if (!insideRoom) {
             insideRoom = true;
+            currentRoom = currentDoor.getConnectedRoom();
+            setCurrentDoor(null);
         }
     }
 
     public void exitRoom() {
         if (insideRoom) {
             insideRoom = false;
+            setCurrentDoor(currentRoom.getDoor());
         }
     }
 
@@ -40,5 +45,17 @@ public abstract class GameCharacter {
 
     public void setCurrentDoor(Door door) {
         this.currentDoor = door;
+    }
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public void setCurrentRoom(Room currentRoom) {
+        this.currentRoom = currentRoom;
+    }
+
+    public void setInsideRoom(boolean insideRoom) {
+        this.insideRoom = insideRoom;
     }
 }

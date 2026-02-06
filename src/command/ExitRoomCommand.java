@@ -3,7 +3,8 @@ package command;
 import model.Player;
 
 public class ExitRoomCommand implements Command {
-    private Player player;
+
+    private final Player player;
 
     public ExitRoomCommand(Player player) {
         this.player = player;

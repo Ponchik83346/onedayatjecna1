@@ -3,7 +3,8 @@ package command;
 import model.Player;
 
 public class MoveRightCommand implements Command {
-    private Player player;
+
+    private final Player player;
 
     public MoveRightCommand(Player player) {
         this.player = player;

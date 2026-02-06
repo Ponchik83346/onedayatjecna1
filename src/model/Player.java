@@ -21,6 +21,7 @@ public class Player extends GameCharacter {
         this.testsCollected = 0;
         this.inventory = new Inventory();
         this.stamina = 100;
+        this.currentRoom = null;
     }
     public void useItem(Item item, Scanner sc) {
         if (!inventory.contains(item)) {
@@ -100,6 +101,46 @@ public class Player extends GameCharacter {
             }
         } else {
             System.out.println("Nejste na schodech!");
+        }
+    }
+
+    @Override
+    public void moveRight() {
+        if (currentDoor.getRight() != null) {
+            currentDoor = currentDoor.getRight();
+        } else{
+            System.out.println("Nelze jit doleva!");
+        }
+    }
+    @Override
+    public void moveLeft() {
+        if (currentDoor.getLeft() != null) {
+            currentDoor = currentDoor.getLeft();
+        } else {
+            System.out.println("Nelze jit doleva!");
+        }
+    }
+    @Override
+    public void enterRoom() {
+        if(currentDoor.getConnectedRoom().getType() == RoomType.STAIRS || currentDoor.getConnectedRoom().getType() == RoomType.ELEVATOR) {
+            System.out.println("Po schodech a výtahem se může chodit pouze nahodu a dolů!");
+        }
+        if (!insideRoom) {
+            insideRoom = true;
+            currentRoom = currentDoor.getConnectedRoom();
+            setCurrentDoor(null);
+        } else {
+            System.out.println("Jste v místnosti!");
+        }
+    }
+
+    @Override
+    public void exitRoom() {
+        if (insideRoom) {
+            insideRoom = false;
+            setCurrentDoor(currentRoom.getDoor());
+        } else {
+            System.out.println("Už jste na chodbě!");
         }
     }
 

@@ -22,43 +22,37 @@ public class CommandFactory {
 
         switch (input) {
             case "left":
-                return player::moveLeft;
+                return new MoveLeftCommand(player);
+
             case "right":
-                return player::moveRight;
+                return new MoveRightCommand(player);
+
+            case "up":
+                return new GoUpstairsCommand(player);
+
+            case "down":
+                return new GoDownstairsCommand(player);
+
             case "enter":
-                return player::enterRoom;
+                return new EnterRoomCommand(player);
+
             case "exit room":
-                return player::exitRoom;
+                return new ExitRoomCommand(player);
+
             case "inventory":
-                return () -> player.openInventory(player.getInventory());
+                return new OpenInventoryCommand(player);
+
             case "use":
-                if (player.getInventory().getItems().isEmpty()) {
-                    System.out.println("Žádné itemy v inventáři!");
-                    return () -> {};
-                }
-                System.out.println("Jaký předmět chete využít?");
-                player.getInventory().printContents();
-                int itemIndex = inputHandler.getScanner().nextInt();
-                Item item = player.getInventory().getItemByIndex(itemIndex);
-                return () -> player.useItem(item, inputHandler.getScanner());
+                return new UseItemCommand(player, inputHandler);
+
             case "help":
-                showHelp();
+                return new HelpCommand();
+
             case "exit game":
                 return new ExitCommand(game);
+
             default:
-                System.out.println("Neznámý příkaz: " + input);
-                return () -> {};
+                return new UnknownCommand();
         }
-    }
-    private void showHelp() {
-        System.out.println("=== HELP ===");
-        System.out.println("left - jdi doleva");
-        System.out.println("right - jdi doprava");
-        System.out.println("enter - jdi do mistnosti");
-        System.out.println("exit - jdi ven z mistnosti");
-        System.out.println("inventory - otevrit inventar");
-        System.out.println("use - využít předmět");
-        System.out.println("help - show this help");
-        System.out.println("quit / exitgame - exit the game");
     }
 }
