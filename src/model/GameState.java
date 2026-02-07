@@ -5,5 +5,6 @@ public enum GameState {
     PLAYING,
     WIN,
     LOSE,
-    EXIT
+    EXIT,
+    QUIZ
 }

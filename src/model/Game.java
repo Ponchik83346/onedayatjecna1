@@ -28,9 +28,6 @@ public class Game {
         this.lastTeacherUpdate = 0;
         this.lastUpdateNano = System.nanoTime();
     }
-    public void update() {
-        updateTeachers();
-    }
     public void updateTeachers() {
         long now = System.nanoTime();
         double delta = (now - lastUpdateNano) / 1_000_000_000.0;
@@ -111,5 +108,7 @@ public class Game {
     public void setRandomGenerator(RandomGenerator randomGenerator) {
         this.randomGenerator = randomGenerator;
     }
+
+
 }
 
