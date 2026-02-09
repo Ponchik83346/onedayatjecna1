@@ -27,15 +27,21 @@ public class GameUI {
             text = text.trim();
             text = text.toLowerCase();
             if (!text.equals("wait")) {
-
-
+                if(game.getPlayer().isInsideRoom()) {
+                }
             Command command = input.readCommand(text);
             if (command != null) command.execute();
             Door playerDoor = game.getPlayer().getCurrentDoor();
-            Room playerRoom = game.getPlayer().getCurrentRoom();
+                Room playerRoom = game.getPlayer().getCurrentRoom();
+                if (playerRoom != null && playerRoom.isHasTest()) {
+                    game.getPlayer().addTest();
+                    System.out.println("Vzali jste test!");
+                    playerRoom.setHasTest(false);
+                }
             for (Teacher t : game.getTeachers()) {
                 boolean sameDoor = t.getCurrentDoor() != null && t.getCurrentDoor() == playerDoor;
                 boolean sameRoom = t.getCurrentRoom() != null && t.getCurrentRoom() == playerRoom;
+                //dodelat zitra
                 if (sameDoor || sameRoom) {
                     game.setState(GameState.QUIZ);
                     boolean correct = t.askQuestion(game.getRandomGenerator().getRandom(), input.getScanner());
@@ -45,6 +51,7 @@ public class GameUI {
                     }
                     game.setState(GameState.PLAYING);
                 }
+                //
             }
             }
             renderer.render(game);
@@ -84,7 +91,8 @@ public class GameUI {
         game = new Game();
         game.initialize();
         renderer = new MapRenderer(game.getMap());
+        input = new InputHandler(null);
         CommandFactory factory = new CommandFactory(game.getPlayer(), input, game);
-        input = new InputHandler(factory);
+        input.setCommandFactory(factory);
     }
 }

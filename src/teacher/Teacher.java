@@ -1,5 +1,7 @@
 package teacher;
+import items.Material;
 import map.Door;
+import map.Room;
 import model.GameCharacter;
 
 import java.util.List;
@@ -51,11 +53,17 @@ public class Teacher extends GameCharacter {
 
     public void moveAI(Random rand) {
         if (isInsideRoom()) {
-            if (Math.random() > 0.5) exitRoom();
+            if (Math.random() < 0.15) exitRoom();
             return;
         }
-        if (currentDoor == null){
-            return;
+        if (currentDoor == null) return;
+        Room room = getCurrentRoom();
+        if (room != null && room.getDoor().isLocked()) {
+            Material mat = room.getDoor().getMaterial();
+            if (mat != null) {
+                mat.setHp(mat.getHp() - 1);
+                if (mat.getHp() <= 0) room.getDoor().setLocked(false);
+            }
         }
         double r = Math.random();
         if (r < 0.4) moveLeft();

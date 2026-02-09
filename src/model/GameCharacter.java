@@ -48,7 +48,8 @@ public abstract class GameCharacter {
     }
 
     public Room getCurrentRoom() {
-        return currentRoom;
+        if (insideRoom) return currentRoom;
+        return currentDoor != null ? currentDoor.getConnectedRoom() : null;
     }
 
     public void setCurrentRoom(Room currentRoom) {

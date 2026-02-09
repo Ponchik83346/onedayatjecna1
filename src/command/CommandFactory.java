@@ -43,6 +43,11 @@ public class CommandFactory {
                 return new ExitCommand(game);
             case "use elevator":
                 return new UseElevatorCommand(player);
+            case "pickup":
+                return new PickupItemCommand(player, inputHandler);
+                case "drop":
+                    return new DropItemCommand(player, inputHandler);
+
             default:
                 return new UnknownCommand();
         }

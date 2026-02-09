@@ -117,8 +117,21 @@ public class Room {
     }
 
     public void printItems() {
-        for (int i = 0; i < items.size(); i++) {
+        if(items.isEmpty()){
+            System.out.println("Místnost je prázdná.");
+            return;
+        }
+        System.out.println("Předměty v místnosti");
+        for(int i=0;i<items.size();i++){
             System.out.println(i + ": " + items.get(i).getName());
         }
+    }
+
+    public boolean isHasTest() {
+        return hasTest;
+    }
+
+    public void setHasTest(boolean hasTest) {
+        this.hasTest = hasTest;
     }
 }

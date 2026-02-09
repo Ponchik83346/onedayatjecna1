@@ -18,8 +18,14 @@ public class MapRenderer {
         Player player = game.getPlayer();
         List<Teacher> teachers = game.getTeachers();
         Floor currentFloor = game.getPlayer().getCurrentFloor();
+        if (currentFloor == null) {
+            return;
+        }
         if(player.isInsideRoom()){
-            player.getCurrentRoom().printItems();
+            Room room = player.getCurrentRoom();
+            if(room != null) room.printItems();
+            else System.out.println("Nejste v žádné místnosti!");
+            return;
         }
         System.out.println("\n=== MAPA ===");
         for (Door door : currentFloor.getDoors()) {

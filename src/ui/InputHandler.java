@@ -29,4 +29,8 @@ public class InputHandler {
     public void setScanner(Scanner scanner) {
         this.scanner = scanner;
     }
+
+    public void setCommandFactory(CommandFactory commandFactory) {
+        this.commandFactory = commandFactory;
+    }
 }
