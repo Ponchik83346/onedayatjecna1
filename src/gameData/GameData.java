@@ -160,6 +160,7 @@ public class GameData {
                     if (item instanceof Food f && f.getStamina() >= 40) {
                         if (rnd.generateProbability(f.getChanceCafeteria())) {
                             room.getFood().add(f);
+                            room.getItems().addAll(room.getFood());
                             count++;
                         }
                     }
@@ -169,6 +170,7 @@ public class GameData {
                             f.getName().toLowerCase().contains("bageta")) {
                         if (rnd.generateProbability(f.getChanceBuffet())) {
                             room.getFood().add(f);
+                            room.getItems().addAll(room.getFood());
                             count++;
                         }
                     }
@@ -184,6 +186,7 @@ public class GameData {
                     if (item instanceof Material m &&
                             rnd.generateProbability(item.getChanceToSpawn())) {
                         room.getMaterials().add(m);
+                        room.getItems().addAll(room.getMaterials());
                         count++;
                     }
                     break;
@@ -193,10 +196,11 @@ public class GameData {
                         switch (item) {
                             case Food f -> room.getFood().add(f);
                             case Material m -> room.getMaterials().add(m);
-                            case Key k -> room.addKey(k);
                             default -> {
                             }
                         }
+                        room.getItems().addAll(room.getFood());
+                        room.getItems().addAll(room.getMaterials());
                         count++;
                     }
                     break;

@@ -30,6 +30,25 @@ public class Teacher extends GameCharacter {
         return name;
     }
 
+    @Override
+    public void enterRoom() {
+        if (!insideRoom) {
+            if(currentRoom.addTeacher(this)){
+                insideRoom = true;
+                currentRoom = currentDoor.getConnectedRoom();
+                setCurrentDoor(null);
+            }
+        }
+    }
+    @Override
+    public void exitRoom() {
+        if (insideRoom) {
+            insideRoom = false;
+            currentRoom.removeTeacher(this);
+            setCurrentDoor(currentRoom.getDoor());
+        }
+    }
+
     public void moveAI(Random rand) {
         if (isInsideRoom()) {
             if (Math.random() > 0.5) exitRoom();

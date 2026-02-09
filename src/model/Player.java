@@ -5,6 +5,7 @@ import map.Door;
 import map.Floor;
 import map.Map;
 import map.RoomType;
+import ui.InputHandler;
 
 import java.util.List;
 import java.util.Scanner;
@@ -74,56 +75,85 @@ public class Player extends GameCharacter {
     }
 
     public void goUpstairs() {
-        if (currentDoor.getConnectedRoom().getType() == RoomType.STAIRS) {
-            Door upDoor = currentDoor.getUpDoor();
-            if (upDoor != null) {
-                currentDoor = upDoor;
-                currentFloor = getFloorByDoor(upDoor);
-                System.out.println("Šli jste po schodech nahoru do patra " + currentFloor.getLevel());
-            } else {
-                System.out.println("Není kam jít!");
-            }
-        } else {
+        if (currentDoor.getConnectedRoom().getType() != RoomType.STAIRS) {
             System.out.println("Nejste na schodech!");
+            return;
         }
+        Map map = GameData.getMap();
+        int targetLevel = currentFloor.getLevel() + 1;
+        for (Floor floor : map.getFloors()) {
+            if (floor.getLevel() == targetLevel) {
+                for (Door door : floor.getDoors()) {
+
+                    if (door.getConnectedRoom().getType() == RoomType.STAIRS) {
+                        currentDoor = door;
+                        currentFloor = floor;
+
+                        System.out.println("Šli jste nahoru do patra " + targetLevel);
+                        return;
+                    }
+                }
+            }
+        }
+        System.out.println("Výše už žádné patro není!");
     }
 
 
     public void goDownstairs() {
-        if (currentDoor.getConnectedRoom().getType() == RoomType.STAIRS) {
-            Door downDoor = currentDoor.getDownDoor();
-            if (downDoor != null) {
-                currentDoor = downDoor;
-                currentFloor = getFloorByDoor(downDoor);
-                System.out.println("Šli jste po schodech dolu do patra " + currentFloor.getLevel());
-            } else {
-                System.out.println("Není kam jít!");
-            }
-        } else {
+        if (currentDoor.getConnectedRoom().getType() != RoomType.STAIRS) {
             System.out.println("Nejste na schodech!");
+            return;
         }
+        Map map = GameData.getMap();
+        int targetLevel = currentFloor.getLevel() - 1;
+        for (Floor floor : map.getFloors()) {
+            if (floor.getLevel() == targetLevel) {
+                for (Door door : floor.getDoors()) {
+
+                    if (door.getConnectedRoom().getType() == RoomType.STAIRS) {
+                        currentDoor = door;
+                        currentFloor = floor;
+
+                        System.out.println("Šli jste dolů do patra " + targetLevel);
+                        return;
+                    }
+                }
+            }
+        }
+        System.out.println("Níže už žádné patro není!");
     }
 
     @Override
     public void moveRight() {
-        if (currentDoor.getRight() != null) {
-            currentDoor = currentDoor.getRight();
-        } else{
-            System.out.println("Nelze jit doleva!");
+        if (currentDoor == null) {
+            System.out.println("Jsi v místnosti!");
+            return;
         }
+        Door right = currentDoor.getRight();
+        if (right == null) {
+            System.out.println("Nelze jít doprava!");
+            return;
+        }
+        currentDoor = right;
     }
     @Override
     public void moveLeft() {
-        if (currentDoor.getLeft() != null) {
-            currentDoor = currentDoor.getLeft();
-        } else {
-            System.out.println("Nelze jit doleva!");
+        if (currentDoor == null) {
+            System.out.println("Jsi v místnosti!");
+            return;
         }
+        Door left = currentDoor.getLeft();
+        if (left == null) {
+            System.out.println("Nelze jít doLeva!");
+            return;
+        }
+        currentDoor = left;
     }
     @Override
     public void enterRoom() {
         if(currentDoor.getConnectedRoom().getType() == RoomType.STAIRS || currentDoor.getConnectedRoom().getType() == RoomType.ELEVATOR) {
             System.out.println("Po schodech a výtahem se může chodit pouze nahodu a dolů!");
+            return;
         }
         if (!insideRoom) {
             insideRoom = true;
@@ -144,24 +174,38 @@ public class Player extends GameCharacter {
         }
     }
 
-    public void useElevator() {
-        if (currentDoor.getConnectedRoom().getType() == RoomType.ELEVATOR) {
-            Map map = GameData.getMap();
-            for (Floor floor : map.getFloors()) {
+    public void useElevator(InputHandler inputHandler) {
+        if (currentDoor.getConnectedRoom().getType() != RoomType.ELEVATOR) {
+            System.out.println("Nejste ve výtahu!");
+            return;
+        }
+        if (currentDoor.isLocked()) {
+            System.out.println("Výtah je zamčený!");
+            return;
+        }
+        Map map = GameData.getMap();
+        System.out.println("Do jakého patra chcete jet?");
+        if (!inputHandler.getScanner().hasNextInt()) {
+            System.out.println("Musíš zadat číslo patra!");
+            inputHandler.getScanner().next();
+            return;
+        }
+        int targetLevel = inputHandler.getScanner().nextInt();
+        for (Floor floor : map.getFloors()) {
+            if (floor.getLevel() == targetLevel) {
                 for (Door door : floor.getDoors()) {
-                    if (door.getConnectedRoom().getType() == RoomType.ELEVATOR
-                            && door != currentDoor) {
+
+                    if (door.getConnectedRoom().getType() == RoomType.ELEVATOR) {
                         currentDoor = door;
                         currentFloor = floor;
-                        System.out.println("Jeli jste výtahem do patra " + currentFloor.getLevel());
+
+                        System.out.println("Jeli jste výtahem do patra " + targetLevel);
                         return;
                     }
                 }
             }
-            System.out.println("Špatné číslo výtahu!");
-        } else {
-            System.out.println("Nejste ve výtahu!");
         }
+        System.out.println("Takové patro neexistuje!");
     }
 
     public void addTest() {

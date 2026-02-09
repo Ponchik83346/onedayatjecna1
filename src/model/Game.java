@@ -42,7 +42,9 @@ public class Game {
     }
 
     public boolean isRunning() {
-        return state == GameState.PLAYING;
+        return state != GameState.EXIT
+                && state != GameState.LOSE
+                && state != GameState.WIN;
     }
 
     public GameState getState() {

@@ -20,6 +20,10 @@ public class MapRenderer {
         Player player = game.getPlayer();
         List<Teacher> teachers = game.getTeachers();
         Floor currentFloor = game.getPlayer().getCurrentFloor();
+        if(player.isInsideRoom()){
+            player.getCurrentRoom().printItems();
+            System.out.println("Jaký item si chcete vzít?");
+        }
         System.out.println("\n=== MAPA ===");
         for (Door door : currentFloor.getDoors()) {
             char symbol = '.';

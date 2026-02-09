@@ -2,8 +2,10 @@ package command;
 
 
 import model.Player;
+import ui.InputHandler;
 
 public class UseElevatorCommand implements Command {
+    private InputHandler input;
     private Player player;
 
     public UseElevatorCommand(Player player) {
@@ -12,6 +14,6 @@ public class UseElevatorCommand implements Command {
 
     @Override
     public void execute() {
-        player.useElevator();
+        player.useElevator(input);
     }
 }

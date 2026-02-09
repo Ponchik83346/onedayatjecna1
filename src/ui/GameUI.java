@@ -14,9 +14,7 @@ public class GameUI {
     private InputHandler input;
     private Thread thread = new Thread(() -> {
         game.setState(GameState.PLAYING);
-        while (game.getState() != GameState.LOSE
-                && game.getState() != GameState.WIN
-                && game.getState() != GameState.EXIT) {
+        while (game.isRunning()) {
             if (game.getState() == GameState.QUIZ) {
                 try {
                     Thread.sleep(100);
@@ -26,6 +24,11 @@ public class GameUI {
                 continue;
             }
             String text = input.processInput();
+            text = text.trim();
+            text = text.toLowerCase();
+            if (!text.equals("wait")) {
+
+
             Command command = input.readCommand(text);
             if (command != null) command.execute();
             Door playerDoor = game.getPlayer().getCurrentDoor();
@@ -43,6 +46,7 @@ public class GameUI {
                     game.setState(GameState.PLAYING);
                 }
             }
+            }
             renderer.render(game);
         }
     });
@@ -59,17 +63,19 @@ public class GameUI {
         final int UPDATE_FPS = 20;
         final long frameTime = 1000 / UPDATE_FPS;
         while (game.isRunning()) {
-            long start = System.nanoTime();
-            if(game.getState() != GameState.QUIZ) {
-                game.updateTeachers();
+            if (game.getState() == GameState.QUIZ) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {}
+                continue;
             }
+            long start = System.nanoTime();
+            game.updateTeachers();
             long elapsed = System.nanoTime() - start;
             long sleep = frameTime - elapsed / 1_000_000;
             if (sleep > 0) {
-                try { Thread.sleep(sleep);
-                }
-                catch (InterruptedException _) {
-                }
+                try { Thread.sleep(sleep); }
+                catch (InterruptedException e) {}
             }
         }
     }

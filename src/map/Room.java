@@ -1,9 +1,6 @@
 package map;
-import items.Hammer;
-import items.Key;
+import items.*;
 import teacher.Teacher;
-import items.Food;
-import items.Material;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +16,7 @@ public class Room {
     private Hammer hammer;
     private boolean hasKey;
     private int maxItemCountPerRoom;
+    private ArrayList<Item> items;
 
     public Room(String id, RoomType type) {
         this.id = id;
@@ -32,9 +30,10 @@ public class Room {
         } else if(type == RoomType.BUFET){
             this.maxItemCountPerRoom = 2;
             this.capacity = 1;
-        } else{
+        } else {
             this.capacity = 1;
         }
+        items = new ArrayList<>();
     }
 
     public void addMaterial(Material material) {
@@ -53,6 +52,18 @@ public class Room {
         }
         return false;
     }
+    public void removeTeacher(Teacher teacher) {
+        teachersInside.remove(teacher);
+    }
+
+    public ArrayList<Teacher> getTeachersInside() {
+        return teachersInside;
+    }
+
+    public void setTeachersInside(ArrayList<Teacher> teachersInside) {
+        this.teachersInside = teachersInside;
+    }
+
     public void addKey(Key key) {
         hasKey = true;
     }
@@ -94,5 +105,19 @@ public class Room {
 
     public void setFood(List<Food> food) {
         this.food = food;
+    }
+
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<Item> items) {
+        this.items = items;
+    }
+
+    public void printItems() {
+        for (int i = 0; i < items.size(); i++) {
+            System.out.println(i + ": " + items.get(i).getName());
+        }
     }
 }

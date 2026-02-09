@@ -23,34 +23,26 @@ public class CommandFactory {
         switch (input) {
             case "left":
                 return new MoveLeftCommand(player);
-
             case "right":
                 return new MoveRightCommand(player);
-
             case "up":
                 return new GoUpstairsCommand(player);
-
             case "down":
                 return new GoDownstairsCommand(player);
-
             case "enter":
                 return new EnterRoomCommand(player);
-
-            case "exit room":
+            case "exit":
                 return new ExitRoomCommand(player);
-
             case "inventory":
                 return new OpenInventoryCommand(player);
-
             case "use":
                 return new UseItemCommand(player, inputHandler);
-
             case "help":
                 return new HelpCommand();
-
             case "exit game":
                 return new ExitCommand(game);
-
+            case "use elevator":
+                return new UseElevatorCommand(player);
             default:
                 return new UnknownCommand();
         }
