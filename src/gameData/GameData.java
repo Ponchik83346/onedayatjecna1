@@ -154,7 +154,9 @@ public class GameData {
         int max = room.getMaxItemCountPerRoom();
         int count = 0;
         for (Item item : items) {
-            if (count >= max) break;
+            if (count >= max){
+                break;
+            }
             switch (room.getType()) {
                 case LUNCHROOM:
                     if (item instanceof Food f && f.getStamina() >= 40) {

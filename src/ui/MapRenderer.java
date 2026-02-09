@@ -1,7 +1,5 @@
 package ui;
-import map.Door;
-import map.Floor;
-import map.Map;
+import map.*;
 import model.Game;
 import model.Player;
 import teacher.Teacher;
@@ -22,7 +20,6 @@ public class MapRenderer {
         Floor currentFloor = game.getPlayer().getCurrentFloor();
         if(player.isInsideRoom()){
             player.getCurrentRoom().printItems();
-            System.out.println("Jaký item si chcete vzít?");
         }
         System.out.println("\n=== MAPA ===");
         for (Door door : currentFloor.getDoors()) {
@@ -44,6 +41,7 @@ public class MapRenderer {
                     case LUNCHROOM -> symbol = 'J';
                     case LAB -> symbol = 'D';
                     case PRINCIPALSOFFICE -> symbol = 'O';
+                    case CABINET -> symbol = 'C';
                 }
             }
             System.out.print("[" + symbol + "]");

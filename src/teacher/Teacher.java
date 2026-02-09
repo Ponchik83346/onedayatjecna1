@@ -33,7 +33,7 @@ public class Teacher extends GameCharacter {
     @Override
     public void enterRoom() {
         if (!insideRoom) {
-            if(currentRoom.addTeacher(this)){
+            if(currentDoor.getConnectedRoom().addTeacher(this)){
                 insideRoom = true;
                 currentRoom = currentDoor.getConnectedRoom();
                 setCurrentDoor(null);

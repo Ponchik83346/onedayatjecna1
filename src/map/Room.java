@@ -32,6 +32,7 @@ public class Room {
             this.capacity = 1;
         } else {
             this.capacity = 1;
+            this.maxItemCountPerRoom = 5;
         }
         items = new ArrayList<>();
     }

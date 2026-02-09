@@ -1,6 +1,6 @@
 {
   "teachers": [
-  {"name": "NEUGEBAUEROVA", "aiLevel": 10, "questionSet": "math", "startDoorId": "3-9", "timeLimit": 20},
+  {"name": "NEUGEBAUEROVA", "aiLevel": 10, "questionSet": "math", "startDoorId": "3-12", "timeLimit": 20},
   {"name": "SEDOVA", "aiLevel": 12, "questionSet": "it", "startDoorId": "2-3", "timeLimit": 20},
   {"name": "STUDENKOVA", "aiLevel": 12, "questionSet": "czech", "startDoorId": "2-15", "timeLimit": 12},
   {"name": "PROCHAZKA", "aiLevel": 10, "questionSet": "td", "startDoorId": "1-2", "timeLimit": 15},
