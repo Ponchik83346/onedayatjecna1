@@ -48,6 +48,7 @@ public class Teacher extends GameCharacter {
             insideRoom = false;
             currentRoom.removeTeacher(this);
             setCurrentDoor(currentRoom.getDoor());
+            currentRoom = null;
         }
     }
 
@@ -75,16 +76,24 @@ public class Teacher extends GameCharacter {
         Question q = questions.getQuestions().get(rand.nextInt(questions.getQuestions().size()));
         System.out.println(q);
         long start = System.currentTimeMillis();
-        String answer = input.nextLine().toUpperCase();
+        String answer = input.nextLine();
+
+        if (answer == null || answer.isEmpty()) {
+            System.out.println("Nezadali jste odpověď!");
+            return false;
+        }
+        answer = answer.toUpperCase();
         long end = System.currentTimeMillis();
         long seconds = (end - start) / 1000;
         if (seconds > timeLimit) {
-            System.out.println("Čas vypršel!");
+            System.out.println("Čas vypršel! (limit: " + timeLimit + " s)");
             return false;
         }
         if (q.isCorrect(answer)) {
             System.out.println("Správně!");
-            currentDoor = startDoor;
+            if (!isInsideRoom()) {
+                currentDoor = startDoor;
+            }
             return true;
         } else {
             System.out.println("Špatně!");

@@ -27,6 +27,7 @@ public class MapRenderer {
             else System.out.println("Nejste v žádné místnosti!");
             return;
         }
+        System.out.println("stamina: "+player.getStamina());
         System.out.println("\n=== MAPA ===");
         for (Door door : currentFloor.getDoors()) {
             char symbol = '.';

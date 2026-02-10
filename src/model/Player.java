@@ -24,6 +24,9 @@ public class Player extends GameCharacter {
         this.stamina = 100;
         this.currentRoom = null;
     }
+    public boolean hasEnoughTests(){
+        return this.testsCollected == 30;
+    }
     public void useItem(Item item, Scanner sc) {
         if (!inventory.contains(item)) {
             System.out.println("Nemáte tento item v inventáři!");
@@ -90,6 +93,7 @@ public class Player extends GameCharacter {
                         currentFloor = floor;
 
                         System.out.println("Šli jste nahoru do patra " + targetLevel);
+                        stamina = stamina-20;
                         return;
                     }
                 }
@@ -115,6 +119,7 @@ public class Player extends GameCharacter {
                         currentFloor = floor;
 
                         System.out.println("Šli jste dolů do patra " + targetLevel);
+                        stamina = stamina-20;
                         return;
                     }
                 }
@@ -135,6 +140,7 @@ public class Player extends GameCharacter {
             return;
         }
         currentDoor = right;
+        stamina = stamina-5;
     }
     @Override
     public void moveLeft() {
@@ -148,6 +154,7 @@ public class Player extends GameCharacter {
             return;
         }
         currentDoor = left;
+        stamina = stamina-5;
     }
     @Override
     public void enterRoom() {

@@ -75,6 +75,7 @@ public class Game {
     public Player getPlayer() {
         return gameData.getPlayer();
     }
+
     public List<Teacher> getTeachers() {
         return gameData.getTeachers();
     }

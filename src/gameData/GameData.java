@@ -173,6 +173,9 @@ public class GameData {
                     }
                 }
                 case LAB -> {
+                    if(item instanceof Hammer h && rnd.generateProbability(h.getChanceToSpawn())){
+                        room.getItems().add(new Hammer(h.getHp(), h.getName(), h.getChanceToSpawn()));
+                    }
                     if (item instanceof Material m && rnd.generateProbability(m.getChanceToSpawn())) {
                         room.getItems().add(new Material(m.getHp(), m.getName(), m.getChanceToSpawn()));
                         count++;
@@ -182,13 +185,15 @@ public class GameData {
                     }
                 }
                 case CLASSROOM -> {
-                    if (item instanceof Food f && rnd.generateProbability(item.getChanceToSpawn())) {
+                    if (item instanceof Food f && rnd.generateProbability(item.getChanceToSpawn()*3)) {
                             room.getItems().add(new Food(f.getStamina(), f.getName(), f.getChanceClass(), f.getChanceBuffet(), f.getChanceCafeteria()));
                             count++;
                     }
-                    else if (item instanceof Material m && rnd.generateProbability(m.getChanceToSpawn()/2)) {
+                    else if (item instanceof Material m && rnd.generateProbability(m.getChanceToSpawn()/4)) {
                                 room.getItems().add(new Material(m.getHp(), m.getName(), m.getChanceToSpawn()));
                                 count++;
+                    } else if(item instanceof Hammer h && rnd.generateProbability(h.getChanceToSpawn()/6)){
+                        room.getItems().add(new Hammer(h.getHp(), h.getName(), h.getChanceToSpawn()));
                     }
                 }
             }

@@ -1,10 +1,11 @@
 package ui;
+
 import map.Door;
 import map.Room;
 import model.Game;
+import model.GameState;
 import command.Command;
 import command.CommandFactory;
-import model.GameState;
 import teacher.Teacher;
 
 public class GameUI {
@@ -12,80 +13,7 @@ public class GameUI {
     private Game game;
     private MapRenderer renderer;
     private InputHandler input;
-    private Thread thread = new Thread(() -> {
-        game.setState(GameState.PLAYING);
-        while (game.isRunning()) {
-            if (game.getState() == GameState.QUIZ) {
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                continue;
-            }
-            String text = input.processInput();
-            text = text.trim();
-            text = text.toLowerCase();
-            if (!text.equals("wait")) {
-                if(game.getPlayer().isInsideRoom()) {
-                }
-            Command command = input.readCommand(text);
-            if (command != null) command.execute();
-            Door playerDoor = game.getPlayer().getCurrentDoor();
-                Room playerRoom = game.getPlayer().getCurrentRoom();
-                if (playerRoom != null && playerRoom.isHasTest()) {
-                    game.getPlayer().addTest();
-                    System.out.println("Vzali jste test!");
-                    playerRoom.setHasTest(false);
-                }
-            for (Teacher t : game.getTeachers()) {
-                boolean sameDoor = t.getCurrentDoor() != null && t.getCurrentDoor() == playerDoor;
-                boolean sameRoom = t.getCurrentRoom() != null && t.getCurrentRoom() == playerRoom;
-                //dodelat zitra
-                if (sameDoor || sameRoom) {
-                    game.setState(GameState.QUIZ);
-                    boolean correct = t.askQuestion(game.getRandomGenerator().getRandom(), input.getScanner());
-                    if (!correct) {
-                        game.setState(GameState.LOSE);
-                        System.out.println("GAME OVER");
-                    }
-                    game.setState(GameState.PLAYING);
-                }
-                //
-            }
-            }
-            renderer.render(game);
-        }
-    });
-    /**
-     * 2 thread method
-     * Jeden thread checkuje input hrace, druhy updatuje ucitele.
-     */
-    public void gameLoop() {
-        //prvni render hry
-        renderer.render(game);
-        //thread pro input
-        thread.start();
-        //update ucitelu
-        final int UPDATE_FPS = 20;
-        final long frameTime = 1000 / UPDATE_FPS;
-        while (game.isRunning()) {
-            if (game.getState() == GameState.QUIZ) {
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {}
-                continue;
-            }
-            long start = System.nanoTime();
-            game.updateTeachers();
-            long elapsed = System.nanoTime() - start;
-            long sleep = frameTime - elapsed / 1_000_000;
-            if (sleep > 0) {
-                try { Thread.sleep(sleep); }
-                catch (InterruptedException e) {}
-            }
-        }
-    }
+    private Thread inputThread;
 
     public GameUI() {
         game = new Game();
@@ -94,5 +22,112 @@ public class GameUI {
         input = new InputHandler(null);
         CommandFactory factory = new CommandFactory(game.getPlayer(), input, game);
         input.setCommandFactory(factory);
+        inputThread = new Thread(this::processInputLoop);
+    }
+    /**
+     * Hlavní loop pro zpracování inputu hráče a interakce s učiteli.
+     */
+    private void processInputLoop() {
+        game.setState(GameState.PLAYING);
+        while (game.isRunning()) {
+            // Výhra
+            if (game.getPlayer().hasEnoughTests()) {
+                System.out.println("Vyhrál jsi!");
+                break;
+            }
+            if (game.getState() == GameState.QUIZ) {
+                sleep(100);
+                continue;
+            }
+            if(game.getPlayer().getStamina()==0){
+                System.out.println("Prohrál jsi! Vypršela ti stamina!");
+            }
+            String text = input.processInput().trim().toLowerCase();
+            if (!text.equals("wait")) {
+                Command command = input.readCommand(text);
+                if (command != null) command.execute();
+
+                handleTestPickup();
+                handleTeacherInteractions();
+            }
+            renderer.render(game);
+        }
+    }
+
+    /**
+     * Kontrola a sběr testů, pokud jsou ve stejné místnosti
+     */
+    private void handleTestPickup() {
+        Room playerRoom = game.getPlayer().getCurrentRoom();
+        if (playerRoom != null && playerRoom.isHasTest()) {
+            game.getPlayer().addTest();
+            System.out.println("Vzali jste test!");
+            playerRoom.setHasTest(false);
+        }
+    }
+
+    /**
+     * Kontrola interakce s učiteli (místnost/chodba)
+     */
+    private void handleTeacherInteractions() {
+        Door playerDoor = game.getPlayer().getCurrentDoor();
+        Room playerRoom = game.getPlayer().getCurrentRoom();
+
+        for (Teacher t : game.getTeachers()) {
+            if (t.isInsideRoom() && playerRoom != null && t.getCurrentRoom() == playerRoom) {
+                startQuiz(t);
+                continue;
+            }
+            if (!t.isInsideRoom() && playerRoom == null && t.getCurrentDoor() != null && t.getCurrentDoor() == playerDoor) {
+                startQuiz(t);
+            }
+        }
+    }
+
+    /**
+     * Spustí quiz s učitelem a nastaví stav hry podle výsledku
+     */
+    private void startQuiz(Teacher t) {
+        game.setState(GameState.QUIZ);
+        boolean correct = t.askQuestion(game.getRandomGenerator().getRandom(), input.getScanner());
+        if (!correct) {
+            game.setState(GameState.LOSE);
+            System.out.println("Prohrál jsi! Chytil tě učitel!");
+        } else {
+            game.setState(GameState.PLAYING);
+        }
+    }
+
+    /**
+     * Hlavní game loop - spouští input thread a update učitelů
+     */
+    public void gameLoop() {
+        renderer.render(game);
+        inputThread.start();
+
+        final int UPDATE_FPS = 20;
+        final long frameTime = 1000 / UPDATE_FPS;
+
+        while (game.isRunning()) {
+            if (game.getState() == GameState.QUIZ) {
+                sleep(100);
+                continue;
+            }
+
+            long start = System.nanoTime();
+            game.updateTeachers();
+            long elapsed = System.nanoTime() - start;
+            long sleepTime = frameTime - elapsed / 1_000_000;
+            if (sleepTime > 0) sleep(sleepTime);
+        }
+    }
+
+    /**
+     * Utility metoda pro sleep
+     */
+    private void sleep(long ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException ignored) {}
     }
 }
