@@ -27,16 +27,15 @@ public class Player extends GameCharacter {
     public boolean hasEnoughTests(){
         return this.testsCollected == 30;
     }
-    public void useItem(Item item, Scanner sc) {
+    public void useItem(Item item, InputHandler inputHandler) {
         if (!inventory.contains(item)) {
             System.out.println("Nemáte tento item v inventáři!");
             return;
         }
-        Door door = getCurrentDoor();
         switch (item.getType()) {
             case FOOD -> {
                 Food food = (Food) item;
-                food.use(this);
+                setStamina(stamina + food.getStamina());
                 inventory.removeItem(item);
                 System.out.println("Snědl jste " + food.getName() + ". Stamina + " + food.getStamina());
             }
@@ -47,19 +46,32 @@ public class Player extends GameCharacter {
                 System.out.println("Využili jste klíč!");
             }
             case HAMMER -> {
+                Door door = getCurrentDoor();
+                if (door == null) {
+                    System.out.println("Nestojíte u dveří!");
+                    return;
+                }
                 List<Material> materials = inventory.getMaterials();
                 if (materials.isEmpty()) {
                     System.out.println("Nemáte žádné materiály!");
                     return;
                 }
-                System.out.println("Vyberte si materiál:");
+                System.out.println("Vyberte materiál:");
                 for (int i = 0; i < materials.size(); i++) {
                     System.out.println(i + ": " + materials.get(i).getName());
                 }
-                int choice = -1;
-                while (choice < 0 || choice >= materials.size()) {
-                    System.out.print("Zadejte číslo materiálu: ");
-                    choice = sc.nextInt();
+                System.out.print("Zadejte číslo: ");
+                String input = inputHandler.getScanner().nextLine();
+                int choice;
+                try {
+                    choice = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    System.out.println("Neplatné číslo!");
+                    return;
+                }
+                if (choice < 0 || choice >= materials.size()) {
+                    System.out.println("Neplatná volba!");
+                    return;
                 }
                 Material chosenMat = materials.get(choice);
                 Hammer hammer = (Hammer) item;
@@ -67,8 +79,11 @@ public class Player extends GameCharacter {
                 inventory.removeItem(chosenMat);
                 if (hammer.getHp() <= 0) {
                     inventory.removeItem(hammer);
-                    System.out.println("Hammer broke.");
+                    System.out.println("Kladivo se rozbilo.");
                 }
+            }
+            case MATERIAL -> {
+                System.out.println("Nelze využít materiál bez kladiva! Využijte kladivo a až poté vyberte materiál.");
             }
         }
     }
@@ -261,15 +276,5 @@ public class Player extends GameCharacter {
 
     public void setCurrentFloor(Floor currentFloor) {
         this.currentFloor = currentFloor;
-    }
-
-    private Floor getFloorByDoor(Door door) {
-        Map map = GameData.getMap();
-        for (Floor floor : map.getFloors()) {
-            if (floor.getDoors().contains(door)) {
-                return floor;
-            }
-        }
-        return null;
     }
 }

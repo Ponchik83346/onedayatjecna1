@@ -6,8 +6,13 @@ import model.Game;
 import model.GameState;
 import command.Command;
 import command.CommandFactory;
+import model.Player;
 import teacher.Teacher;
 
+/**
+ * Hlavní smyčka pro zpracování vstupu hráče.
+ * Kontroluje výhru, prohru, zpracovává příkazy a řeší interakce s učiteli.
+ */
 public class GameUI {
 
     private Game game;
@@ -19,45 +24,58 @@ public class GameUI {
         game = new Game();
         game.initialize();
         renderer = new MapRenderer(game.getMap());
-        input = new InputHandler(null);
-        CommandFactory factory = new CommandFactory(game.getPlayer(), input, game);
-        input.setCommandFactory(factory);
+        CommandFactory factory = new CommandFactory(game.getPlayer(), game);
+        input = new InputHandler(factory);
         inputThread = new Thread(this::processInputLoop);
     }
     /**
-     * Hlavní loop pro zpracování inputu hráče a interakce s učiteli.
+     * Zkontroluje, zda hráč stojí v místnosti s testem, a pokud ano, přidá jej hráči.
      */
     private void processInputLoop() {
         game.setState(GameState.PLAYING);
         while (game.isRunning()) {
-            // Výhra
             if (game.getPlayer().hasEnoughTests()) {
                 System.out.println("Vyhrál jsi!");
+                game.setState(GameState.WIN);
+                break;
+            }
+            if (game.getPlayer().getStamina() <= 0) {
+                System.out.println("Prohrál jsi! Vypršela ti stamina!");
+                game.setState(GameState.LOSE);
                 break;
             }
             if (game.getState() == GameState.QUIZ) {
                 sleep(100);
                 continue;
             }
-            if(game.getPlayer().getStamina()==0){
-                System.out.println("Prohrál jsi! Vypršela ti stamina!");
-            }
-            String text = input.processInput().trim().toLowerCase();
+            String text = input.processInput().toLowerCase().trim();
             if (!text.equals("wait")) {
                 Command command = input.readCommand(text);
-                if (command != null) command.execute();
-
+                if (command != null) {
+                    command.execute();
+                }
                 handleTestPickup();
-                handleTeacherInteractions();
+                if (!handleTeacherInteractions()) {
+                    break;
+                }
+            }
+            if (!game.isRunning()){
+                break;
             }
             renderer.render(game);
         }
     }
 
     /**
-     * Kontrola a sběr testů, pokud jsou ve stejné místnosti
+     * Zkontroluje, zda je hráč ve stejné lokaci jako učitel.
+     * Pokud ano, spustí kvíz.
+     *
+     * @return true pokud hra může pokračovat, false pokud hráč prohrál
      */
     private void handleTestPickup() {
+        if (!game.getPlayer().isInsideRoom()){
+            return;
+        }
         Room playerRoom = game.getPlayer().getCurrentRoom();
         if (playerRoom != null && playerRoom.isHasTest()) {
             game.getPlayer().addTest();
@@ -67,34 +85,37 @@ public class GameUI {
     }
 
     /**
-     * Kontrola interakce s učiteli (místnost/chodba)
+     * Spustí kvíz s daným učitelem a podle výsledku nastaví stav hry.
+     * @return true při správné odpovědi, false při špatné odpovědi
      */
-    private void handleTeacherInteractions() {
-        Door playerDoor = game.getPlayer().getCurrentDoor();
-        Room playerRoom = game.getPlayer().getCurrentRoom();
-
+    private boolean handleTeacherInteractions() {
+        Player player = game.getPlayer();
+        Door playerDoor = player.getCurrentDoor();
+        Room playerRoom = player.getCurrentRoom();
         for (Teacher t : game.getTeachers()) {
-            if (t.isInsideRoom() && playerRoom != null && t.getCurrentRoom() == playerRoom) {
-                startQuiz(t);
-                continue;
+            if (t.isInsideRoom() && player.isInsideRoom() && t.getCurrentRoom() == playerRoom) {
+                return startQuiz(t);
             }
-            if (!t.isInsideRoom() && playerRoom == null && t.getCurrentDoor() != null && t.getCurrentDoor() == playerDoor) {
-                startQuiz(t);
+            if (!t.isInsideRoom() && !player.isInsideRoom() && t.getCurrentDoor() == playerDoor) {
+                return startQuiz(t);
             }
         }
+        return true;
     }
 
     /**
      * Spustí quiz s učitelem a nastaví stav hry podle výsledku
      */
-    private void startQuiz(Teacher t) {
+    private boolean startQuiz(Teacher t) {
         game.setState(GameState.QUIZ);
         boolean correct = t.askQuestion(game.getRandomGenerator().getRandom(), input.getScanner());
         if (!correct) {
             game.setState(GameState.LOSE);
             System.out.println("Prohrál jsi! Chytil tě učitel!");
+            return false;
         } else {
             game.setState(GameState.PLAYING);
+            return true;
         }
     }
 
@@ -129,5 +150,42 @@ public class GameUI {
         try {
             Thread.sleep(ms);
         } catch (InterruptedException ignored) {}
+    }
+
+    public void playIntro() {
+        try {
+
+            System.out.println("\n=== INTRO ===\n");
+
+            Thread.sleep(1000);
+            System.out.println("Třída je tichá...");
+            Thread.sleep(1500);
+
+            System.out.println("Slunce prosvítá oknem staré učebny.");
+            Thread.sleep(1500);
+
+            System.out.println("Hráč sedí v zadní lavici.");
+            Thread.sleep(2000);
+
+            System.out.println("\nDveře se pomalu otevřou...");
+            Thread.sleep(1500);
+
+            System.out.println("Vchází pan učitel Kuchařík.");
+            Thread.sleep(1500);
+
+            System.out.println("\"Stratil jsem všechny testy.\"");
+            Thread.sleep(1500);
+
+            System.out.println("\"Pokud je nenajdu, dostanete všichni za 5!\"");
+            Thread.sleep(2000);
+
+            System.out.println("\nMusíš najít 30 testů roztroušených po škole.");
+            Thread.sleep(2000);
+
+            System.out.println("Začni hru...\n");
+
+        } catch (InterruptedException ignored) {
+
+        }
     }
 }

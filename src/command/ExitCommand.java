@@ -4,11 +4,12 @@ import model.Game;
 import model.GameState;
 
 public class ExitCommand implements Command {
-    @Override
-    public void execute() {
-
+    private final Game game;
+    public ExitCommand(Game game){
+        this.game = game;
     }
-    public ExitCommand(Game game) {
+    @Override
+    public void execute(){
         game.setState(GameState.EXIT);
     }
 }

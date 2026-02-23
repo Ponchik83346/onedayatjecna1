@@ -7,49 +7,34 @@ import model.Player;
 import ui.InputHandler;
 
 public class CommandFactory {
+
     private final Player player;
-    private final InputHandler inputHandler;
     private final Game game;
 
-    public CommandFactory(Player player, InputHandler inputHandler, Game game) {
+    public CommandFactory(Player player, Game game) {
         this.player = player;
-        this.inputHandler = inputHandler;
         this.game = game;
     }
 
-    public Command create(String input) {
+    public Command create(String input, InputHandler inputHandler) {
+
         input = input.toLowerCase().trim();
 
-        switch (input) {
-            case "left":
-                return new MoveLeftCommand(player);
-            case "right":
-                return new MoveRightCommand(player);
-            case "up":
-                return new GoUpstairsCommand(player);
-            case "down":
-                return new GoDownstairsCommand(player);
-            case "enter":
-                return new EnterRoomCommand(player);
-            case "exit":
-                return new ExitRoomCommand(player);
-            case "inventory":
-                return new OpenInventoryCommand(player);
-            case "use":
-                return new UseItemCommand(player, inputHandler);
-            case "help":
-                return new HelpCommand();
-            case "exit game":
-                return new ExitCommand(game);
-            case "use elevator":
-                return new UseElevatorCommand(player);
-            case "pickup":
-                return new PickupItemCommand(player, inputHandler);
-                case "drop":
-                    return new DropItemCommand(player, inputHandler);
-
-            default:
-                return new UnknownCommand();
-        }
+        return switch (input) {
+            case "left" -> new MoveLeftCommand(player);
+            case "right" -> new MoveRightCommand(player);
+            case "up" -> new GoUpstairsCommand(player);
+            case "down" -> new GoDownstairsCommand(player);
+            case "enter" -> new EnterRoomCommand(player);
+            case "exit" -> new ExitRoomCommand(player);
+            case "inventory" -> new OpenInventoryCommand(player);
+            case "use" -> new UseItemCommand(player, inputHandler);
+            case "help" -> new HelpCommand();
+            case "exit game" -> new ExitCommand(game);
+            case "use elevator" -> new UseElevatorCommand(player, inputHandler);
+            case "pickup" -> new PickupItemCommand(player, inputHandler);
+            case "drop" -> new DropItemCommand(player, inputHandler);
+            default -> new UnknownCommand();
+        };
     }
 }

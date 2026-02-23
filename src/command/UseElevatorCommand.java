@@ -8,8 +8,9 @@ public class UseElevatorCommand implements Command {
     private InputHandler input;
     private Player player;
 
-    public UseElevatorCommand(Player player) {
+    public UseElevatorCommand(Player player, InputHandler input) {
         this.player = player;
+        this.input = input;
     }
 
     @Override

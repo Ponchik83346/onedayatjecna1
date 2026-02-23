@@ -41,6 +41,9 @@ public class MapRenderer {
                     }
                 }
             }
+            if(door.isLocked()){
+                symbol = 'X';
+            }
             if (symbol == '.') {
                 switch (door.getConnectedRoom().getType()) {
                     case STAIRS -> symbol = 'S';

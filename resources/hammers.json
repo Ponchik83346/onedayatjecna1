@@ -1,0 +1,5 @@
+﻿{
+  "hammers": [
+    { "name": "HAMMER", "hp": 2, "chanceToSpawn": 10 }
+  ]
+}

@@ -9,7 +9,7 @@ public class Food extends Item {
     private int chanceCafeteria;
 
     public Food(int stamina, String name, int chanceClass, int chanceBuffet, int chanceCafeteria) {
-        super(name);
+        super(name, chanceClass, ItemType.FOOD);
         this.stamina = stamina;
         this.chanceClass = chanceClass;
         this.chanceBuffet = chanceBuffet;
@@ -50,9 +50,5 @@ public class Food extends Item {
 
     public void setChanceCafeteria(int chanceCafeteria) {
         this.chanceCafeteria = chanceCafeteria;
-    }
-
-    public void use(Player player) {
-        player.addStamina(20);
     }
 }

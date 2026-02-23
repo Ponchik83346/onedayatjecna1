@@ -18,7 +18,7 @@ public class Inventory {
     public void removeItem(Item item) {
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i) == item) {
-                items.set(i, null);
+                items.remove(i);
                 return;
             }
         }
@@ -56,10 +56,9 @@ public class Inventory {
         return mats;
     }
 
-    public Item getItemByIndex(int index) {
-        if (index < 0 || index >= items.size()) {
+    public Item getItemByIndex(int index){
+        if(index < 0 || index >= items.size())
             return null;
-        }
         return items.get(index);
     }
 }
