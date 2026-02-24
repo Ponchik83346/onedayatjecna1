@@ -1,4 +1,4 @@
-﻿import map.Door;
+import map.Door;
 import map.Room;
 import map.RoomType;
 import org.junit.jupiter.api.Test;

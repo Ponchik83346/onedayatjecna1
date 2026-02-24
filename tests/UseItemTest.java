@@ -1,4 +1,4 @@
-﻿import command.CommandFactory;
+import command.CommandFactory;
 import items.Food;
 import items.Hammer;
 import items.Key;

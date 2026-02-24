@@ -1,4 +1,4 @@
-﻿import command.Command;
+import command.Command;
 import command.CommandFactory;
 import command.MoveLeftCommand;
 import command.MoveRightCommand;

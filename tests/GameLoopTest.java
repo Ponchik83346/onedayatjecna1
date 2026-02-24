@@ -1,4 +1,4 @@
-﻿import model.Game;
+import model.Game;
 import model.GameState;
 import org.junit.jupiter.api.Test;
 import ui.GameUI;
