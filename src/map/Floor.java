@@ -2,6 +2,9 @@ package map;
 
 import java.util.List;
 
+/**
+ * Třída pro patro. Obsahuje list dveří.
+ */
 public class Floor {
     private final int level;
     private final List<Door> doors;

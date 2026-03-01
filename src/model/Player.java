@@ -1,15 +1,15 @@
 package model;
 import gameData.GameData;
 import items.*;
-import map.Door;
-import map.Floor;
-import map.Map;
-import map.RoomType;
+import map.*;
 import ui.InputHandler;
 
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Třída pro hráče. Hráč má inventory, počet testů a narozdíl od učitelů i currentFloor.
+ */
 public class Player extends GameCharacter {
 
     private int stamina;
@@ -24,9 +24,20 @@ public class Player extends GameCharacter {
         this.stamina = 100;
         this.currentRoom = null;
     }
+
+    /**
+     * Podmínka pro výhru.
+     * @return Jestli hráč vyhrál.
+     */
     public boolean hasEnoughTests(){
         return this.testsCollected == 30;
     }
+
+    /**
+     * Použít předmět.
+     * @param item předmět k použití
+     * @param inputHandler input hráče.
+     */
     public void useItem(Item item, InputHandler inputHandler) {
         if (!inventory.contains(item)) {
             System.out.println("Nemáte tento item v inventáři!");
@@ -75,7 +86,7 @@ public class Player extends GameCharacter {
                 }
                 Material chosenMat = materials.get(choice);
                 Hammer hammer = (Hammer) item;
-                hammer.use(this, chosenMat, door);
+                hammer.use(chosenMat, door);
                 inventory.removeItem(chosenMat);
                 if (hammer.getHp() <= 0) {
                     inventory.removeItem(hammer);
@@ -92,6 +103,9 @@ public class Player extends GameCharacter {
         this.currentDoor = currentDoor;
     }
 
+    /**
+     * Jít po schodech nahorů.
+     */
     public void goUpstairs() {
         if (currentDoor.getConnectedRoom().getType() != RoomType.STAIRS) {
             System.out.println("Nejste na schodech!");
@@ -117,7 +131,9 @@ public class Player extends GameCharacter {
         System.out.println("Výše už žádné patro není!");
     }
 
-
+    /**
+     * Jít po schodech dolů.
+     */
     public void goDownstairs() {
         if (currentDoor.getConnectedRoom().getType() != RoomType.STAIRS) {
             System.out.println("Nejste na schodech!");
@@ -149,53 +165,61 @@ public class Player extends GameCharacter {
             System.out.println("Jsi v místnosti!");
             return;
         }
-        Door right = currentDoor.getRight();
-        if (right == null) {
+        Door before = currentDoor;
+        super.moveRight();
+        if (before == currentDoor) {
             System.out.println("Nelze jít doprava!");
-            return;
+        } else {
+            stamina -= 5;
         }
-        currentDoor = right;
-        stamina = stamina-5;
     }
+
     @Override
     public void moveLeft() {
         if (currentDoor == null) {
             System.out.println("Jsi v místnosti!");
             return;
         }
-        Door left = currentDoor.getLeft();
-        if (left == null) {
-            System.out.println("Nelze jít doLeva!");
-            return;
+        Door before = currentDoor;
+        super.moveLeft();
+        if (before == currentDoor) {
+            System.out.println("Nelze jít doleva!");
+        } else {
+            stamina -= 5;
         }
-        currentDoor = left;
-        stamina = stamina-5;
     }
     @Override
     public void enterRoom() {
-        if(currentDoor.getConnectedRoom().getType() == RoomType.STAIRS || currentDoor.getConnectedRoom().getType() == RoomType.ELEVATOR) {
-            System.out.println("Po schodech a výtahem se může chodit pouze nahodu a dolů!");
+        if (currentDoor == null) {
+            System.out.println("Jsi již v místnosti!");
             return;
         }
-        if (!insideRoom) {
-            insideRoom = true;
-            currentRoom = currentDoor.getConnectedRoom();
-            setCurrentDoor(null);
-        } else {
-            System.out.println("Jste v místnosti!");
+        Room targetRoom = currentDoor.getConnectedRoom();
+        if (targetRoom.getType() == RoomType.STAIRS ||
+                targetRoom.getType() == RoomType.ELEVATOR) {
+            System.out.println("Po schodech a výtahem se může chodit pouze nahoru a dolů!");
+            return;
         }
+        if (currentDoor.isLocked()) {
+            System.out.println("Nelze jít do místnosti, dveře jsou zamčené/zabarikádované!");
+            return;
+        }
+        super.enterRoom();
     }
 
     @Override
     public void exitRoom() {
-        if (insideRoom) {
-            insideRoom = false;
-            setCurrentDoor(currentRoom.getDoor());
-        } else {
+        if (!insideRoom) {
             System.out.println("Už jste na chodbě!");
+            return;
         }
+        super.exitRoom();
     }
 
+    /**
+     * Využítí výtahu.
+     * @param inputHandler input hráče
+     */
     public void useElevator(InputHandler inputHandler) {
         if (currentDoor.getConnectedRoom().getType() != RoomType.ELEVATOR) {
             System.out.println("Nejste ve výtahu!");
@@ -234,20 +258,12 @@ public class Player extends GameCharacter {
         testsCollected++;
     }
 
-    public void loseStamina(int amount) {
-        this.stamina -= amount;
-    }
-
-    public void addStamina(int amount) {
-        this.stamina += amount;
-    }
-
     public int getStamina() {
         return stamina;
     }
 
-    public void openInventory(Inventory inventory) {
-        inventory.printContents();
+    public void openInventory() {
+        this.inventory.printContents();
     }
 
     public Floor getCurrentFloor() {
@@ -258,16 +274,12 @@ public class Player extends GameCharacter {
         return inventory;
     }
 
-    public int getTestsCollected() {
-        return testsCollected;
-    }
-
     public void setStamina(int stamina) {
         this.stamina = stamina;
     }
 
-    public void setInventory(Inventory inventory) {
-        this.inventory = inventory;
+    public int getTestsCollected() {
+        return testsCollected;
     }
 
     public void setTestsCollected(int testsCollected) {

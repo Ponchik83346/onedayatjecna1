@@ -1,7 +1,9 @@
 package gameData;
 
 import map.RoomType;
-
+/**
+ * Třída pro načtení místnosti z jsonu.
+ */
 public class RoomData {
     private String id;
     private RoomType type;

@@ -1,5 +1,8 @@
 package teacher;
 
+/**
+ * Všechny učitelé vyjmenované
+ */
 public enum TeacherType {
     NEUGEBAUEROVA(),
     SEDOVA(),

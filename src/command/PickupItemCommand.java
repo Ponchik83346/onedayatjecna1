@@ -4,16 +4,26 @@ import map.Room;
 import model.Game;
 import model.Player;
 import ui.InputHandler;
+/**
+ * Příkaz pro sebrání předmětu z aktuální místnosti.
+ */
 public class PickupItemCommand implements Command {
 
     private Player player;
     private InputHandler inputHandler;
-
+    /**
+     * Vytvoří příkaz pro sbírání předmětů.
+     * @param player hráč, který předmět sbírá
+     * @param inputHandler vstup pro načtení indexu
+     */
     public PickupItemCommand(Player player, InputHandler inputHandler) {
         this.player = player;
         this.inputHandler = inputHandler;
     }
-
+    /**
+     * Provede sebrání předmětu.
+     * Hráč musí být v místnosti a vybrat platný index předmětu.
+     */
     @Override
     public void execute() {
         if (!player.isInsideRoom()) {

@@ -1,5 +1,9 @@
 package map;
 import java.util.List;
+
+/**
+ * Třída pro mapu. Obsahuje list pater.
+ */
 public class Map {
     private List<Floor> floors;
 

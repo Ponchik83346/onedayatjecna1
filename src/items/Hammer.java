@@ -3,6 +3,10 @@ package items;
 import map.Door;
 import model.Player;
 
+/**
+ * Třída pro kladivo.
+ * Obsahuje počet hp.
+ */
 public class Hammer extends Item {
     private int hp;
 
@@ -11,7 +15,12 @@ public class Hammer extends Item {
         this.hp = 2;
     }
 
-    public void use(Player player, Material material, Door door) {
+    /**
+     * Použití kladiva na dveře.
+     * @param material Materiál k použití.
+     * @param door Dveře na které se použije materiál.
+     */
+    public void use(Material material, Door door) {
         if (door.isLocked()) {
             System.out.println("Dveře už jsou zabarikádované!");
             return;

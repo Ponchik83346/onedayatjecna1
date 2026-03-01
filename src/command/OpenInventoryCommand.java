@@ -2,6 +2,9 @@ package command;
 
 import model.Player;
 
+/**
+ * Příkaz pro vypsání inventáře
+ */
 public class OpenInventoryCommand implements Command {
 
     private final Player player;
@@ -10,8 +13,11 @@ public class OpenInventoryCommand implements Command {
         this.player = player;
     }
 
+    /**
+     * Vypíše inventář do konzole.
+     */
     @Override
     public void execute() {
-        player.openInventory(player.getInventory());
+        player.openInventory();
     }
 }

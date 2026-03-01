@@ -9,6 +9,16 @@ import java.util.List;
 public final class MapFactory {
     private MapFactory() {}
 
+    /**
+     * Načte mapu hry ze souboru /map.json a vytvoří strukturu herní mapy.
+     * Načte data do MapData
+     * Vytvoří všechny místnosti a odpovídající dveře
+     * Propojí dveře mezi sebou
+     * Propojí schodiště mezi patry
+     * Uzamkne výtahy
+     * Vytvoří jednotlivá patra
+     * @return plně inicializovaná instance mapy obsahující všechna patra, místnosti a jejich propojení.
+     */
     public static Map load() {
         MapData data = JsonLoader.load("/map.json", MapData.class);
 

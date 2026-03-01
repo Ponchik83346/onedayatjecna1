@@ -4,16 +4,28 @@ import items.Item;
 import map.Room;
 import model.Player;
 import ui.InputHandler;
-
+/**
+ * Příkaz pro položení předmětu z inventáře do aktuální místnosti.
+ */
 public class DropItemCommand implements Command {
 
     private Player player;
     private InputHandler input;
-
+    /**
+     * Vytvoří příkaz pro zahazování předmětů.
+     *
+     * @param player hráč, jehož inventář se používá
+     * @param input  vstup pro načtení indexu předmětu
+     */
     public DropItemCommand(Player player, InputHandler input) {
         this.player = player;
         this.input = input;
     }
+    /**
+     * Provede zahození předmětu.
+     * Hráč musí být v místnosti a mít alespoň jeden předmět v inventáři.
+     * Po výběru indexu se předmět přesune z inventáře do místnosti.
+     */
     @Override
     public void execute() {
         if (!player.isInsideRoom()) {

@@ -1,7 +1,9 @@
 package gameData;
 
 import java.util.List;
-
+/**
+ * Třída pro načtení mapy z jsonu.
+ */
 public class MapData {
     private List<FloorData> floors;
 

@@ -7,11 +7,18 @@ import map.Map;
 import map.RoomType;
 import model.Player;
 
+/**
+ * Třída pro klíč.
+ */
 public class Key extends Item {
     public Key(String name, int chanceToSpawn) {
         super(name, chanceToSpawn, ItemType.KEY);
     }
 
+    /**
+     * Využít klič na výtah.
+     * @param player Player pro přístup k poloze a inventáři.
+     */
     public void use(Player player) {
         if(player.getCurrentDoor().getConnectedRoom().getType()==RoomType.ELEVATOR){
             boolean unlock = GameData.unlockAllElevators();

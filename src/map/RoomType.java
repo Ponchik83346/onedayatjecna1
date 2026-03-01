@@ -1,5 +1,8 @@
 package map;
 
+/**
+ * Rozepsané typy místností.
+ */
 public enum RoomType {
     CLASSROOM,
     CABINET,

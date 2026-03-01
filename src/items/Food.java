@@ -2,6 +2,10 @@ package items;
 
 import model.Player;
 
+/**
+ * Třída pro jídlo.
+ * Obsahuje staminu kterou přidá hráčovi, šance na bufet, třídu a jídelnu.
+ */
 public class Food extends Item {
     private int stamina;
     private int chanceClass;

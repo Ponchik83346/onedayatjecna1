@@ -1,5 +1,7 @@
 package gameData;
-
+/**
+ * Třída pro načtení kladiva z jsonu.
+ */
 public class HammerData {
     private String name;
     private int hp;

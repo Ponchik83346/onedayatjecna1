@@ -9,7 +9,10 @@ import ui.RandomGenerator;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+/**
+ * Uchovává všechna herní data (mapu, hráče, učitele, předměty).
+ * Zajišťuje jejich načtení ze souborů a inicializaci při startu hry.
+ */
 public class GameData {
     private static ArrayList<Food> food;
     private static ArrayList<Material> materials;
@@ -32,7 +35,12 @@ public class GameData {
         items = new ArrayList<>();
         player = new Player();
     }
-
+    /**
+     * Načte kompletní herní data.
+     * Vytvoří mapu, učitele, předměty a náhodně je rozmístí do místností.
+     *
+     * @return inicializovaná instance GameData
+     */
     public static GameData load() {
         GameData data = new GameData();
         map = MapFactory.load();
@@ -44,6 +52,9 @@ public class GameData {
         data.generateItems(new RandomGenerator());
         return data;
     }
+    /**
+     * Sloučí všechny typy předmětů do jednoho seznamu items.
+     */
     public static void createItems() {
         items.clear();
         items.addAll(food);
@@ -51,7 +62,10 @@ public class GameData {
         items.addAll(keys);
         items.addAll(hammers);
     }
-
+    /**
+     * Vytvoří učitele podle dat z JSON souboru
+     * a nastaví jejich počáteční dveře.
+     */
     private void createTeachers() {
         HashMap<String, QuestionSet> questionSets =
                 QuestionSetFactory.createQuestionSets();
@@ -75,6 +89,9 @@ public class GameData {
             teachers.add(t);
         }
     }
+    /**
+     * Načte a vytvoří všechna kladiva ze souboru.
+     */
     private void createHammers() {
         ArrayList<HammerData> hammerData =
                 JsonLoader.load("/hammers.json", HammersData.class).getHammers();
@@ -86,6 +103,9 @@ public class GameData {
             hammers.add(h);
         }
     }
+    /**
+     * Načte a vytvoří všechny druhy jídla ze souboru.
+     */
     private void createFood() {
         ArrayList<FoodData> foodDataList =
                 JsonLoader.load("/food.json", FoodsData.class).getFood();
@@ -95,6 +115,9 @@ public class GameData {
             food.add(f);
         }
     }
+    /**
+     * Načte a vytvoří všechny materiály ze souboru.
+     */
     private void createMaterials() {
         ArrayList<MaterialData> materialsData =
                 JsonLoader.load("/materials.json", MaterialsData.class).getMaterials();
@@ -122,7 +145,10 @@ public class GameData {
     }
 
     public static Map getMap() { return map; }
-
+    /**
+     * Odemkne všechny výtahy v mapě.
+     * @return true jestli byl nalezen alespoň jeden výtah
+     */
     public static boolean unlockAllElevators() {
         boolean foundElevator = false;
         for (Floor floor : map.getFloors()) {
@@ -137,6 +163,9 @@ public class GameData {
         }
         return foundElevator;
     }
+    /**
+     * Náhodně rozmístí předměty a testy do místností pomocí putItemsIntoRooms.
+     */
     private void generateItems(RandomGenerator rnd) {
         List<Room> allRooms = new ArrayList<>();
         for (Floor f : map.getFloors()) {
@@ -158,6 +187,9 @@ public class GameData {
             }
         }
     }
+    /**
+     * Pokusí se vložit náhodné předměty do konkrétní místnosti podle jejího typu a pravděpodobnosti výskytu.
+     */
     private void putItemsIntoRoom(Door d, RandomGenerator rnd) {
         Room room = d.getConnectedRoom();
         if (room == null) return;

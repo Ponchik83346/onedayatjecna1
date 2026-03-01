@@ -1,5 +1,7 @@
 package gameData;
-
+/**
+ * Třída pro načtení materiálu z jsonu.
+ */
 public class MaterialData {
     private String name;
     private int hp;

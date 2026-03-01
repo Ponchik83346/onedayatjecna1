@@ -1,5 +1,7 @@
 package gameData;
-
+/**
+ * Třída pro načtení učitele z jsonu.
+ */
 public class TeacherData {
     private String name;
     private int aiLevel;

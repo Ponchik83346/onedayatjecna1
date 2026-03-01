@@ -8,6 +8,9 @@ import ui.InputHandler;
 import ui.RandomGenerator;
 import java.util.List;
 
+/**
+ * Samotná hra. Zde jsou instance GameData - načtené z jsonů. State - Stav. Čas atd.
+ */
 public class Game {
     private GameData gameData;
     private GameState state;
@@ -18,6 +21,9 @@ public class Game {
     public Game() {
     }
 
+    /**
+     * Inicializace hry. Načtení z jsonů, rozmístění hráče, nastavení času na nulu.
+     */
     public void initialize() {
         this.gameData = GameData.load();
         this.randomGenerator = new RandomGenerator();
@@ -28,6 +34,10 @@ public class Game {
         this.lastTeacherUpdate = 0;
         this.lastUpdateNano = System.nanoTime();
     }
+
+    /**
+     * Každé 3 sekundy updatuje učitele každého učitele.
+     */
     public void updateTeachers() {
         long now = System.nanoTime();
         double delta = (now - lastUpdateNano) / 1_000_000_000.0;
@@ -41,33 +51,20 @@ public class Game {
         }
     }
 
+    /**
+     * Podmínka pro gameloop.
+     * @return Jestli hráč neprohrál/nevyhrál
+     */
     public boolean isRunning() {
         return state != GameState.EXIT
                 && state != GameState.LOSE
                 && state != GameState.WIN;
     }
-
     public GameState getState() {
         return state;
     }
-
     public void setState(GameState state) {
         this.state = state;
-    }
-    public double getGlobalTime() {
-        return globalTime;
-    }
-
-    public void setGlobalTime(int globalTime) {
-        this.globalTime = globalTime;
-    }
-
-    public double getLastTeacherUpdate() {
-        return lastTeacherUpdate;
-    }
-
-    public void setLastTeacherUpdate(int lastTeacherUpdate) {
-        this.lastTeacherUpdate = lastTeacherUpdate;
     }
     public Map getMap() {
         return GameData.getMap();
@@ -88,30 +85,7 @@ public class Game {
         this.gameData = gameData;
     }
 
-    public void setGlobalTime(double globalTime) {
-        this.globalTime = globalTime;
-    }
-
-    public long getLastUpdateNano() {
-        return lastUpdateNano;
-    }
-
-    public void setLastUpdateNano(long lastUpdateNano) {
-        this.lastUpdateNano = lastUpdateNano;
-    }
-
-    public void setLastTeacherUpdate(double lastTeacherUpdate) {
-        this.lastTeacherUpdate = lastTeacherUpdate;
-    }
-
     public RandomGenerator getRandomGenerator() {
         return randomGenerator;
     }
-
-    public void setRandomGenerator(RandomGenerator randomGenerator) {
-        this.randomGenerator = randomGenerator;
-    }
-
-
 }
-

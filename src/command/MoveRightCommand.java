@@ -9,7 +9,9 @@ public class MoveRightCommand implements Command {
     public MoveRightCommand(Player player) {
         this.player = player;
     }
-
+    /**
+     * Pohne hráče na dveře zprava.
+     */
     @Override
     public void execute() {
         player.moveRight();

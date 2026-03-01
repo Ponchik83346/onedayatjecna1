@@ -3,7 +3,9 @@ package gameData;
 import teacher.QuestionSet;
 
 import java.util.ArrayList;
-
+/**
+ * Třída pro načtení sad otázek učitelů z jsonu.
+ */
 public class QuestionSetsData {
     private QuestionSet questionSet;
 

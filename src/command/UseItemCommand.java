@@ -3,14 +3,25 @@ package command;
 import model.Player;
 import items.Item;
 import ui.InputHandler;
-
+/**
+ * Příkaz pro použití předmětu z inventáře hráče.
+ */
 public class UseItemCommand implements Command {
     private final Player player;
     private final InputHandler inputHandler;
+    /**
+     * Vytvoří příkaz pro použití předmětu.
+     * @param player hráč používající předmět
+     * @param inputHandler vstup pro výběr předmětu
+     */
     public UseItemCommand(Player player, InputHandler inputHandler) {
         this.player = player;
         this.inputHandler = inputHandler;
     }
+    /**
+     * Provede použití vybraného předmětu z inventáře.
+     * Hráč musí zadat platný index předmětu.
+     */
     @Override
     public void execute() {
         if (player.getInventory().getItems().isEmpty()) {

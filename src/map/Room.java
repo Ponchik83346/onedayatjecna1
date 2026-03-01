@@ -4,6 +4,10 @@ import teacher.Teacher;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * Třída pro místnost.
+ * Obsahuje RoomType typ, učitelé vevnitř, boolean jestli obsahuje test, klíč, hammer, listy materialu a jídla, kapacitu učitelů, ID, kapacitu předmětů.
+ */
 public class Room {
     private String id;
     private RoomType type;
@@ -116,6 +120,9 @@ public class Room {
         this.items = items;
     }
 
+    /**
+     * Vypíše všechny itemy z listu Items.
+     */
     public void printItems() {
         if(items.isEmpty()){
             System.out.println("Místnost je prázdná.");

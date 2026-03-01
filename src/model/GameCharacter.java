@@ -3,6 +3,9 @@ package model;
 import map.Door;
 import map.Room;
 
+/**
+ * Game character. Umí chodit doprava, doleva, dovnitř a ven z místnosti.
+ */
 public abstract class GameCharacter {
     protected Door currentDoor;
     protected Room currentRoom;

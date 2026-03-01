@@ -1,5 +1,7 @@
 package teacher;
-
+/**
+ * Jednotlivá otázka
+ */
 public class Question {
     private String question;
     private String a;
@@ -7,7 +9,6 @@ public class Question {
     private String c;
     private String d;
     private String correct;
-    private String timeLimit;
 
     public String getQuestion() {
         return question;
@@ -32,15 +33,12 @@ public class Question {
     public String getCorrect() {
         return correct;
     }
-    public String getTimeLimit() {
-        return timeLimit;
-    }
     public boolean isCorrect(String input){
         return input.equals(correct);
     }
 
     @Override
     public String toString() {
-        return getQuestion() + "\n" +"moznosti: " +"\n" + getA()+"\n"+getB()+"\n"+getC()+"\n"+getD()+"\n"+ "správná: "+ getCorrect();
+        return getQuestion() + "\n" +"moznosti: " +"\n" + getA()+"\n"+getB()+"\n"+getC()+"\n"+getD();
     }
 }

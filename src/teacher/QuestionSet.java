@@ -1,6 +1,10 @@
 package teacher;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Sada otázek.
+ */
 public class QuestionSet {
     private List<Question> questions = new ArrayList<>();
     public QuestionSet() {
@@ -12,8 +16,5 @@ public class QuestionSet {
 
     public boolean isEmpty() {
         return questions.isEmpty();
-    }
-    public Question getQuestionByID(int id) {
-        return questions.get(id);
     }
 }

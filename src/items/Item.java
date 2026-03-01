@@ -3,6 +3,10 @@ package items;
 import map.Door;
 import model.Player;
 
+/**
+ * Superclass item.
+ * Jméno, šance na spawn, ItemType typ itemu.
+ */
 public abstract class Item {
     protected String name;
     protected int chanceToSpawn;

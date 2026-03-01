@@ -1,5 +1,8 @@
 package gameData;
 
+/**
+ * Třída pro načtení jídla z jsonu.
+ */
 public class FoodData {
     private String name;
     private int stamina;

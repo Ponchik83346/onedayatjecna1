@@ -3,6 +3,9 @@ package map;
 import items.Material;
 import teacher.Teacher;
 
+/**
+ * Třída pro dveře. Obsahuje connected místnost.
+ */
 public class Door {
     private final String id;
     private Door left;

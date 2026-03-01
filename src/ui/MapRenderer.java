@@ -6,6 +6,9 @@ import teacher.Teacher;
 
 import java.util.List;
 
+/**
+ * Vykresluje mapu
+ */
 public class MapRenderer {
     private Map map;
 
@@ -13,9 +16,13 @@ public class MapRenderer {
         this.map = map;
     }
 
+    /**
+     * Vypisuje všechno na mapě. Učitele, hráče, dveře. Když je hráč v místnosti vypíše předměty.
+     * @param game berou se z něj veškeré instance.
+     */
     public void render(Game game) {
-        Map map = game.getMap();
         Player player = game.getPlayer();
+        System.out.println("Počet testů: "+player.getTestsCollected());
         List<Teacher> teachers = game.getTeachers();
         Floor currentFloor = game.getPlayer().getCurrentFloor();
         if (currentFloor == null) {
@@ -50,8 +57,9 @@ public class MapRenderer {
                     case ELEVATOR -> symbol = 'V';
                     case LUNCHROOM -> symbol = 'J';
                     case LAB -> symbol = 'D';
-                    case PRINCIPALSOFFICE -> symbol = 'O';
+                    case PRINCIPALSOFFICE -> symbol = 'R';
                     case CABINET -> symbol = 'C';
+                    case BUFET -> symbol = 'B';
                 }
             }
             System.out.print("[" + symbol + "]");

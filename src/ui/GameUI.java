@@ -1,5 +1,6 @@
 package ui;
 
+import command.HelpCommand;
 import map.Door;
 import map.Room;
 import model.Game;
@@ -151,7 +152,9 @@ public class GameUI {
             Thread.sleep(ms);
         } catch (InterruptedException ignored) {}
     }
-
+    /**
+     * Metoda pro přehrání intra
+     */
     public void playIntro() {
         try {
 
@@ -181,9 +184,10 @@ public class GameUI {
 
             System.out.println("\nMusíš najít 30 testů roztroušených po škole.");
             Thread.sleep(2000);
+            Command command = new HelpCommand();
+            command.execute();
 
             System.out.println("Začni hru...\n");
-
         } catch (InterruptedException ignored) {
 
         }

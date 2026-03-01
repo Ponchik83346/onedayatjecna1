@@ -3,6 +3,10 @@ package items;
 import map.Door;
 import model.Player;
 
+/**
+ * Třída pro materiál.
+ * Obsahuje hp.
+ */
 public class Material extends Item {
     private int hp;
 
