@@ -85,4 +85,7 @@ drop | Položení itemu
 help | Zobrazení nápovědy
 exit game | Ukončení hry
 
-
+Jak zpustit:
+1. Otevřít terminál
+2. Jít do složky ve které je instalovaný projekt
+3. Spustit onedayatjecna.jar
